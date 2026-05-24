@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Réalisations MAGGMALIGHT - Projets d'éclairage au Maroc</title>
+  <meta name="description" content="Découvrez les projets réalisés par MAGGMALIGHT : restaurants, villas, duplex, conception d'éclairage, produits premium et installation au Maroc.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body { background:#fff; color:var(--black); }
+    .realisations-hero { min-height:620px; padding:154px 0 70px; position:relative; color:#fff; overflow:hidden; background:#070707; }
+    .realisations-hero::before { content:''; position:absolute; inset:0; background:url('images/Réalisations/realisations-hero-dialux-relux.png') center/cover no-repeat; opacity:.72; transform:scale(1.02); }
+    .realisations-hero::after { content:''; position:absolute; inset:0; background:linear-gradient(90deg,rgba(0,0,0,.94),rgba(0,0,0,.62) 52%,rgba(0,0,0,.86)); }
+    .realisations-inner { position:relative; z-index:2; max-width:760px; }
+    .realisations-eyebrow { color:var(--orange); text-transform:uppercase; letter-spacing:.16em; font-size:.76rem; font-weight:800; margin-bottom:18px; }
+    .realisations-title { font-family:var(--font-serif); font-size:clamp(2.45rem,5vw,4.8rem); line-height:1.04; margin-bottom:22px; }
+    .realisations-title span { color:var(--orange); display:block; }
+    .realisations-copy { color:rgba(255,255,255,.84); line-height:1.85; font-size:1.02rem; max-width:650px; margin-bottom:34px; }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:14px; }
+    .hero-btn { min-height:48px; display:inline-flex; align-items:center; justify-content:center; gap:9px; border-radius:40px; padding:0 24px; font-size:.82rem; font-weight:800; transition:var(--tr); }
+    .hero-btn.primary { background:var(--orange); color:#fff; box-shadow:0 18px 44px rgba(242,173,100,.26); }
+    .hero-btn.secondary { border:1px solid rgba(255,255,255,.32); color:#fff; background:rgba(255,255,255,.04); }
+    .hero-btn:hover { transform:translateY(-2px); }
+    .real-stats { position:relative; z-index:2; margin-top:58px; display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.1); border-radius:14px; overflow:hidden; backdrop-filter:blur(10px); }
+    .real-stat { background:rgba(12,12,12,.72); padding:22px; }
+    .real-stat strong { display:block; color:var(--orange); font-size:1.45rem; margin-bottom:4px; }
+    .real-stat span { color:rgba(255,255,255,.78); font-size:.76rem; line-height:1.5; }
+    .real-section { padding:72px 0; background:#fff; }
+    .section-head { text-align:center; max-width:760px; margin:0 auto 36px; }
+    .section-kicker { color:var(--orange); font-size:.72rem; font-weight:800; letter-spacing:.15em; text-transform:uppercase; margin-bottom:9px; }
+    .section-title { font-size:clamp(1.65rem,3vw,2.45rem); line-height:1.2; margin-bottom:12px; }
+    .section-sub { color:var(--text-2); line-height:1.75; font-size:.92rem; }
+    .filters { display:flex; justify-content:center; flex-wrap:wrap; gap:10px; margin-bottom:34px; }
+    .filter-btn { border:1px solid var(--border); background:#fff; color:var(--text-2); border-radius:28px; padding:10px 18px; font-size:.78rem; font-weight:800; cursor:pointer; transition:var(--tr); }
+    .filter-btn:hover, .filter-btn.active { color:#fff; background:var(--black); border-color:var(--black); box-shadow:0 12px 30px rgba(0,0,0,.12); }
+    .projects-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+    .project-card { border:1px solid var(--border); background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 18px 48px rgba(29,29,27,.07); transition:transform .28s ease, box-shadow .28s ease, border-color .28s ease; cursor:pointer; }
+    .project-card:hover { transform:translateY(-6px); box-shadow:0 26px 68px rgba(29,29,27,.13); border-color:rgba(242,173,100,.38); }
+    .project-media { position:relative; height:248px; overflow:hidden; background:#111; }
+    .project-media img { width:100%; height:100%; object-fit:cover; display:block; transition:transform .45s ease; }
+    .project-card:hover .project-media img { transform:scale(1.06); }
+    .project-pill { position:absolute; top:14px; left:14px; background:rgba(0,0,0,.72); color:#fff; border:1px solid rgba(255,255,255,.18); backdrop-filter:blur(8px); border-radius:20px; padding:7px 12px; font-size:.68rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; }
+    .project-content { padding:20px; }
+    .project-location { color:var(--orange); font-size:.7rem; font-weight:800; text-transform:uppercase; letter-spacing:.12em; margin-bottom:8px; }
+    .project-title { font-size:1.12rem; line-height:1.3; margin-bottom:10px; }
+    .project-desc { color:var(--text-2); font-size:.82rem; line-height:1.7; margin-bottom:16px; min-height:70px; }
+    .project-meta { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px; }
+    .project-meta span { background:var(--bg-alt); border:1px solid var(--border); border-radius:18px; padding:6px 10px; color:var(--text-2); font-size:.68rem; font-weight:700; }
+    .project-link { color:var(--black); font-size:.78rem; font-weight:800; display:inline-flex; align-items:center; gap:8px; }
+    .project-link svg { width:15px; height:15px; color:var(--orange); transition:transform .25s ease; }
+    .project-card:hover .project-link svg { transform:translateX(4px); }
+    .featured-real { padding:72px 0; background:#111; color:#fff; }
+    .featured-grid { display:grid; grid-template-columns:.9fr 1.1fr; gap:38px; align-items:center; }
+    .featured-copy h2 { font-size:clamp(1.8rem,3vw,3rem); line-height:1.18; margin-bottom:16px; }
+    .featured-copy p { color:rgba(255,255,255,.76); line-height:1.8; margin-bottom:26px; }
+    .scope-list { display:grid; gap:12px; margin-bottom:28px; }
+    .scope-item { display:flex; gap:11px; align-items:flex-start; color:rgba(255,255,255,.86); font-size:.86rem; }
+    .scope-icon { width:22px; height:22px; border-radius:50%; background:rgba(242,173,100,.16); color:var(--orange); display:flex; align-items:center; justify-content:center; flex-shrink:0; margin-top:1px; }
+    .scope-icon svg { width:12px; height:12px; }
+    .featured-gallery { display:grid; grid-template-columns:1.35fr .75fr; gap:12px; height:430px; }
+    .featured-gallery img { width:100%; height:100%; object-fit:cover; border-radius:10px; }
+    .featured-stack { display:grid; gap:12px; }
+    .real-cta { background:linear-gradient(90deg,#111,#1b1712); color:#fff; padding:48px 0; }
+    .real-cta-inner { display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .real-cta h2 { font-size:1.7rem; margin-bottom:8px; }
+    .real-cta p { color:rgba(255,255,255,.74); line-height:1.7; max-width:680px; }
+    .modal { position:fixed; inset:0; background:rgba(0,0,0,.78); z-index:2200; display:none; align-items:center; justify-content:center; padding:24px; }
+    .modal.show { display:flex; }
+    .modal-panel { background:#fff; border-radius:14px; width:min(1120px,100%); max-height:90vh; overflow:auto; box-shadow:0 40px 120px rgba(0,0,0,.35); }
+    .modal-head { display:flex; justify-content:space-between; align-items:flex-start; gap:20px; padding:24px 26px; border-bottom:1px solid var(--border); }
+    .modal-title { font-size:1.45rem; margin-bottom:6px; }
+    .modal-sub { color:var(--orange); font-size:.76rem; font-weight:800; text-transform:uppercase; letter-spacing:.12em; }
+    .modal-close { width:42px; height:42px; border-radius:50%; border:1px solid var(--border); background:#fff; cursor:pointer; font-size:1.4rem; line-height:1; }
+    .modal-body { display:grid; grid-template-columns:1fr .65fr; gap:24px; padding:26px; }
+    .modal-main-img { width:100%; height:430px; object-fit:cover; border-radius:10px; background:#111; }
+    .modal-thumbs { display:grid; grid-template-columns:repeat(5,1fr); gap:8px; margin-top:10px; }
+    .modal-thumbs img { width:100%; height:74px; object-fit:cover; border-radius:8px; cursor:pointer; border:2px solid transparent; opacity:.72; transition:var(--tr); }
+    .modal-thumbs img.active, .modal-thumbs img:hover { border-color:var(--orange); opacity:1; }
+    .modal-info p { color:var(--text-2); line-height:1.8; margin-bottom:18px; }
+    .modal-info-grid { display:grid; gap:12px; margin-bottom:22px; }
+    .modal-info-item { padding:14px; background:var(--bg-alt); border:1px solid var(--border); border-radius:9px; }
+    .modal-info-item strong { display:block; font-size:.74rem; text-transform:uppercase; letter-spacing:.1em; color:var(--text-3); margin-bottom:5px; }
+    .modal-info-item span { font-size:.9rem; font-weight:700; }
+    @media(max-width:980px) {
+      .real-stats, .projects-grid, .featured-grid, .modal-body { grid-template-columns:1fr 1fr; }
+      .featured-grid, .modal-body { grid-template-columns:1fr; }
+      .featured-gallery { height:360px; }
+      .real-cta-inner { flex-direction:column; align-items:flex-start; }
+    }
+    @media(max-width:640px) {
+      .realisations-hero { padding-top:126px; min-height:auto; }
+      .real-stats, .projects-grid { grid-template-columns:1fr; }
+      .project-media { height:230px; }
+      .featured-gallery { grid-template-columns:1fr; height:auto; }
+      .featured-gallery img { height:220px; }
+      .modal { padding:10px; }
+      .modal-main-img { height:290px; }
+      .modal-thumbs { grid-template-columns:repeat(3,1fr); }
+      .modal-thumbs img { height:68px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============ TICKER ============ -->
+<div class="ticker-bar">
+  <div class="ticker-track">
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Livraison partout au Maroc</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>Paiement 100% sécurisé</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Conseil expert gratuit</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>Installation disponible</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Showroom à Marrakech</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Produits garantis 2 ans</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Livraison partout au Maroc</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>Paiement 100% sécurisé</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Conseil expert gratuit</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>Installation disponible</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Showroom à Marrakech</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Produits garantis 2 ans</div>
+    <span class="ticker-sep">✦</span>
+  </div>
+</div>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar hero-mode" id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" id="navLogo">
+        <img src="images/logo.png" alt="MAGGMALIGHT" class="nav-logo-img" id="logoImg" onerror="this.style.display='none';document.getElementById('logoText').style.display='flex'">
+        <span class="nav-logo-text" id="logoText" style="display:none">
+          <span class="nav-logo-main">MAGGMA<span class="logo-light">LIGHT</span></span>
+          <span class="nav-logo-sub">Lighting Design &amp; Solutions</span>
+        </span>
+      </a>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="index.html#categories" class="nav-link">
+            Produits
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-dropdown">
+            <a href="category.html?cat=salon">Toutes les catégories</a>
+            <a href="category.html?cat=suspensions">Suspensions</a>
+            <a href="category.html?cat=appliques">Appliques murales</a>
+            <a href="category.html?cat=spots">Spots &amp; Downlights</a>
+            <a href="category.html?cat=rails">Rails Magnétiques</a>
+            <a href="category.html?cat=exterieur">Luminaires Extérieurs</a>
+            <a href="smart-lighting.html">Smart Lighting</a>
+            <a href="category.html?cat=ruban">Profils LED</a>
+            <a href="category.html?cat=lampadaires">Lampes Décoratives</a>
+            <a href="category.html?cat=appareillage">Appareillage</a>
+          </div>
+        </li>
+        <li><a href="formations.html" class="nav-link">Formations</a></li>
+        <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+        <li><a href="smart-lighting.html" class="nav-link" style="color:var(--orange);font-weight:600">Smart Lighting</a></li>
+        <li><a href="blog.html" class="nav-link">Conseils</a></li>
+        <li><a href="index.html#showroom" class="nav-link">À propos</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="nav-action-btn" onclick="window.openSearch ? openSearch() : (location.href='category.html?cat=salon')" title="Rechercher">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="nav-action-btn" title="Mon compte">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </button>
+        <button class="nav-action-btn" title="Favoris">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </button>
+        <button class="nav-action-btn" onclick="window.openCart ? openCart() : (location.href='product.html')" title="Panier">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span class="nav-badge" id="cart-count">0</span>
+        </button>
+      </div>
+      <div class="nav-hamburger" onclick="toggleMobileNav()"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-header">
+    <div class="nav-logo-text">
+      <span class="nav-logo-main" style="color:#1D1D1B">MAGGMA<span class="logo-light">LIGHT</span></span>
+      <span class="nav-logo-sub" style="color:#888">Lighting Design &amp; Solutions</span>
+    </div>
+    <button class="mobile-nav-close" onclick="toggleMobileNav()">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="mobile-nav-links">
+    <a href="index.html#categories" onclick="toggleMobileNav()">Produits</a>
+    <a href="formations.html" onclick="toggleMobileNav()">Formations</a>
+    <a href="realisations.html" onclick="toggleMobileNav()">Réalisations</a>
+    <a href="smart-lighting.html" onclick="toggleMobileNav()">Smart Lighting</a>
+    <a href="blog.html" onclick="toggleMobileNav()">Conseils</a>
+    <a href="index.html#showroom" onclick="toggleMobileNav()">À propos</a>
+    <a href="contact.html" onclick="toggleMobileNav()">Contact</a>
+    <a href="consultation.html" style="color:var(--orange);font-weight:700">Réserver une consultation</a>
+  </div>
+</div>
+
+<main>
+  <section class="realisations-hero">
+    <div class="container">
+      <div class="realisations-inner">
+        <div class="realisations-eyebrow">Portfolio MAGGMALIGHT</div>
+        <h1 class="realisations-title">Nos projets <span>réalisés</span></h1>
+        <p class="realisations-copy">Restaurants, villas et espaces premium au Maroc. MAGGMALIGHT accompagne les projets depuis la conception d'éclairage jusqu'au choix des produits et l'installation sur site.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="hero-btn primary">Découvrir les projets</a>
+          <a href="consultation.html" class="hero-btn secondary">Demander une consultation</a>
+        </div>
+      </div>
+      <div class="real-stats">
+        <div class="real-stat"><strong>8</strong><span>projets mis en avant</span></div>
+        <div class="real-stat"><strong>360°</strong><span>conception, produits et installation</span></div>
+        <div class="real-stat"><strong>+400</strong><span>produits premium disponibles</span></div>
+        <div class="real-stat"><strong>150+</strong><span>apprenants formés</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="real-section" id="projects">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-kicker">Références</div>
+        <h2 class="section-title">Des ambiances pensées pour chaque lieu</h2>
+        <p class="section-sub">Chaque réalisation montre une facette du savoir-faire MAGGMALIGHT : lumière décorative, éclairage architectural, produits premium, électricité et installation.</p>
+      </div>
+      <div class="filters">
+        <button class="filter-btn active" onclick="filterProjects('all',this)">Tous</button>
+        <button class="filter-btn" onclick="filterProjects('residential',this)">Villas & Duplex</button>
+        <button class="filter-btn" onclick="filterProjects('hospitality',this)">Restaurants</button>
+        <button class="filter-btn" onclick="filterProjects('electricity',this)">Électricité</button>
+      </div>
+      <div class="projects-grid">
+        <article class="project-card" data-cat="hospitality" onclick="openProject('agafay')">
+          <div class="project-media"><img src="images/Réalisations/Restaurant Oasis Sky Agafay/R62_0897.JPG" alt="Restaurant Oasis Sky Camp Agafay"><div class="project-pill">Restaurant</div></div>
+          <div class="project-content">
+            <div class="project-location">Agafay, Marrakech</div>
+            <h3 class="project-title">Restaurant Oasis Sky Camp</h3>
+            <p class="project-desc">Ambiance lumineuse chaude pour un restaurant à Agafay : suspensions, éclairage décoratif, zones de table et mise en valeur architecturale.</p>
+            <div class="project-meta"><span>Restaurant</span><span>Produits</span><span>Installation</span></div>
+            <div class="project-link">Voir le projet <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
+          </div>
+        </article>
+
+        <article class="project-card" data-cat="residential" onclick="openProject('villa-targa')">
+          <div class="project-media"><img src="images/Réalisations/Villa Targa/cover.jpg" alt="Villa Targa" onerror="this.onerror=null;this.src='images/sliders/slide-salon.png'"><div class="project-pill">Villa</div></div>
+          <div class="project-content">
+            <div class="project-location">Targa, Marrakech</div>
+            <h3 class="project-title">Villa à Targa</h3>
+            <p class="project-desc">Projet complet : conception d'éclairage, choix des luminaires MAGGMALIGHT et installation des produits sur site.</p>
+            <div class="project-meta"><span>Conception</span><span>Produits</span><span>Installation</span></div>
+            <div class="project-link">Voir le projet <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
+          </div>
+        </article>
+
+        <article class="project-card" data-cat="residential electricity" onclick="openProject('ouarzazate')">
+          <div class="project-media"><img src="images/Réalisations/Villa Route de Ouarzazate/cover.jpg" alt="Villa Route de Ouarzazate" onerror="this.onerror=null;this.src='images/sliders/slide-ext.png'"><div class="project-pill">Villa</div></div>
+          <div class="project-content">
+            <div class="project-location">Route de Ouarzazate</div>
+            <h3 class="project-title">Villa Route de Ouarzazate</h3>
+            <p class="project-desc">Fourniture des produits d'éclairage et accompagnement sur la partie électricité pour une villa contemporaine.</p>
+            <div class="project-meta"><span>Produits</span><span>Électricité</span><span>Villa</span></div>
+            <div class="project-link">Voir le projet <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
+          </div>
+        </article>
+
+        <article class="project-card" data-cat="residential" onclick="openProject('tamensourt')">
+          <div class="project-media"><img src="images/Réalisations/Villa Tamensourt/cover.jpg" alt="Villa Tamensourt" onerror="this.onerror=null;this.src='images/SmartLighting/projets-smart-lighting.png'"><div class="project-pill">Villa</div></div>
+          <div class="project-content">
+            <div class="project-location">Tamensourt</div>
+            <h3 class="project-title">Villa à Tamensourt</h3>
+            <p class="project-desc">Sélection de produits d'éclairage et création d'ambiances pour les espaces de vie intérieurs et extérieurs.</p>
+            <div class="project-meta"><span>Villa</span><span>Ambiance</span><span>Produits</span></div>
+            <div class="project-link">Voir le projet <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
+          </div>
+        </article>
+
+        <article class="project-card" data-cat="residential" onclick="openProject('fes')">
+          <div class="project-media"><img src="images/Réalisations/Villa Route de Fès/cover.jpg" alt="Villa Route de Fès" onerror="this.onerror=null;this.src='images/sliders/slide-cuisine.png'"><div class="project-pill">Villa</div></div>
+          <div class="project-content">
+            <div class="project-location">Route de Fès</div>
+            <h3 class="project-title">Villa Route de Fès</h3>
+            <p class="project-desc">Solutions lumineuses premium pour une villa avec éclairage décoratif, technique et extérieur.</p>
+            <div class="project-meta"><span>Villa</span><span>Éclairage</span><span>Extérieur</span></div>
+            <div class="project-link">Voir le projet <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
+          </div>
+        </article>
+
+        <article class="project-card" data-cat="residential" onclick="openProject('duplex-targa')">
+          <div class="project-media"><img src="images/Réalisations/Duplex Targa/cover.jpg" alt="Duplex Targa" onerror="this.onerror=null;this.src='images/SmartLighting/hero-casambi-salon.png'"><div class="project-pill">Duplex</div></div>
+          <div class="project-content">
+            <div class="project-location">Targa, Marrakech</div>
+            <h3 class="project-title">Duplex à Targa</h3>
+            <p class="project-desc">Éclairage intérieur sur mesure pour duplex : confort visuel, mise en valeur décorative et produits premium.</p>
+            <div class="project-meta"><span>Duplex</span><span>Intérieur</span><span>Sur mesure</span></div>
+            <div class="project-link">Voir le projet <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
+          </div>
+        </article>
+
+        <article class="project-card" data-cat="residential" onclick="openProject('amelkis')">
+          <div class="project-media"><img src="images/Réalisations/Villa Golf Amelkis/cover.jpg" alt="Villa Golf Amelkis" onerror="this.onerror=null;this.src='images/SmartLighting/projets-smart-lighting.png'"><div class="project-pill">Villa premium</div></div>
+          <div class="project-content">
+            <div class="project-location">Golf Amelkis</div>
+            <h3 class="project-title">Villa Golf Amelkis</h3>
+            <p class="project-desc">Projet résidentiel premium autour d'une ambiance lumineuse élégante, adaptée aux espaces de réception et de vie.</p>
+            <div class="project-meta"><span>Premium</span><span>Villa</span><span>Installation</span></div>
+            <div class="project-link">Voir le projet <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
+          </div>
+        </article>
+
+        <article class="project-card" data-cat="residential" onclick="openProject('alien-home')">
+          <div class="project-media"><img src="images/Réalisations/Alien Home - California USA/1.jpg" alt="Alien Home California USA"><div class="project-pill">Villa concept</div></div>
+          <div class="project-content">
+            <div class="project-location">California, USA</div>
+            <h3 class="project-title">Alien Home — California</h3>
+            <p class="project-desc">Concept résidentiel signature avec ambiance lumineuse futuriste, lignes architecturales fortes et scénarios d'éclairage premium.</p>
+            <div class="project-meta"><span>Concept</span><span>Villa</span><span>Lighting design</span></div>
+            <div class="project-link">Voir le projet <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured-real">
+    <div class="container featured-grid">
+      <div class="featured-copy">
+        <div class="section-kicker">Projet en focus</div>
+        <h2>Oasis Sky Camp Agafay</h2>
+        <p>Un restaurant où la lumière fait partie de l'expérience : éclairage chaleureux, zones de table bien définies, scénographie nocturne et choix de luminaires adaptés à l'ambiance du lieu.</p>
+        <div class="scope-list">
+          <div class="scope-item"><span class="scope-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></span>Éclairage décoratif et ambiance restaurant</div>
+          <div class="scope-item"><span class="scope-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></span>Sélection de produits adaptés aux zones de service</div>
+          <div class="scope-item"><span class="scope-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></span>Installation et finition sur site</div>
+        </div>
+        <a href="contact.html" class="btn-primary">Discuter d'un projet similaire</a>
+      </div>
+      <div class="featured-gallery">
+        <img src="images/Réalisations/Restaurant Oasis Sky Agafay/R62_0890.JPG" alt="Oasis Sky Camp Agafay">
+        <div class="featured-stack">
+          <img src="images/Réalisations/Restaurant Oasis Sky Agafay/R62_0918.JPG" alt="Ambiance restaurant Agafay">
+          <img src="images/Réalisations/Restaurant Oasis Sky Agafay/R62_0944.JPG" alt="Luminaire restaurant Agafay">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="real-cta">
+    <div class="container real-cta-inner">
+      <div>
+        <h2>Votre projet peut être le prochain.</h2>
+        <p>Villa, restaurant, hôtel, duplex ou commerce : notre équipe vous accompagne sur la conception, les produits et l'installation.</p>
+      </div>
+      <a href="consultation.html" class="btn-primary">Réserver une consultation gratuite</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="images/logo.png" alt="MAGGMALIGHT" class="footer-logo-img">
+        <div class="footer-brand-sub">Lighting Design &amp; Solutions</div>
+        <p class="footer-desc">L'expertise éclairage au service de vos projets. Produits premium, solutions intelligentes et accompagnement sur mesure partout au Maroc.</p>
+      </div>
+      <div><div class="footer-col-title">Produits</div><div class="footer-links"><a href="index.html#categories" class="footer-link">Éclairage intérieur</a><a href="index.html#categories" class="footer-link">Éclairage extérieur</a><a href="smart-lighting.html" class="footer-link">Smart Lighting</a><a href="index.html#categories" class="footer-link">Rails magnétiques</a></div></div>
+      <div><div class="footer-col-title">Informations</div><div class="footer-links"><a href="realisations.html" class="footer-link">Réalisations</a><a href="index.html#why" class="footer-link">À propos</a><a href="contact.html" class="footer-link">Contact</a><a href="consultation.html" class="footer-link">Consultation gratuite</a></div></div>
+      <div><div class="footer-col-title">Service Client</div><div class="footer-links"><a href="tel:+212708032018" class="footer-link">+212 708 032 018</a><a href="mailto:contact@maggmalight.com" class="footer-link">contact@maggmalight.com</a><a href="https://wa.me/212708032018" class="footer-link">Support WhatsApp</a></div></div>
+      <div><div class="footer-col-title">Showroom</div><div class="footer-links"><a href="https://maps.app.goo.gl/4cSXcTtbNnTfEFKS7" class="footer-link">Marrakech, Route de Safi</a><a href="#" class="footer-link">Lun - Sam : 9h00 - 19h00</a></div><div style="margin-top:16px;border-radius:8px;overflow:hidden;height:84px"><img src="images/Showroom/ouverture-4.JPG" alt="Showroom" style="width:100%;height:100%;object-fit:cover"></div></div>
+    </div>
+    <div class="footer-bottom"><div class="footer-bottom-left">© 2026 MAGGMALIGHT — Tous droits réservés. by <a href="https://groweb.ma" target="_blank" rel="noopener" class="footer-bottom-link">Groweb</a></div><div class="footer-bottom-right"><a href="#" class="footer-bottom-link">Mentions légales</a><a href="#" class="footer-bottom-link">Confidentialité</a></div></div>
+  </div>
+</footer>
+
+<a href="https://wa.me/212708032018" target="_blank" class="whatsapp-sticky" aria-label="WhatsApp">
+  <div class="whatsapp-label">Discuter sur WhatsApp</div>
+  <div class="whatsapp-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
+</a>
+
+<div class="modal" id="projectModal" onclick="closeProject(event)">
+  <div class="modal-panel" onclick="event.stopPropagation()">
+    <div class="modal-head">
+      <div>
+        <h3 class="modal-title" id="modalTitle"></h3>
+        <div class="modal-sub" id="modalLocation"></div>
+      </div>
+      <button class="modal-close" onclick="closeProject()">×</button>
+    </div>
+    <div class="modal-body">
+      <div>
+        <img src="" alt="" class="modal-main-img" id="modalMainImg">
+        <div class="modal-thumbs" id="modalThumbs"></div>
+      </div>
+      <div class="modal-info">
+        <p id="modalDesc"></p>
+        <div class="modal-info-grid">
+          <div class="modal-info-item"><strong>Type</strong><span id="modalType"></span></div>
+          <div class="modal-info-item"><strong>Intervention</strong><span id="modalScope"></span></div>
+          <div class="modal-info-item"><strong>Lieu</strong><span id="modalPlace"></span></div>
+        </div>
+        <a href="consultation.html" class="btn-primary">Demander une consultation</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const projectData = {
+  agafay: {
+    title:'Restaurant Oasis Sky Camp',
+    location:'Agafay, Marrakech',
+    type:'Restaurant',
+    scope:'Produits d’éclairage, ambiance décorative, installation',
+    desc:'Ambiance lumineuse chaude pour un restaurant à Agafay : suspensions, éclairage décoratif, zones de table et mise en valeur architecturale.',
+    images:[
+      'images/Réalisations/Restaurant Oasis Sky Agafay/R62_0897.JPG',
+      'images/Réalisations/Restaurant Oasis Sky Agafay/R62_0890.JPG',
+      'images/Réalisations/Restaurant Oasis Sky Agafay/R62_0918.JPG',
+      'images/Réalisations/Restaurant Oasis Sky Agafay/R62_0944.JPG',
+      'images/Réalisations/Restaurant Oasis Sky Agafay/1.JPG'
+    ]
+  },
+  'villa-targa': {
+    title:'Villa à Targa',
+    location:'Targa, Marrakech',
+    type:'Villa résidentielle',
+    scope:'Conception d’éclairage, produits MAGGMALIGHT, installation',
+    desc:'Projet complet depuis la réflexion lumière jusqu’à la sélection des produits et leur installation dans la villa.',
+    images:['images/Réalisations/Villa Targa/cover.jpg','images/Réalisations/Villa Targa/1.jpg','images/Réalisations/Villa Targa/2.jpg','images/Réalisations/Villa Targa/3.jpg','images/sliders/slide-salon.png']
+  },
+  ouarzazate: {
+    title:'Villa Route de Ouarzazate',
+    location:'Route de Ouarzazate',
+    type:'Villa résidentielle',
+    scope:'Produits d’éclairage et électricité',
+    desc:'Fourniture des produits d’éclairage et accompagnement sur la partie électricité pour une villa contemporaine.',
+    images:['images/Réalisations/Villa Route de Ouarzazate/cover.jpg','images/Réalisations/Villa Route de Ouarzazate/1.jpg','images/Réalisations/Villa Route de Ouarzazate/2.jpg','images/sliders/slide-ext.png']
+  },
+  tamensourt: {
+    title:'Villa à Tamensourt',
+    location:'Tamensourt',
+    type:'Villa résidentielle',
+    scope:'Produits d’éclairage et installation',
+    desc:'Sélection de produits d’éclairage et création d’ambiances pour les espaces de vie intérieurs et extérieurs.',
+    images:['images/Réalisations/Villa Tamensourt/cover.jpg','images/Réalisations/Villa Tamensourt/1.jpg','images/Réalisations/Villa Tamensourt/2.jpg','images/SmartLighting/projets-smart-lighting.png']
+  },
+  fes: {
+    title:'Villa Route de Fès',
+    location:'Route de Fès',
+    type:'Villa résidentielle',
+    scope:'Éclairage intérieur, extérieur et produits premium',
+    desc:'Solutions lumineuses premium pour une villa avec éclairage décoratif, technique et extérieur.',
+    images:['images/Réalisations/Villa Route de Fès/cover.jpg','images/Réalisations/Villa Route de Fès/1.jpg','images/Réalisations/Villa Route de Fès/2.jpg','images/sliders/slide-cuisine.png']
+  },
+  'duplex-targa': {
+    title:'Duplex à Targa',
+    location:'Targa, Marrakech',
+    type:'Duplex résidentiel',
+    scope:'Lighting design, produits et installation',
+    desc:'Éclairage intérieur sur mesure pour duplex : confort visuel, mise en valeur décorative et produits premium.',
+    images:['images/Réalisations/Duplex Targa/cover.jpg','images/Réalisations/Duplex Targa/1.jpg','images/Réalisations/Duplex Targa/2.jpg','images/SmartLighting/hero-casambi-salon.png']
+  },
+  amelkis: {
+    title:'Villa Golf Amelkis',
+    location:'Golf Amelkis, Marrakech',
+    type:'Villa premium',
+    scope:'Produits premium, ambiance lumineuse, installation',
+    desc:'Projet résidentiel premium autour d’une ambiance lumineuse élégante, adaptée aux espaces de réception et de vie.',
+    images:['images/Réalisations/Villa Golf Amelkis/cover.jpg','images/Réalisations/Villa Golf Amelkis/1.jpg','images/Réalisations/Villa Golf Amelkis/2.jpg','images/SmartLighting/projets-smart-lighting.png']
+  },
+  'alien-home': {
+    title:'Alien Home — California',
+    location:'California, USA',
+    type:'Villa concept',
+    scope:'Concept lighting design, ambiance architecturale, scénarios lumineux',
+    desc:'Concept résidentiel signature avec ambiance lumineuse futuriste, lignes architecturales fortes et scénarios d’éclairage premium.',
+    images:[
+      'images/Réalisations/Alien Home - California USA/1.jpg',
+      'images/Réalisations/Alien Home - California USA/12.jpg',
+      'images/Réalisations/Alien Home - California USA/16.jpg',
+      'images/Réalisations/Alien Home - California USA/Screenshot 2025-04-18 at 10.34.06 AM.png',
+      'images/Réalisations/Alien Home - California USA/Screenshot 2025-04-23 at 3.22.19 PM.png'
+    ]
+  }
+};
+
+const fallbackImage = 'images/Showroom/R62_0185.JPG';
+
+function filterProjects(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(item => item.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.project-card').forEach(card => {
+    const cats = card.dataset.cat || '';
+    card.style.display = cat === 'all' || cats.includes(cat) ? '' : 'none';
+  });
+}
+
+function openProject(id) {
+  const project = projectData[id];
+  if (!project) return;
+  document.getElementById('modalTitle').textContent = project.title;
+  document.getElementById('modalLocation').textContent = project.location;
+  document.getElementById('modalDesc').textContent = project.desc;
+  document.getElementById('modalType').textContent = project.type;
+  document.getElementById('modalScope').textContent = project.scope;
+  document.getElementById('modalPlace').textContent = project.location;
+  setModalImage(project.images[0]);
+  const thumbs = document.getElementById('modalThumbs');
+  thumbs.innerHTML = '';
+  project.images.forEach((src, index) => {
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = project.title;
+    img.className = index === 0 ? 'active' : '';
+    img.onerror = () => { img.onerror = null; img.src = fallbackImage; };
+    img.onclick = () => {
+      document.querySelectorAll('.modal-thumbs img').forEach(t => t.classList.remove('active'));
+      img.classList.add('active');
+      setModalImage(src);
+    };
+    thumbs.appendChild(img);
+  });
+  document.getElementById('projectModal').classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+
+function setModalImage(src) {
+  const main = document.getElementById('modalMainImg');
+  main.src = src;
+  main.onerror = () => { main.onerror = null; main.src = fallbackImage; };
+}
+
+function closeProject(event) {
+  if (event && event.target.id !== 'projectModal') return;
+  document.getElementById('projectModal').classList.remove('show');
+  document.body.style.overflow = '';
+}
+
+function toggleMobileNav() {
+  document.getElementById('mobileNav').classList.toggle('active');
+}
+
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 260) {
+    navbar.classList.remove('hero-mode');
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.add('hero-mode');
+    navbar.classList.remove('scrolled');
+  }
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeProject();
+});
+</script>
+
+<script>
+(function(){
+  window.toggleMobileNav = function(){
+    const nav = document.getElementById('mobileNav');
+    if (!nav) return;
+    nav.classList.toggle('open');
+    nav.classList.toggle('active');
+    document.body.style.overflow = (nav.classList.contains('open') || nav.classList.contains('active')) ? 'hidden' : '';
+  };
+  if (!window.openSearch) window.openSearch = function(){ location.href = 'category.html?cat=salon'; };
+  if (!window.openCart) window.openCart = function(){ location.href = 'product.html'; };
+  const navbar = document.getElementById('navbar');
+  function updateCommonNavbar(){
+    if (!navbar) return;
+    const hero = document.querySelector('.hero, .cat-hero, .contact-hero, .blog-hero, .academy-hero, .sl-hero, .cp-hero, .real-hero, .product-page, .ty-wrap');
+    const threshold = hero ? Math.max(90, hero.offsetHeight * 0.45) : 140;
+    if (window.scrollY > threshold) {
+      navbar.classList.remove('hero-mode');
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.add('hero-mode');
+      navbar.classList.remove('scrolled');
+    }
+  }
+  window.addEventListener('scroll', updateCommonNavbar, { passive:true });
+  window.addEventListener('resize', updateCommonNavbar);
+  updateCommonNavbar();
+})();
+</script>
+
+</body>
+</html>

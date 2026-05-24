@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formations Dialux & Relux au Maroc - MAGGMALIGHT Academy</title>
+  <meta name="description" content="Formations professionnelles Dialux, Relux et conception d'éclairage avec MAGGMALIGHT Academy au Maroc. Apprenez avec Said Ouhssaine, expert en éclairage.">
+  <meta name="keywords" content="formation Dialux Maroc, formation Relux Maroc, formation éclairage Marrakech, conception lumière, MAGGMALIGHT Academy">
+  <link rel="canonical" href="https://maggmalight.com/formations.html">
+  <meta property="og:title" content="Formations Dialux & Relux - MAGGMALIGHT Academy">
+  <meta property="og:description" content="Maîtrisez Dialux, Relux et la conception lumière avec un expert en éclairage au Maroc.">
+  <meta property="og:image" content="images/Blog/blog-hero-smart-lighting.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body { background:#fff; color:var(--black); }
+    .academy-main { overflow:hidden; }
+    .academy-hero { position:relative; min-height:680px; display:flex; align-items:center; background:#090705 url('images/Formations/formations-hero-slider.png') center/cover no-repeat; border-bottom:1px solid var(--border); overflow:hidden; }
+    .academy-hero::before { content:''; position:absolute; inset:0; background:linear-gradient(90deg,rgba(0,0,0,.78) 0%,rgba(0,0,0,.56) 34%,rgba(0,0,0,.12) 67%,rgba(0,0,0,.22) 100%); }
+    .academy-hero::after { display:none; }
+    .academy-hero .container { max-width:none; width:100%; margin:0; padding-left:clamp(22px,5.6vw,96px); padding-right:28px; }
+    .academy-hero-inner { position:relative; z-index:1; max-width:660px; padding:92px 0 76px; color:#fff; text-align:left; margin-left:0; }
+    .academy-breadcrumb { display:none; gap:10px; align-items:center; color:rgba(255,255,255,.62); font-size:.72rem; margin-bottom:42px; }
+    .academy-breadcrumb a { color:rgba(255,255,255,.78); }
+    .academy-kicker { color:var(--orange); text-transform:uppercase; letter-spacing:.13em; font-size:.74rem; font-weight:800; margin-bottom:14px; }
+    .academy-title { font-size:clamp(2.35rem,4.8vw,4.45rem); line-height:1.12; letter-spacing:-.03em; margin-bottom:20px; max-width:650px; color:#fff; text-shadow:0 12px 38px rgba(0,0,0,.45); }
+    .academy-lead { color:rgba(255,255,255,.88); line-height:1.85; font-size:1rem; max-width:560px; margin-bottom:28px; text-shadow:0 8px 26px rgba(0,0,0,.35); }
+    .academy-actions { display:flex; justify-content:flex-start; align-items:center; gap:14px; flex-wrap:wrap; }
+    .academy-btn { min-height:48px; padding:0 24px; border-radius:7px; font-weight:800; font-size:.82rem; display:inline-flex; align-items:center; justify-content:center; gap:10px; transition:var(--tr); }
+    .academy-btn svg { width:17px; height:17px; }
+    .academy-btn-primary { background:var(--orange); color:#fff; box-shadow:0 18px 42px rgba(242,173,100,.28); }
+    .academy-btn-primary:hover { background:var(--orange-dark); transform:translateY(-2px); }
+    .academy-btn-light { background:rgba(255,255,255,.08); color:#fff; border:1px solid rgba(255,255,255,.55); backdrop-filter:blur(8px); }
+    .academy-btn-light:hover { border-color:var(--orange); color:#fff; background:rgba(242,173,100,.18); transform:translateY(-2px); }
+    .hero-device { display:none; position:absolute; z-index:1; right:7vw; bottom:60px; width:min(420px,34vw); border-radius:18px; padding:14px; background:linear-gradient(135deg,#191919,#050505); box-shadow:0 36px 80px rgba(0,0,0,.3); transform:perspective(900px) rotateY(-8deg) rotateX(3deg); }
+    .hero-device-screen { aspect-ratio:16/10; border-radius:12px; overflow:hidden; background:#101010; position:relative; }
+    .hero-device-screen::before { content:''; position:absolute; inset:0; background:url('images/Spaces/facade.png') center/cover no-repeat; opacity:.72; }
+    .hero-device-screen::after { content:'DIALux\A RELUX'; white-space:pre; position:absolute; right:22px; bottom:20px; color:#fff; font-weight:800; font-size:clamp(1.2rem,2vw,2rem); line-height:1.4; text-align:right; text-shadow:0 4px 18px rgba(0,0,0,.55); }
+    .academy-strip { display:none; border-bottom:1px solid var(--border); background:#fff; }
+    .academy-strip-inner { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; padding:18px 0; }
+    .academy-strip-item { display:flex; align-items:center; gap:10px; color:var(--text-2); font-size:.77rem; font-weight:700; }
+    .academy-strip-item svg { width:18px; height:18px; color:var(--orange); flex-shrink:0; }
+    .academy-section { padding:64px 0; }
+    .academy-section.alt { background:#fbfaf7; }
+    .trainer-grid { display:grid; grid-template-columns:330px 1fr; gap:48px; align-items:center; }
+    .trainer-photo { height:360px; border-radius:10px; overflow:hidden; background:linear-gradient(145deg,#f8f8f6,#fff); position:relative; box-shadow:0 24px 60px rgba(29,29,27,.13); }
+    .trainer-photo img { width:100%; height:100%; object-fit:cover; object-position:center top; display:block; }
+    .trainer-photo::after { content:''; position:absolute; inset:auto 0 0; height:34%; background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.55)); pointer-events:none; }
+    .trainer-title { font-size:2rem; line-height:1.2; margin:8px 0 8px; }
+    .trainer-role { font-weight:800; margin-bottom:16px; }
+    .trainer-copy { color:var(--text-2); line-height:1.85; max-width:670px; margin-bottom:26px; }
+    .trainer-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:22px; }
+    .trainer-stat svg { width:28px; height:28px; color:var(--orange); margin-bottom:9px; }
+    .trainer-stat strong { display:block; color:var(--orange); font-size:1.25rem; }
+    .trainer-stat span { color:var(--text-3); font-size:.68rem; }
+    .section-head { text-align:center; max-width:680px; margin:0 auto 34px; }
+    .section-head h2 { font-size:clamp(1.65rem,3vw,2.35rem); line-height:1.2; margin-bottom:10px; }
+    .section-head p { color:var(--text-2); line-height:1.7; }
+    .training-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
+    .training-card { background:#fff; border:1px solid var(--border); border-radius:10px; overflow:hidden; box-shadow:0 18px 48px rgba(29,29,27,.06); transition:var(--tr); }
+    .training-card:hover { transform:translateY(-6px); border-color:rgba(242,173,100,.45); box-shadow:0 26px 70px rgba(29,29,27,.12); }
+    .training-img { height:154px; overflow:hidden; }
+    .training-img img { width:100%; height:100%; object-fit:cover; transition:transform .45s ease; }
+    .training-card:hover .training-img img { transform:scale(1.06); }
+    .training-body { padding:22px; position:relative; }
+    .training-icon { position:absolute; top:-26px; left:22px; width:52px; height:52px; border-radius:50%; background:#fff; color:var(--orange); border:1px solid var(--border); display:flex; align-items:center; justify-content:center; box-shadow:0 12px 28px rgba(29,29,27,.1); }
+    .training-icon svg { width:24px; height:24px; }
+    .training-body h3 { font-size:1.05rem; margin:18px 0 10px; }
+    .training-body p { color:var(--text-2); font-size:.78rem; line-height:1.7; margin-bottom:16px; min-height:54px; }
+    .training-list { display:grid; gap:8px; margin-bottom:18px; color:var(--text-2); font-size:.73rem; }
+    .training-list li { display:flex; gap:8px; align-items:flex-start; }
+    .training-list li::before { content:'✓'; color:var(--orange); font-weight:900; }
+    .training-link { height:38px; padding:0 14px; border:1px solid var(--border); border-radius:6px; display:flex; align-items:center; justify-content:space-between; color:var(--black); font-weight:800; font-size:.74rem; transition:var(--tr); }
+    .training-link:hover { color:#fff; background:var(--orange); border-color:var(--orange); }
+    .youtube-band { background:#fff; border:1px solid var(--border); border-radius:12px; padding:28px; display:grid; grid-template-columns:1fr 1.5fr; gap:30px; align-items:center; box-shadow:0 22px 58px rgba(29,29,27,.07); }
+    .youtube-intro { display:flex; gap:18px; align-items:flex-start; }
+    .youtube-icon { width:44px; height:44px; border-radius:10px; background:#ff2d2d; color:#fff; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+    .youtube-icon svg { width:23px; height:23px; }
+    .youtube-intro h3 { margin-bottom:8px; }
+    .youtube-intro p { color:var(--text-2); font-size:.82rem; line-height:1.7; margin-bottom:18px; }
+    .youtube-proof { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:0 0 18px; }
+    .youtube-proof-card { border:1px solid rgba(242,173,100,.32); background:linear-gradient(145deg,#fff,#fff8f0); color:var(--black); border-radius:10px; padding:13px 12px; min-height:98px; transition:var(--tr); }
+    .youtube-proof-card:hover { transform:translateY(-4px); border-color:var(--orange); box-shadow:0 16px 38px rgba(242,173,100,.16); }
+    .youtube-proof-card svg { width:24px; height:24px; color:var(--orange); margin-bottom:10px; }
+    .youtube-proof-card strong { display:block; font-size:.9rem; line-height:1.2; margin-bottom:5px; }
+    .youtube-proof-card span { display:block; color:var(--text-2); font-size:.66rem; line-height:1.45; font-weight:700; }
+    .youtube-intro .academy-btn-light { background:#fff; color:var(--black); border-color:var(--border); }
+    .youtube-intro .academy-btn-light:hover { color:#fff; background:var(--orange); border-color:var(--orange); }
+    .video-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+    .video-card { aspect-ratio:9 / 6; min-height:0; border-radius:8px; overflow:hidden; position:relative; background:#111; color:#fff; padding:14px; display:flex; align-items:flex-end; }
+    .video-card::before { content:''; position:absolute; inset:0; background:var(--img) center/cover no-repeat; opacity:.75; }
+    .video-card::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg,rgba(0,0,0,.1),rgba(0,0,0,.78)); }
+    .video-card strong { position:relative; z-index:1; font-size:.85rem; line-height:1.35; }
+    .why-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:22px; }
+    .why-card { border:1px solid var(--border); border-radius:10px; padding:24px; background:#fff; transition:var(--tr); }
+    .why-card:hover { transform:translateY(-4px); box-shadow:0 18px 48px rgba(29,29,27,.09); border-color:rgba(242,173,100,.38); }
+    .why-card svg { width:34px; height:34px; color:var(--orange); margin-bottom:16px; }
+    .why-card strong { display:block; margin-bottom:8px; }
+    .why-card p { color:var(--text-2); font-size:.78rem; line-height:1.7; }
+    .reviews-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; }
+    .academy-review { background:#fff; border:1px solid var(--border); border-radius:10px; padding:24px; box-shadow:0 14px 38px rgba(29,29,27,.05); }
+    .academy-stars { color:var(--orange); letter-spacing:2px; margin-bottom:12px; }
+    .academy-review p { color:var(--text-2); line-height:1.75; font-size:.84rem; margin-bottom:18px; }
+    .review-person { display:flex; align-items:center; gap:12px; }
+    .review-avatar { width:38px; height:38px; border-radius:50%; background:#111; color:#fff; display:flex; align-items:center; justify-content:center; font-weight:800; }
+    .academy-cta { background:#10100f; color:#fff; padding:44px 0; }
+    .academy-cta-inner { display:flex; align-items:center; justify-content:space-between; gap:28px; }
+    .academy-cta h2 { font-size:1.7rem; margin-bottom:8px; }
+    .academy-cta p { color:rgba(255,255,255,.72); }
+    @media(max-width:1050px) {
+      .hero-device { display:none; }
+      .academy-hero { background-position:center; }
+      .training-grid, .why-grid { grid-template-columns:repeat(2,1fr); }
+      .trainer-grid, .youtube-band { grid-template-columns:1fr; }
+    }
+    @media(max-width:720px) {
+      .academy-hero { min-height:560px; background-position:center; }
+      .academy-hero .container { padding-left:18px; padding-right:18px; }
+      .academy-hero-inner { padding:74px 0 46px; }
+      .academy-actions { align-items:flex-start; }
+      .academy-strip-inner, .trainer-stats, .training-grid, .why-grid, .reviews-grid, .video-grid, .youtube-proof { grid-template-columns:1fr; }
+      .academy-cta-inner { flex-direction:column; align-items:flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============ TICKER ============ -->
+<div class="ticker-bar">
+  <div class="ticker-track">
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Livraison partout au Maroc</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>Paiement 100% sécurisé</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Conseil expert gratuit</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>Installation disponible</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Showroom à Marrakech</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Produits garantis 2 ans</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Livraison partout au Maroc</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>Paiement 100% sécurisé</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Conseil expert gratuit</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>Installation disponible</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Showroom à Marrakech</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Produits garantis 2 ans</div>
+    <span class="ticker-sep">✦</span>
+  </div>
+</div>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar hero-mode" id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" id="navLogo">
+        <img src="images/logo.png" alt="MAGGMALIGHT" class="nav-logo-img" id="logoImg" onerror="this.style.display='none';document.getElementById('logoText').style.display='flex'">
+        <span class="nav-logo-text" id="logoText" style="display:none">
+          <span class="nav-logo-main">MAGGMA<span class="logo-light">LIGHT</span></span>
+          <span class="nav-logo-sub">Lighting Design &amp; Solutions</span>
+        </span>
+      </a>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="index.html#categories" class="nav-link">
+            Produits
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-dropdown">
+            <a href="category.html?cat=salon">Toutes les catégories</a>
+            <a href="category.html?cat=suspensions">Suspensions</a>
+            <a href="category.html?cat=appliques">Appliques murales</a>
+            <a href="category.html?cat=spots">Spots &amp; Downlights</a>
+            <a href="category.html?cat=rails">Rails Magnétiques</a>
+            <a href="category.html?cat=exterieur">Luminaires Extérieurs</a>
+            <a href="smart-lighting.html">Smart Lighting</a>
+            <a href="category.html?cat=ruban">Profils LED</a>
+            <a href="category.html?cat=lampadaires">Lampes Décoratives</a>
+            <a href="category.html?cat=appareillage">Appareillage</a>
+          </div>
+        </li>
+        <li><a href="formations.html" class="nav-link">Formations</a></li>
+        <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+        <li><a href="smart-lighting.html" class="nav-link" style="color:var(--orange);font-weight:600">Smart Lighting</a></li>
+        <li><a href="blog.html" class="nav-link">Conseils</a></li>
+        <li><a href="index.html#showroom" class="nav-link">À propos</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="nav-action-btn" onclick="window.openSearch ? openSearch() : (location.href='category.html?cat=salon')" title="Rechercher">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="nav-action-btn" title="Mon compte">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </button>
+        <button class="nav-action-btn" title="Favoris">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </button>
+        <button class="nav-action-btn" onclick="window.openCart ? openCart() : (location.href='product.html')" title="Panier">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span class="nav-badge" id="cart-count">0</span>
+        </button>
+      </div>
+      <div class="nav-hamburger" onclick="toggleMobileNav()"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-header">
+    <div class="nav-logo-text">
+      <span class="nav-logo-main" style="color:#1D1D1B">MAGGMA<span class="logo-light">LIGHT</span></span>
+      <span class="nav-logo-sub" style="color:#888">Lighting Design &amp; Solutions</span>
+    </div>
+    <button class="mobile-nav-close" onclick="toggleMobileNav()">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="mobile-nav-links">
+    <a href="index.html#categories" onclick="toggleMobileNav()">Produits</a>
+    <a href="formations.html" onclick="toggleMobileNav()">Formations</a>
+    <a href="realisations.html" onclick="toggleMobileNav()">Réalisations</a>
+    <a href="smart-lighting.html" onclick="toggleMobileNav()">Smart Lighting</a>
+    <a href="blog.html" onclick="toggleMobileNav()">Conseils</a>
+    <a href="index.html#showroom" onclick="toggleMobileNav()">À propos</a>
+    <a href="contact.html" onclick="toggleMobileNav()">Contact</a>
+    <a href="consultation.html" style="color:var(--orange);font-weight:700">Réserver une consultation</a>
+  </div>
+</div>
+
+<main class="academy-main">
+  <section class="academy-hero">
+    <div class="hero-device"><div class="hero-device-screen"></div></div>
+    <div class="container">
+      <div class="academy-hero-inner">
+        <div class="academy-breadcrumb"><a href="index.html">Accueil</a><span>›</span><a href="formations.html">Formations</a><span>›</span><span>Formation Dialux & Relux</span></div>
+        <div class="academy-kicker">Formation professionnelle</div>
+        <h1 class="academy-title">Maîtrisez Dialux & Relux avec un expert en éclairage</h1>
+        <p class="academy-lead">Formez-vous avec Said Ouhssaine, spécialiste en conception lumière, projets résidentiels, hôtels, restaurants et espaces commerciaux.</p>
+        <div class="academy-actions">
+          <a href="contact.html" class="academy-btn academy-btn-primary">S'inscrire à la formation <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+          <a href="consultation.html" class="academy-btn academy-btn-light">Réserver votre consultation gratuite <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="academy-strip">
+    <div class="container academy-strip-inner">
+      <div class="academy-strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20l9-5-9-5-9 5 9 5z"/><path d="M12 12l9-5-9-5-9 5 9 5z"/></svg>Formations 100% pratiques</div>
+      <div class="academy-strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Certificat de formation</div>
+      <div class="academy-strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Accès aux supports</div>
+      <div class="academy-strip-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Accompagnement personnalisé</div>
+    </div>
+  </div>
+
+  <section class="academy-section">
+    <div class="container trainer-grid">
+      <div class="trainer-photo">
+        <img src="images/Team/said-ouhssaine.png" alt="Said Ouhssaine, formateur Dialux et Relux">
+      </div>
+      <div>
+        <div class="academy-kicker">Votre formateur</div>
+        <h2 class="trainer-title">Said Ouhssaine</h2>
+        <div class="trainer-role">Éclairagiste &amp; Formateur<br>Plus de 9 ans d'expérience en éclairage</div>
+        <p class="trainer-copy">Passionné par la lumière et la conception d'espaces, j'accompagne les architectes, designers et ingénieurs dans la maîtrise des logiciels Dialux et Relux pour créer des projets d'éclairage performants, esthétiques et réalistes.</p>
+        <div class="trainer-stats">
+          <div class="trainer-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l2 4 4 2-4 2-2 4-2-4-4-2 4-2 2-4z"/></svg><strong>9+</strong><span>ans d'expérience</span></div>
+          <div class="trainer-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg><strong>+150</strong><span>apprenants formés</span></div>
+          <div class="trainer-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 12h8M8 16h5M8 8h8"/></svg><strong>600+</strong><span>projets réalisés</span></div>
+          <div class="trainer-stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6L9 17l-5-5"/></svg><strong>100%</strong><span>satisfaction</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="academy-section alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>Nos formations en éclairage</h2>
+        <p>Des programmes pensés pour apprendre avec des cas réels, des exercices concrets et une méthode professionnelle.</p>
+      </div>
+      <div class="training-grid">
+        <article class="training-card">
+          <div class="training-img"><img src="images/Formations/bases-eclairage.png" alt="Formation bases en éclairage"></div>
+          <div class="training-body">
+            <div class="training-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2a7 7 0 00-4 12c.7.6 1 1.3 1 2h6c0-.7.3-1.4 1-2a7 7 0 00-4-12z"/></svg></div>
+            <h3>Les bases en éclairage</h3>
+            <p>Comprenez les fondamentaux de la lumière et maîtrisez les bases techniques.</p>
+            <ul class="training-list"><li>Principes de la lumière</li><li>Unités et photométrie</li><li>Types de luminaires</li><li>Calculs d'éclairage</li></ul>
+            <a href="contact.html" class="training-link">Voir la formation <span>→</span></a>
+          </div>
+        </article>
+        <article class="training-card">
+          <div class="training-img"><img src="images/Spaces/salon.png" alt="Formation éclairage résidentiel"></div>
+          <div class="training-body">
+            <div class="training-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg></div>
+            <h3>Éclairage résidentiel</h3>
+            <p>Concevez des ambiances lumineuses confortables et esthétiques.</p>
+            <ul class="training-list"><li>Séjours et chambres</li><li>Éclairage fonctionnel</li><li>Études de cas</li><li>Rendus réalistes</li></ul>
+            <a href="contact.html" class="training-link">Voir la formation <span>→</span></a>
+          </div>
+        </article>
+        <article class="training-card">
+          <div class="training-img"><img src="images/Formations/eclairage-horticole.png" alt="Formation éclairage horticole"></div>
+          <div class="training-body">
+            <div class="training-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22V12"/><path d="M12 12C8 12 5 9 5 5c4 0 7 3 7 7z"/><path d="M12 12c4 0 7-3 7-7-4 0-7 3-7 7z"/></svg></div>
+            <h3>Éclairage horticole</h3>
+            <p>Apprenez à concevoir des solutions adaptées à la culture et aux plantes.</p>
+            <ul class="training-list"><li>Photosynthèse et spectre</li><li>Types de cultures</li><li>Calculs PPFD</li><li>Études de cas réels</li></ul>
+            <a href="contact.html" class="training-link">Voir la formation <span>→</span></a>
+          </div>
+        </article>
+        <article class="training-card">
+          <div class="training-img"><img src="images/Formations/mentorship-1-to-1.png" alt="Mentorship éclairage personnalisé"></div>
+          <div class="training-body">
+            <div class="training-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div>
+            <h3>Mentorship 1-to-1</h3>
+            <p>Un accompagnement personnalisé pour développer votre expertise.</p>
+            <ul class="training-list"><li>Sessions personnalisées</li><li>Analyse de projets</li><li>Conseils stratégiques</li><li>Suivi sur-mesure</li></ul>
+            <a href="contact.html" class="training-link">En savoir plus <span>→</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="academy-section">
+    <div class="container youtube-band">
+      <div class="youtube-intro">
+        <div class="youtube-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></div>
+        <div>
+          <h3>Découvrez Maggmalight Academy sur YouTube</h3>
+          <p>Des tutoriels gratuits, des astuces d'experts et des études de projets réels pour progresser en éclairage.</p>
+          <div class="youtube-proof">
+            <div class="youtube-proof-card">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9l5 3-5 3z"/></svg>
+              <strong>+142 vidéos</strong>
+              <span>Dialux, Relux, lighting design.</span>
+            </div>
+            <div class="youtube-proof-card">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15 15 0 010 20"/><path d="M12 2a15 15 0 000 20"/></svg>
+              <strong>Audience mondiale</strong>
+              <span>Europe, Afrique, USA, UAE.</span>
+            </div>
+            <div class="youtube-proof-card">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11l18-8-8 18-2-8-8-2z"/><path d="M13 13l8-10"/></svg>
+              <strong>7+ pays</strong>
+              <span>Grèce, Germany, France, Maroc...</span>
+            </div>
+          </div>
+          <a href="https://www.youtube.com/@OUHSSAINESAID-LightingDesign" target="_blank" class="academy-btn academy-btn-light">Voir la chaîne YouTube <span>→</span></a>
+        </div>
+      </div>
+      <div class="video-grid">
+        <a href="https://youtu.be/msxKGaxI3II?si=YWSHKs62KLD-FS7C" target="_blank" rel="noopener" class="video-card" style="--img:url('images/Formations/Miniatures/Dialu evo guide for beginners.jpg')"><strong>DIALux Evo guide pour débutants</strong></a>
+        <a href="https://youtu.be/nLK12CXbfDg?si=BNRQX6IF65xEXYvm" target="_blank" rel="noopener" class="video-card" style="--img:url('images/Formations/Miniatures/Dialux vs Relu.jpg')"><strong>DIALux vs Relux : lequel choisir ?</strong></a>
+        <a href="https://www.youtube.com/watch?v=03uda_ttA9g" target="_blank" rel="noopener" class="video-card" style="--img:url('images/Formations/Miniatures/Outdoor Planning & Lighting Dialux Evo.jpg')"><strong>Outdoor Planning & Lighting Dialux Evo</strong></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="academy-section alt">
+    <div class="container">
+      <div class="section-head"><h2>Pourquoi se former avec Maggmalight ?</h2></div>
+      <div class="why-grid">
+        <div class="why-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg><strong>Apprentissage pratique</strong><p>Des exercices concrets et des projets réels pour maîtriser les logiciels.</p></div>
+        <div class="why-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg><strong>Expert formateur</strong><p>Apprenez avec un professionnel passionné, pédagogue et terrain.</p></div>
+        <div class="why-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8 12h8M12 8v8"/></svg><strong>Accompagnement</strong><p>Un suivi personnalisé pour répondre à vos questions et progresser vite.</p></div>
+        <div class="why-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18.5 7.5L5.5 20.5"/><path d="M5.5 7.5l13 13"/></svg><strong>Accès à vie</strong><p>Accédez aux ressources, supports et mises à jour après la formation.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="academy-section">
+    <div class="container">
+      <div class="section-head"><h2>Ils ont suivi la formation</h2></div>
+      <div class="reviews-grid">
+        <div class="academy-review"><div class="academy-stars">★★★★★</div><p>“Excellente formation. Les exemples sont concrets et la méthode est claire.”</p><div class="review-person"><div class="review-avatar">YB</div><div><strong>Yassine B.</strong><br><span>Architecte</span></div></div></div>
+        <div class="academy-review"><div class="academy-stars">★★★★★</div><p>“Grâce à cette formation, j'ai gagné en autonomie et en qualité dans mes projets d'éclairage.”</p><div class="review-person"><div class="review-avatar">IK</div><div><strong>Imane K.</strong><br><span>Designer d'intérieur</span></div></div></div>
+        <div class="academy-review"><div class="academy-stars">★★★★★</div><p>“Le contenu est clair, complet et très pratique. Je recommande vivement.”</p><div class="review-person"><div class="review-avatar">MT</div><div><strong>Mehdi T.</strong><br><span>Ingénieur électricité</span></div></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="academy-cta">
+    <div class="container academy-cta-inner">
+      <div>
+        <h2>Prêt à maîtriser Dialux & Relux ?</h2>
+        <p>Contactez MAGGMALIGHT Academy pour recevoir le programme et les prochaines dates.</p>
+      </div>
+      <a href="contact.html" class="academy-btn academy-btn-primary">Demander une inscription</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="images/logo.png" alt="MAGGMALIGHT" class="footer-logo-img">
+        <p class="footer-desc">Des luminaires design et modernes, des solutions intelligentes et une academy dédiée à la conception lumière.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/maggmalight/" class="footer-social" target="_blank" rel="noopener">IG</a>
+          <a href="https://www.facebook.com/profile.php?id=100089545215268&locale=fr_FR" class="footer-social" target="_blank" rel="noopener">FB</a>
+          <a href="https://www.youtube.com/@OUHSSAINESAID-LightingDesign" class="footer-social" target="_blank" rel="noopener">YT</a>
+        </div>
+      </div>
+      <div><div class="footer-col-title">Informations</div><div class="footer-links"><a href="index.html#showroom" class="footer-link">À propos</a><a href="realisations.html" class="footer-link">Réalisations</a><a href="formations.html" class="footer-link">Formations</a><a href="contact.html" class="footer-link">Contact</a></div></div>
+      <div><div class="footer-col-title">Produits</div><div class="footer-links"><a href="category.html?cat=salon" class="footer-link">Catégories</a><a href="smart-lighting.html" class="footer-link">Smart Lighting</a><a href="category.html?cat=suspensions" class="footer-link">Suspensions</a><a href="category.html?cat=appliques" class="footer-link">Appliques</a></div></div>
+      <div><div class="footer-col-title">Service Client</div><div class="footer-links"><a href="tel:+212708032018" class="footer-link">+212 708 032 018</a><a href="mailto:contact@maggmalight.com" class="footer-link">contact@maggmalight.com</a><a href="consultation.html" class="footer-link">Consultation gratuite</a></div></div>
+      <div><div class="footer-col-title">Newsletter</div><p class="footer-desc">Recevez nos conseils, formations et nouveautés.</p><div style="display:flex"><input style="flex:1;background:#1b1b1b;border:1px solid #2d2d2d;color:#fff;padding:12px;border-radius:5px 0 0 5px" placeholder="Votre email"><button style="background:var(--orange);color:#fff;padding:0 16px;border-radius:0 5px 5px 0">›</button></div></div>
+    </div>
+    <div class="footer-bottom"><div class="footer-bottom-left">© 2026 MAGGMALIGHT — Tous droits réservés. by <a href="https://groweb.ma" target="_blank" rel="noopener" class="footer-bottom-link">Groweb</a></div><div class="footer-bottom-right"><a href="#" class="footer-bottom-link">Mentions légales</a><a href="#" class="footer-bottom-link">CGV</a><a href="#" class="footer-bottom-link">Confidentialité</a></div></div>
+  </div>
+</footer>
+
+<a href="https://wa.me/212708032018?text=Bonjour%20MAGGMALIGHT%2C%20je%20souhaite%20des%20informations%20sur%20les%20formations%20Dialux%20et%20Relux." class="whatsapp-sticky" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/></svg>
+</a>
+
+<script>
+function toggleMobileNav(){const nav=document.getElementById('mobileNav'); if(nav) nav.classList.toggle('active');}
+</script>
+
+<script>
+(function(){
+  window.toggleMobileNav = function(){
+    const nav = document.getElementById('mobileNav');
+    if (!nav) return;
+    nav.classList.toggle('open');
+    nav.classList.toggle('active');
+    document.body.style.overflow = (nav.classList.contains('open') || nav.classList.contains('active')) ? 'hidden' : '';
+  };
+  if (!window.openSearch) window.openSearch = function(){ location.href = 'category.html?cat=salon'; };
+  if (!window.openCart) window.openCart = function(){ location.href = 'product.html'; };
+  const navbar = document.getElementById('navbar');
+  function updateCommonNavbar(){
+    if (!navbar) return;
+    const hero = document.querySelector('.hero, .cat-hero, .contact-hero, .blog-hero, .academy-hero, .sl-hero, .cp-hero, .real-hero, .product-page, .ty-wrap');
+    const threshold = hero ? Math.max(90, hero.offsetHeight * 0.45) : 140;
+    if (window.scrollY > threshold) {
+      navbar.classList.remove('hero-mode');
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.add('hero-mode');
+      navbar.classList.remove('scrolled');
+    }
+  }
+  window.addEventListener('scroll', updateCommonNavbar, { passive:true });
+  window.addEventListener('resize', updateCommonNavbar);
+  updateCommonNavbar();
+})();
+</script>
+
+</body>
+</html>

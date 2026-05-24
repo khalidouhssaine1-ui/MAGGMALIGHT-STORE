@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commande reçue — MAGGMALIGHT</title>
+  <meta name="description" content="Merci pour votre commande MAGGMALIGHT. Notre équipe vous contactera pour confirmer votre commande et organiser la livraison.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body { background:#f8f7f4; color:var(--black); }
+    .ty-wrap { min-height:100vh; padding:120px 0 60px; display:flex; align-items:center; }
+    .ty-card { background:#fff; border:1px solid var(--border); border-radius:18px; overflow:hidden; box-shadow:0 20px 60px rgba(29,29,27,.08); max-width:980px; margin:0 auto; }
+    .ty-hero { background:linear-gradient(135deg,#111,#1D1D1B); color:#fff; padding:44px; position:relative; overflow:hidden; }
+    .ty-hero::after { content:''; position:absolute; right:-80px; top:-80px; width:260px; height:260px; border-radius:50%; background:rgba(242,173,100,.16); }
+    .ty-logo { height:36px; width:auto; background:transparent; border-radius:0; padding:0; margin-bottom:28px; box-sizing:content-box; }
+    .ty-check { width:62px; height:62px; border-radius:50%; background:var(--orange); display:flex; align-items:center; justify-content:center; margin-bottom:18px; box-shadow:0 10px 30px rgba(242,173,100,.28); }
+    .ty-check svg { width:30px; height:30px; }
+    .ty-title { font-family:var(--font-serif); font-size:clamp(2rem,4vw,3rem); line-height:1.12; margin-bottom:12px; position:relative; z-index:1; }
+    .ty-desc { color:rgba(255,255,255,.72); line-height:1.7; max-width:620px; position:relative; z-index:1; }
+    .ty-body { padding:34px 44px 44px; }
+    .ty-grid { display:grid; grid-template-columns:1.2fr .8fr; gap:28px; align-items:start; }
+    .ty-section-title { font-size:.78rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:var(--orange); margin-bottom:14px; }
+    .ty-summary { border:1px solid var(--border); border-radius:14px; padding:20px; background:#fff; }
+    .ty-row { display:flex; justify-content:space-between; gap:18px; padding:12px 0; border-bottom:1px solid var(--border); font-size:.9rem; }
+    .ty-row:last-child { border-bottom:none; }
+    .ty-row span:first-child { color:var(--text-3); }
+    .ty-row span:last-child { color:var(--black); font-weight:700; text-align:right; }
+    .ty-total { font-size:1.15rem; }
+    .ty-steps { display:grid; gap:14px; }
+    .ty-step { display:flex; gap:12px; align-items:flex-start; padding:16px; border-radius:12px; background:var(--bg-alt); }
+    .ty-step-num { width:28px; height:28px; border-radius:50%; background:rgba(242,173,100,.16); color:var(--orange); display:flex; align-items:center; justify-content:center; font-size:.78rem; font-weight:800; flex-shrink:0; }
+    .ty-step strong { display:block; font-size:.88rem; margin-bottom:3px; }
+    .ty-step p { font-size:.78rem; color:var(--text-3); line-height:1.55; margin:0; }
+    .ty-actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:26px; }
+    .ty-btn { display:inline-flex; align-items:center; justify-content:center; gap:8px; border-radius:999px; padding:13px 22px; font-size:.82rem; font-weight:800; text-transform:uppercase; letter-spacing:.04em; transition:var(--tr); }
+    .ty-btn-primary { background:var(--orange); color:#fff; }
+    .ty-btn-primary:hover { background:var(--orange-dark); transform:translateY(-1px); }
+    .ty-btn-outline { border:1.5px solid var(--border-2); color:var(--black); }
+    .ty-btn-outline:hover { border-color:var(--orange); color:var(--orange); }
+    .ty-contact { margin-top:22px; font-size:.82rem; color:var(--text-3); line-height:1.7; }
+    .ty-contact a { color:var(--black); font-weight:700; }
+    @media(max-width:760px) {
+      .ty-wrap { padding:94px 0 34px; }
+      .ty-hero, .ty-body { padding:28px 20px; }
+      .ty-grid { grid-template-columns:1fr; }
+      .ty-actions { flex-direction:column; }
+      .ty-btn { width:100%; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============ TICKER ============ -->
+<div class="ticker-bar">
+  <div class="ticker-track">
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Livraison partout au Maroc</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>Paiement 100% sécurisé</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Conseil expert gratuit</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>Installation disponible</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Showroom à Marrakech</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Produits garantis 2 ans</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Livraison partout au Maroc</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>Paiement 100% sécurisé</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Conseil expert gratuit</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>Installation disponible</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Showroom à Marrakech</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Produits garantis 2 ans</div>
+    <span class="ticker-sep">✦</span>
+  </div>
+</div>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar hero-mode" id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" id="navLogo">
+        <img src="images/logo.png" alt="MAGGMALIGHT" class="nav-logo-img" id="logoImg" onerror="this.style.display='none';document.getElementById('logoText').style.display='flex'">
+        <span class="nav-logo-text" id="logoText" style="display:none">
+          <span class="nav-logo-main">MAGGMA<span class="logo-light">LIGHT</span></span>
+          <span class="nav-logo-sub">Lighting Design &amp; Solutions</span>
+        </span>
+      </a>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="index.html#categories" class="nav-link">
+            Produits
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-dropdown">
+            <a href="category.html?cat=salon">Toutes les catégories</a>
+            <a href="category.html?cat=suspensions">Suspensions</a>
+            <a href="category.html?cat=appliques">Appliques murales</a>
+            <a href="category.html?cat=spots">Spots &amp; Downlights</a>
+            <a href="category.html?cat=rails">Rails Magnétiques</a>
+            <a href="category.html?cat=exterieur">Luminaires Extérieurs</a>
+            <a href="smart-lighting.html">Smart Lighting</a>
+            <a href="category.html?cat=ruban">Profils LED</a>
+            <a href="category.html?cat=lampadaires">Lampes Décoratives</a>
+            <a href="category.html?cat=appareillage">Appareillage</a>
+          </div>
+        </li>
+        <li><a href="formations.html" class="nav-link">Formations</a></li>
+        <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+        <li><a href="smart-lighting.html" class="nav-link" style="color:var(--orange);font-weight:600">Smart Lighting</a></li>
+        <li><a href="blog.html" class="nav-link">Conseils</a></li>
+        <li><a href="index.html#showroom" class="nav-link">À propos</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="nav-action-btn" onclick="window.openSearch ? openSearch() : (location.href='category.html?cat=salon')" title="Rechercher">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="nav-action-btn" title="Mon compte">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </button>
+        <button class="nav-action-btn" title="Favoris">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </button>
+        <button class="nav-action-btn" onclick="window.openCart ? openCart() : (location.href='product.html')" title="Panier">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span class="nav-badge" id="cart-count">0</span>
+        </button>
+      </div>
+      <div class="nav-hamburger" onclick="toggleMobileNav()"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-header">
+    <div class="nav-logo-text">
+      <span class="nav-logo-main" style="color:#1D1D1B">MAGGMA<span class="logo-light">LIGHT</span></span>
+      <span class="nav-logo-sub" style="color:#888">Lighting Design &amp; Solutions</span>
+    </div>
+    <button class="mobile-nav-close" onclick="toggleMobileNav()">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="mobile-nav-links">
+    <a href="index.html#categories" onclick="toggleMobileNav()">Produits</a>
+    <a href="formations.html" onclick="toggleMobileNav()">Formations</a>
+    <a href="realisations.html" onclick="toggleMobileNav()">Réalisations</a>
+    <a href="smart-lighting.html" onclick="toggleMobileNav()">Smart Lighting</a>
+    <a href="blog.html" onclick="toggleMobileNav()">Conseils</a>
+    <a href="index.html#showroom" onclick="toggleMobileNav()">À propos</a>
+    <a href="contact.html" onclick="toggleMobileNav()">Contact</a>
+    <a href="consultation.html" style="color:var(--orange);font-weight:700">Réserver une consultation</a>
+  </div>
+</div>
+
+<main class="ty-wrap">
+    <div class="container">
+      <div class="ty-card">
+        <div class="ty-hero">
+          <img src="images/logo.png" alt="MAGGMALIGHT" class="ty-logo">
+          <div class="ty-check">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h1 class="ty-title">Merci, votre commande est bien reçue.</h1>
+          <p class="ty-desc">Notre équipe va vous appeler pour confirmer les détails, valider la disponibilité et organiser la livraison avec paiement à la réception.</p>
+        </div>
+        <div class="ty-body">
+          <div class="ty-grid">
+            <div>
+              <div class="ty-section-title">Résumé de commande</div>
+              <div class="ty-summary" id="orderSummary">
+                <div class="ty-row"><span>Produit</span><span id="ty-product">Suspension LED Moderne Line Noir Mat</span></div>
+                <div class="ty-row"><span>Référence</span><span id="ty-ref">ML-PL-1023</span></div>
+                <div class="ty-row"><span>Quantité</span><span id="ty-qty">1</span></div>
+                <div class="ty-row ty-total"><span>Total</span><span id="ty-total">1 450,00 MAD</span></div>
+                <div class="ty-row"><span>Paiement</span><span>Paiement à la livraison</span></div>
+                <div class="ty-row"><span>Livraison</span><span id="ty-city">Maroc</span></div>
+              </div>
+              <div class="ty-actions">
+                <a class="ty-btn ty-btn-primary" href="index.html">Retour au store</a>
+                <a class="ty-btn ty-btn-outline" href="product.html">Voir le produit</a>
+              </div>
+            </div>
+            <div>
+              <div class="ty-section-title">Prochaines étapes</div>
+              <div class="ty-steps">
+                <div class="ty-step"><div class="ty-step-num">1</div><div><strong>Confirmation par téléphone</strong><p>Un conseiller MAGGMALIGHT confirme votre commande et votre adresse.</p></div></div>
+                <div class="ty-step"><div class="ty-step-num">2</div><div><strong>Préparation</strong><p>Votre produit est préparé depuis notre showroom à Marrakech.</p></div></div>
+                <div class="ty-step"><div class="ty-step-num">3</div><div><strong>Livraison COD</strong><p>Vous payez uniquement à la réception de votre commande.</p></div></div>
+              </div>
+              <div class="ty-contact">
+                Besoin d’aide ? Appelez <a href="tel:+212708032018">+212 708 032 018</a><br>
+                ou écrivez-nous sur <a href="https://wa.me/212708032018" target="_blank" rel="noopener">WhatsApp</a>.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const order = JSON.parse(localStorage.getItem('maggmalight_last_order') || '{}');
+    if (order.product) {
+      document.getElementById('ty-product').textContent = order.product;
+      document.getElementById('ty-ref').textContent = order.ref || 'ML-PL-1023';
+      document.getElementById('ty-qty').textContent = order.qty || '1';
+      document.getElementById('ty-total').textContent = order.total || '1 450,00 MAD';
+      document.getElementById('ty-city').textContent = [order.city, order.address].filter(Boolean).join(' · ') || 'Maroc';
+    }
+  </script>
+
+<script>
+(function(){
+  window.toggleMobileNav = function(){
+    const nav = document.getElementById('mobileNav');
+    if (!nav) return;
+    nav.classList.toggle('open');
+    nav.classList.toggle('active');
+    document.body.style.overflow = (nav.classList.contains('open') || nav.classList.contains('active')) ? 'hidden' : '';
+  };
+  if (!window.openSearch) window.openSearch = function(){ location.href = 'category.html?cat=salon'; };
+  if (!window.openCart) window.openCart = function(){ location.href = 'product.html'; };
+  const navbar = document.getElementById('navbar');
+  function updateCommonNavbar(){
+    if (!navbar) return;
+    const hero = document.querySelector('.hero, .cat-hero, .contact-hero, .blog-hero, .academy-hero, .sl-hero, .cp-hero, .real-hero, .product-page, .ty-wrap');
+    const threshold = hero ? Math.max(90, hero.offsetHeight * 0.45) : 140;
+    if (window.scrollY > threshold) {
+      navbar.classList.remove('hero-mode');
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.add('hero-mode');
+      navbar.classList.remove('scrolled');
+    }
+  }
+  window.addEventListener('scroll', updateCommonNavbar, { passive:true });
+  window.addEventListener('resize', updateCommonNavbar);
+  updateCommonNavbar();
+})();
+</script>
+
+</body>
+</html>

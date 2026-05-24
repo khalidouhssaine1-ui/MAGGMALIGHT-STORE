@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAGGMALIGHT — Luminaires Premium | Marrakech, Maroc</title>
+  <meta name="description" content="Découvrez les luminaires premium MAGGMALIGHT à Marrakech. Smart Lighting, suspensions design, rails magnétiques. Livraison partout au Maroc.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Category gradient backgrounds */
+    .cg-susp{background:radial-gradient(circle at 50% 30%,#2d1f00 0%,#0d0d0b 100%)}
+    .cg-appl{background:radial-gradient(circle at 50% 30%,#001220 0%,#080d0d 100%)}
+    .cg-spot{background:radial-gradient(circle at 50% 30%,#151510 0%,#0a0a0a 100%)}
+    .cg-rail{background:radial-gradient(circle at 50% 30%,#1a1200 0%,#0d0d0a 100%)}
+    .cg-ext{background:radial-gradient(circle at 50% 30%,#001a0a 0%,#080d0a 100%)}
+    .cg-smart{background:radial-gradient(circle at 50% 30%,#00001f 0%,#08080d 100%)}
+    .cg-led{background:radial-gradient(circle at 50% 30%,#1a0000 0%,#0d0808 100%)}
+    .cg-deco{background:radial-gradient(circle at 50% 30%,#12001a 0%,#0d080d 100%)}
+    /* Space backgrounds */
+    .sp-bain{background-image:url('images/Spaces/salle-de-bain.png');background-size:cover;background-position:center}
+    .sp-salon{background-image:url('images/Spaces/salon.png');background-size:cover;background-position:center}
+    .sp-bureau{background-image:url('images/Spaces/bureau.png');background-size:cover;background-position:center}
+    .sp-chambre{background-image:url('images/Spaces/chambre-a-coucher.png');background-size:cover;background-position:center}
+    .sp-cuisine{background-image:url('images/Spaces/cuisine.png');background-size:cover;background-position:center}
+    .sp-terrasse{background-image:url('images/Spaces/terrasse.png');background-size:cover;background-position:center}
+    .sp-jardin{background-image:url('images/Spaces/jardin.png');background-size:cover;background-position:center}
+    .sp-facade{background-image:url('images/Spaces/facade.png');background-size:cover;background-position:center}
+    .sp-bureau-secondaire{background-image:url('images/Spaces/bureau-secondaire.png');background-size:cover;background-position:center}
+    /* Product placeholder backgrounds */
+    .pb1{background:radial-gradient(ellipse at 50% 30%,#f2ad6420 0%,#f5f3ee 70%)}
+    .pb2{background:radial-gradient(ellipse at 50% 30%,#f2ad6415 0%,#f0eee8 70%)}
+    .pb3{background:radial-gradient(ellipse at 50% 30%,#f2ad641a 0%,#ede9e0 70%)}
+  </style>
+</head>
+<body>
+
+<!-- ============ TICKER ============ -->
+<div class="ticker-bar">
+  <div class="ticker-track">
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Livraison partout au Maroc</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>Paiement 100% sécurisé</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Conseil expert gratuit</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>Installation disponible</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Showroom à Marrakech</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Produits garantis 2 ans</div>
+    <span class="ticker-sep">✦</span>
+    <!-- Duplicate for seamless loop -->
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Livraison partout au Maroc</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>Paiement 100% sécurisé</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Conseil expert gratuit</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>Installation disponible</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Showroom à Marrakech</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Produits garantis 2 ans</div>
+    <span class="ticker-sep">✦</span>
+  </div>
+</div>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar hero-mode" id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" id="navLogo">
+        <img src="images/logo.png" alt="MAGGMALIGHT" class="nav-logo-img" id="logoImg"
+             onerror="this.style.display='none';document.getElementById('logoText').style.display='flex'">
+        <span class="nav-logo-text" id="logoText" style="display:none">
+          <span class="nav-logo-main">MAGGMA<span class="logo-light">LIGHT</span></span>
+          <span class="nav-logo-sub">Lighting Design &amp; Solutions</span>
+        </span>
+      </a>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="#categories" class="nav-link">
+            Produits
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-dropdown">
+	            <a href="category.html?cat=salon">Toutes les catégories</a>
+	            <a href="category.html?cat=suspensions">Suspensions</a>
+	            <a href="category.html?cat=appliques">Appliques murales</a>
+	            <a href="category.html?cat=spots">Spots &amp; Downlights</a>
+	            <a href="category.html?cat=rails">Rails Magnétiques</a>
+	            <a href="category.html?cat=exterieur">Luminaires Extérieurs</a>
+	            <a href="smart-lighting.html">Smart Lighting</a>
+	            <a href="category.html?cat=ruban">Profils LED</a>
+	            <a href="category.html?cat=lampadaires">Lampes Décoratives</a>
+	            <a href="category.html?cat=appareillage">Appareillage</a>
+          </div>
+        </li>
+        <li><a href="formations.html" class="nav-link">Formations</a></li>
+        <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+        <li><a href="smart-lighting.html" class="nav-link" style="color:var(--orange);font-weight:600">Smart Lighting</a></li>
+        <li><a href="blog.html" class="nav-link">Conseils</a></li>
+        <li><a href="#showroom" class="nav-link">À propos</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="nav-action-btn" onclick="openSearch()" title="Rechercher">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="nav-action-btn" title="Mon compte">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </button>
+        <button class="nav-action-btn" title="Favoris">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </button>
+        <button class="nav-action-btn" onclick="openCart()" title="Panier">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span class="nav-badge" id="cart-count">0</span>
+        </button>
+      </div>
+      <div class="nav-hamburger" onclick="toggleMobileNav()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-header">
+    <div class="nav-logo-text">
+      <span class="nav-logo-main" style="color:#1D1D1B">MAGGMA<span class="logo-light">LIGHT</span></span>
+      <span class="nav-logo-sub" style="color:#888">Lighting Design &amp; Solutions</span>
+    </div>
+    <button class="mobile-nav-close" onclick="toggleMobileNav()">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="mobile-nav-links">
+    <a href="#categories" onclick="toggleMobileNav()">Produits</a>
+    <a href="formations.html" onclick="toggleMobileNav()">Formations</a>
+    <a href="realisations.html" onclick="toggleMobileNav()">Réalisations</a>
+    <a href="#categories" onclick="toggleMobileNav()">Smart Lighting</a>
+    <a href="blog.html" onclick="toggleMobileNav()">Conseils</a>
+    <a href="#showroom" onclick="toggleMobileNav()">À propos</a>
+    <a href="#contact-form" onclick="toggleMobileNav()">Contact</a>
+    <a href="consultation.html" style="color:var(--orange);font-weight:700">Réserver une consultation</a>
+  </div>
+</div>
+
+<!-- ============ HERO SLIDER ============ -->
+<section class="hero" id="hero">
+  <div class="hero-slides">
+
+    <!-- Slide 1 — Salon -->
+    <div class="hero-slide active" id="slide-0">
+      <div class="hero-slide-bg" style="background-image:url('images/sliders/slide-salon.png');background-position:center right"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <span class="hero-eyebrow">Collection Premium 2025</span>
+        <h1 class="hero-headline">L'éclairage qui<br><em>transforme</em><br>votre espace.</h1>
+        <div class="hero-rule"></div>
+        <p class="hero-sub">Luminaires premium, smart lighting<br>et expertise professionnelle partout au Maroc.</p>
+        <div class="hero-actions">
+          <a href="#best-sellers" class="btn-primary">
+            Découvrir les collections
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="consultation.html" class="btn-outline">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Réserver une consultation
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 — Cuisine -->
+    <div class="hero-slide" id="slide-1">
+      <div class="hero-slide-bg" style="background-image:url('images/sliders/slide-cuisine.png');background-position:center right"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <span class="hero-eyebrow">Éclairage Cuisine &amp; Séjour</span>
+        <h1 class="hero-headline">L'éclairage<br><em>qui sublime</em><br>votre cuisine.</h1>
+        <div class="hero-rule"></div>
+        <p class="hero-sub">Des solutions lumineuses élégantes<br>et fonctionnelles pour chaque espace.</p>
+        <div class="hero-actions">
+          <a href="#best-sellers" class="btn-primary">
+            Découvrir les collections
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="consultation.html" class="btn-outline">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Réserver une consultation
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 — Extérieur -->
+    <div class="hero-slide" id="slide-2">
+      <div class="hero-slide-bg" style="background-image:url('images/sliders/slide-ext.png');background-position:center right"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <span class="hero-eyebrow">Luminaires Extérieurs Premium</span>
+        <h1 class="hero-headline">L'éclairage<br><em>qui révèle</em><br>la beauté de vos extérieurs.</h1>
+        <div class="hero-rule"></div>
+        <p class="hero-sub">Sublimez vos espaces extérieurs avec<br>des luminaires d'exception.</p>
+        <div class="hero-actions">
+          <a href="#best-sellers" class="btn-primary">
+            Découvrir les collections
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="https://maps.app.goo.gl/4cSXcTtbNnTfEFKS7" target="_blank" class="btn-outline">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Visiter le showroom
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Controls -->
+  <div class="hero-dots">
+    <div class="hero-dot active" onclick="goToSlide(0)"></div>
+    <div class="hero-dot" onclick="goToSlide(1)"></div>
+    <div class="hero-dot" onclick="goToSlide(2)"></div>
+  </div>
+  <div class="hero-arrows">
+    <button class="hero-arrow" onclick="changeSlide(-1)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+    <button class="hero-arrow" onclick="changeSlide(1)">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+    </button>
+  </div>
+</section>
+
+<!-- ============ TRUST STRIP ============ -->
+<section class="trust-strip">
+  <div class="container">
+    <div class="trust-grid">
+      <div class="trust-item">
+        <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div><div class="trust-num">Showroom</div><div class="trust-label">à Marrakech</div></div>
+      </div>
+      <div class="trust-sep"></div>
+      <div class="trust-item">
+        <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+        <div><div class="trust-num">Experts</div><div class="trust-label">en lighting</div></div>
+      </div>
+      <div class="trust-sep"></div>
+      <div class="trust-item trust-partner" style="flex-direction:column;align-items:flex-start">
+        <div class="trust-partner-name">CAS<span>A</span>MBI</div>
+        <div class="trust-partner-sub">Partenaire officiel</div>
+      </div>
+      <div class="trust-sep"></div>
+      <div class="trust-item">
+        <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
+        <div><div class="trust-num">+400</div><div class="trust-label">Produits premium disponibles</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CATEGORIES ============ -->
+<section class="section-light" id="categories">
+  <div class="container">
+    <div class="section-header fade-in-up">
+      <div>
+        <span class="section-tag">Notre catalogue</span>
+        <h2 class="section-title">Catégories de Produits</h2>
+      </div>
+      <a href="category.html?cat=salon" class="view-all">Voir toutes les catégories <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    </div>
+    <div class="categories-grid fade-in-up">
+	      <a href="category.html?cat=suspensions" class="cat-card"><div class="cat-img-wrap"><img src="images/Categories/Suspensions.webp" alt="Suspensions" loading="lazy"></div><div class="cat-overlay"><div class="cat-name">Suspensions</div></div></a>
+	      <a href="category.html?cat=appliques" class="cat-card"><div class="cat-img-wrap"><img src="images/Categories/Applique Intérieur.png" alt="Appliques Intérieur" loading="lazy"></div><div class="cat-overlay"><div class="cat-name">Appliques Intérieur</div></div></a>
+	      <a href="category.html?cat=spots" class="cat-card"><div class="cat-img-wrap"><img src="images/Categories/Spots.png" alt="Spots & Downlights" loading="lazy"></div><div class="cat-overlay"><div class="cat-name">Spots &amp; Downlights</div></div></a>
+	      <a href="category.html?cat=rails" class="cat-card"><div class="cat-img-wrap"><img src="images/Categories/Rails Magnétique.webp" alt="Rails Magnétiques" loading="lazy"></div><div class="cat-overlay"><div class="cat-name">Rails Magnétiques</div></div></a>
+	      <a href="category.html?cat=exterieur" class="cat-card"><div class="cat-img-wrap"><img src="images/Categories/Applique Extérieur.png" alt="Appliques Extérieur" loading="lazy"></div><div class="cat-overlay"><div class="cat-name">Appliques Extérieur</div></div></a>
+	      <a href="category.html?cat=ruban" class="cat-card"><div class="cat-img-wrap"><img src="images/Categories/Ruban LED.png" alt="Ruban LED" loading="lazy"></div><div class="cat-overlay"><div class="cat-name">Ruban LED</div></div></a>
+	      <a href="category.html?cat=lampadaires" class="cat-card"><div class="cat-img-wrap"><img src="images/Categories/Les Lampadaires.png" alt="Lampadaires" loading="lazy"></div><div class="cat-overlay"><div class="cat-name">Lampadaires</div></div></a>
+	      <a href="category.html?cat=appareillage" class="cat-card"><div class="cat-img-wrap"><img src="images/Products/maggmalight-0082-cadre-1-element-dome-nocturne-bros.webp" alt="Appareillage" loading="lazy"></div><div class="cat-overlay"><div class="cat-name">Appareillage</div></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES STRIP ============ -->
+<div class="features-strip fade-in-up">
+  <div class="container">
+    <div class="features-grid">
+      <div class="feature-item"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div><div class="feature-title">Design premium</div><div class="feature-desc">Matériaux haut de gamme</div></div></div>
+      <div class="feature-item"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4"/></svg></div><div><div class="feature-title">Technologie intelligente</div><div class="feature-desc">Connectée &amp; pilotable</div></div></div>
+      <div class="feature-item"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div><div class="feature-title">Intérieur &amp; Extérieur</div><div class="feature-desc">Pour chaque espace</div></div></div>
+      <div class="feature-item"><div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 010 1.4L7.4 15l-2.4.6.6-2.4 7.3-7.3a1 1 0 011.4 0z"/><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/></svg></div><div><div class="feature-title">Solutions sur mesure</div><div class="feature-desc">Pour chaque projet</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SHOP BY SPACE ============ -->
+<section class="section-alt" id="spaces">
+  <div class="container">
+    <div class="section-header fade-in-up">
+      <div>
+        <span class="section-tag">Par ambiance</span>
+        <h2 class="section-title">Shop by Space</h2>
+      </div>
+      <a href="category.html?cat=salon" class="view-all">Voir tous les espaces <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    </div>
+    <div class="spaces-grid fade-in-up">
+	      <a href="category.html?cat=bain" class="space-card"><div class="space-bg-img sp-bain"></div><div class="space-overlay"><div class="space-name">Salle de bain</div></div></a>
+	      <a href="category.html?cat=salon" class="space-card"><div class="space-bg-img sp-salon"></div><div class="space-overlay"><div class="space-name">Salon</div></div></a>
+	      <a href="category.html?cat=bureau" class="space-card"><div class="space-bg-img sp-bureau"></div><div class="space-overlay"><div class="space-name">Bureau</div></div></a>
+	      <a href="category.html?cat=chambre" class="space-card"><div class="space-bg-img sp-chambre"></div><div class="space-overlay"><div class="space-name">Chambre à coucher</div></div></a>
+	      <a href="category.html?cat=cuisine" class="space-card"><div class="space-bg-img sp-cuisine"></div><div class="space-overlay"><div class="space-name">Cuisine</div></div></a>
+	      <a href="category.html?cat=terrasse" class="space-card"><div class="space-bg-img sp-terrasse"></div><div class="space-overlay"><div class="space-name">Terrasse</div></div></a>
+	      <a href="category.html?cat=jardin" class="space-card"><div class="space-bg-img sp-jardin"></div><div class="space-overlay"><div class="space-name">Jardin</div></div></a>
+	      <a href="category.html?cat=facade" class="space-card"><div class="space-bg-img sp-facade"></div><div class="space-overlay"><div class="space-name">Façade</div></div></a>
+	      <a href="category.html?cat=bureau" class="space-card"><div class="space-bg-img sp-bureau-secondaire"></div><div class="space-overlay"><div class="space-name">Bureau privé</div></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MEILLEURES VENTES CAROUSEL ============ -->
+<section class="products-section" id="best-sellers">
+  <div class="container">
+    <div class="section-header fade-in-up">
+      <div>
+        <span class="section-tag">Les plus populaires</span>
+        <h2 class="section-title">Meilleures Ventes</h2>
+      </div>
+      <a href="#" class="view-all">Voir tout <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    </div>
+    <div class="carousel-outer">
+      <button class="carousel-btn carousel-btn-prev" onclick="scrollCarousel('car-best',-1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
+      <div class="carousel-track" id="car-best">
+        <div class="product-card fade-in-up" onclick="window.location.href='product.html'" style="cursor:pointer">
+          <div class="product-img-wrap"><div class="product-img-placeholder pb1">💡</div><span class="product-badge bestseller">Best seller</span><button class="product-wishlist" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button></div>
+          <div class="product-info"><div class="product-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="review-count">(12)</span></div><div class="product-name">Suspension LED Modern Line Noir Mat</div><div class="product-price-row"><span class="product-price">1 450,00 MAD</span></div><button class="product-add-btn" onclick="addToCart('Suspension LED Modern Line',1450);event.stopPropagation()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>Ajouter au panier</button></div>
+        </div>
+        <div class="product-card fade-in-up" onclick="window.location.href='product.html'" style="cursor:pointer">
+          <div class="product-img-wrap"><div class="product-img-placeholder pb2">🔦</div><button class="product-wishlist" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button></div>
+          <div class="product-info"><div class="product-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="review-count">(8)</span></div><div class="product-name">Rail magnétique 1m + Spot LED Noir</div><div class="product-price-row"><span class="product-price">890,00 MAD</span></div><button class="product-add-btn" onclick="addToCart('Rail magnétique 1m',890);event.stopPropagation()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>Ajouter au panier</button></div>
+        </div>
+        <div class="product-card fade-in-up" onclick="window.location.href='product.html'" style="cursor:pointer">
+          <div class="product-img-wrap"><div class="product-img-placeholder pb3">⬛</div><button class="product-wishlist" onclick="event.stopPropagation()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></button></div>
+          <div class="product-info"><div class="product-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star empty">★</span><span class="review-count">(7)</span></div><div class="product-name">Spot encastré orientable Intérieur</div><div class="product-price-row"><span class="product-price">320,00 MAD</span></div><button class="product-add-btn" onclick="addToCart('Spot encastré',320);event.stopPropagation()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>Ajouter au panier</button></div>
+        </div>
+        <div class="product-card fade-in-up" onclick="window.location.href='product.html'" style="cursor:pointer">
+          <div class="product-img-wrap"><div class="product-img-placeholder pb1">〰️</div><span class="product-badge bestseller">Top vente</span></div>
+          <div class="product-info"><div class="product-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="review-count">(14)</span></div><div class="product-name">Bande LED C08 5m 24V</div><div class="product-price-row"><span class="product-price">420,00 MAD</span></div><button class="product-add-btn" onclick="addToCart('Bande LED C08',420);event.stopPropagation()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>Ajouter au panier</button></div>
+        </div>
+        <div class="product-card fade-in-up" onclick="window.location.href='product.html'" style="cursor:pointer">
+          <div class="product-img-wrap"><div class="product-img-placeholder pb2">🌙</div><span class="product-badge bestseller">Top vente</span></div>
+          <div class="product-info"><div class="product-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="review-count">(11)</span></div><div class="product-name">Suspension LED Wave Noir &amp; Or</div><div class="product-price-row"><span class="product-price">2 250,00 MAD</span></div><button class="product-add-btn" onclick="addToCart('Suspension Wave',2250);event.stopPropagation()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>Ajouter au panier</button></div>
+        </div>
+        <div class="product-card fade-in-up" onclick="window.location.href='product.html'" style="cursor:pointer">
+          <div class="product-img-wrap"><div class="product-img-placeholder pb3">⭕</div></div>
+          <div class="product-info"><div class="product-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="review-count">(6)</span></div><div class="product-name">Downlight LED encastré 24W</div><div class="product-price-row"><span class="product-price">340,00 MAD</span></div><button class="product-add-btn" onclick="addToCart('Downlight LED 24W',340);event.stopPropagation()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>Ajouter au panier</button></div>
+        </div>
+      </div>
+      <button class="carousel-btn carousel-btn-next" onclick="scrollCarousel('car-best',1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NOUVEAUTÉS CAROUSEL ============ -->
+<section class="products-section bg-alt">
+  <div class="container">
+    <div class="section-header fade-in-up">
+      <div>
+        <span class="section-tag">Dernières arrivées</span>
+        <h2 class="section-title">Nouvelles Arrivées</h2>
+      </div>
+      <a href="#" class="view-all">Voir toutes les nouveautés <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+    </div>
+    <div class="carousel-outer">
+      <button class="carousel-btn carousel-btn-prev" onclick="scrollCarousel('car-new',-1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
+      <div class="carousel-track" id="car-new">
+        <div class="product-card fade-in-up" onclick="window.location.href='product.html'" style="cursor:pointer">
+          <div class="product-img-wrap"><div class="product-img-placeholder pb1">🪔</div><span class="product-badge new">Nouveau</span></div>
+          <div class="product-info"><div class="product-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="review-count">(9)</span></div><div class="product-name">Suspension verre fumé Design</div><div class="product-price-row"><span class="product-price">1 750,00 MAD</span></div><button class="product-add-btn" onclick="addToCart('Suspension verre fumé',1750);event.stopPropagation()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>Ajouter au panier</button></div>
+        </div>
+        <div class="product-card fade-in-up" onclick="window.location.href='product.html'" style="cursor:pointer">
+          <div class="product-img-wrap"><div class="product-img-placeholder pb2">🌟</div><span class="product-badge new">Nouveau</span></div>
+          <div class="product-info"><div class="product-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star empty">★</span><span class="review-count">(7)</span></div><div class="product-name">Applique murale IP65 Extérieur</div><div class="product-price-row"><span class="product-price">650,00 MAD</span></div><button class="product-add-btn" onclick="addToCart('Applique IP65',650);event.stopPropagation()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>Ajouter au panier</button></div>
+        </div>
+        <div class="product-card fade-in-up" onclick="window.location.href='product.html'" style="cursor:pointer">
+          <div class="product-img-wrap"><div class="product-img-placeholder pb3">✨</div><span class="product-badge new">Nouveau</span></div>
+          <div class="product-info"><div class="product-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="review-count">(5)</span></div><div class="product-name">Profil LED encastrable aluminium</div><div class="product-price-row"><span class="product-price">280,00 MAD</span></div><button class="product-add-btn" onclick="addToCart('Profil LED aluminium',280);event.stopPropagation()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>Ajouter au panier</button></div>
+        </div>
+        <div class="product-card fade-in-up" onclick="window.location.href='product.html'" style="cursor:pointer">
+          <div class="product-img-wrap"><div class="product-img-placeholder pb1">🕯️</div><span class="product-badge new">Nouveau</span></div>
+          <div class="product-info"><div class="product-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="review-count">(3)</span></div><div class="product-name">Lustre Art Déco Or &amp; Noir</div><div class="product-price-row"><span class="product-price">3 200,00 MAD</span></div><button class="product-add-btn" onclick="addToCart('Lustre Art Déco',3200);event.stopPropagation()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>Ajouter au panier</button></div>
+        </div>
+        <div class="product-card fade-in-up" onclick="window.location.href='product.html'" style="cursor:pointer">
+          <div class="product-img-wrap"><div class="product-img-placeholder pb2">🏮</div><span class="product-badge new">Nouveau</span></div>
+          <div class="product-info"><div class="product-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star empty">★</span><span class="review-count">(4)</span></div><div class="product-name">Lampadaire LED Arc Design</div><div class="product-price-row"><span class="product-price">1 950,00 MAD</span></div><button class="product-add-btn" onclick="addToCart('Lampadaire LED Arc',1950);event.stopPropagation()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>Ajouter au panier</button></div>
+        </div>
+        <div class="product-card fade-in-up" onclick="window.location.href='product.html'" style="cursor:pointer">
+          <div class="product-img-wrap"><div class="product-img-placeholder pb3">💫</div><span class="product-badge new">Nouveau</span></div>
+          <div class="product-info"><div class="product-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="review-count">(6)</span></div><div class="product-name">Spot extérieur LED IP54</div><div class="product-price-row"><span class="product-price">490,00 MAD</span></div><button class="product-add-btn" onclick="addToCart('Spot extérieur IP54',490);event.stopPropagation()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>Ajouter au panier</button></div>
+        </div>
+      </div>
+      <button class="carousel-btn carousel-btn-next" onclick="scrollCarousel('car-new',1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SHOWROOM ============ -->
+<section class="showroom-section" id="showroom">
+  <div class="container">
+    <div class="showroom-inner">
+      <div class="showroom-content fade-in-up">
+        <div class="gold-line"></div>
+        <div class="showroom-tag">Notre Showroom à Marrakech</div>
+        <h2 class="showroom-title">Vivez l'expérience<br>MAGGMALIGHT</h2>
+        <p class="showroom-desc">Découvrez notre showroom au cœur de Marrakech. Tous nos luminaires sont exposés en situation réelle pour vous aider à faire le meilleur choix.</p>
+        <div class="showroom-points">
+          <div class="showroom-point"><div class="showroom-chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span class="showroom-point-text">+400 produits premium disponibles</span></div>
+          <div class="showroom-point"><div class="showroom-chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span class="showroom-point-text">Conseils par nos experts en éclairage</span></div>
+          <div class="showroom-point"><div class="showroom-chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span class="showroom-point-text">Ambiance lumineuse réelle — testez avant d'acheter</span></div>
+          <div class="showroom-point"><div class="showroom-chk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div><span class="showroom-point-text">Solutions sur mesure pour chaque projet</span></div>
+        </div>
+        <div class="showroom-actions">
+          <a href="https://maps.app.goo.gl/4cSXcTtbNnTfEFKS7" target="_blank" class="btn-primary" style="background:var(--orange);color:#fff;border-color:var(--orange)">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Visiter le showroom
+          </a>
+          <a href="consultation.html" class="btn-outline-dark">Réserver une consultation</a>
+        </div>
+      </div>
+      <div class="showroom-gallery fade-in-up">
+        <div class="sg-main"><img src="images/showroom/R62_0185.JPG" alt="Showroom MAGGMALIGHT" loading="lazy" onerror="this.src='images/showroom/ouverture-2.JPG'"></div>
+        <div class="sg-sm"><img src="images/showroom/R62_0329.JPG" alt="Luminaires showroom" loading="lazy" onerror="this.src='images/showroom/ouverture-3.JPG'"></div>
+        <div class="sg-sm"><img src="images/showroom/R62_0354.JPG" alt="Éclairage premium" loading="lazy" onerror="this.src='images/showroom/ouverture-4.JPG'"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY US ============ -->
+<section class="why-section" id="why">
+  <div class="container">
+    <div class="why-inner">
+      <div class="fade-in-up">
+        <div class="gold-line"></div>
+        <span class="section-tag">Nos engagements</span>
+        <h2 class="section-title">Pourquoi nous<br>faire confiance ?</h2>
+        <p style="font-size:.92rem;color:var(--text-2);line-height:1.8;margin:16px 0 0">MAGGMALIGHT s'est imposé comme la référence nationale en matière d'éclairage premium. Notre engagement : les meilleurs produits, le meilleur conseil, le meilleur service.</p>
+        <div class="why-stats-grid">
+          <div class="why-stat"><div class="why-stat-num">100%</div><div class="why-stat-label">Clients satisfaits</div></div>
+          <div class="why-stat"><div class="why-stat-num">+20</div><div class="why-stat-label">Villes livrées</div></div>
+          <div class="why-stat"><div class="why-stat-num">+400</div><div class="why-stat-label">Produits premium</div></div>
+          <div class="why-stat"><div class="why-stat-num">2 ANS</div><div class="why-stat-label">Garantie produits</div></div>
+          <div class="why-stat"><div class="why-stat-num">7/7</div><div class="why-stat-label">Support disponible</div></div>
+        </div>
+      </div>
+      <div class="why-features-grid fade-in-up">
+        <div class="why-feature"><div class="why-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><div class="why-feature-title">Livraison partout au Maroc</div><div class="why-feature-desc">Expédition rapide et sécurisée dans tout le Maroc dès 48h.</div></div>
+        <div class="why-feature"><div class="why-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="why-feature-title">Paiement sécurisé</div><div class="why-feature-desc">Transactions 100% sécurisées. Paiement à la livraison disponible.</div></div>
+        <div class="why-feature"><div class="why-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 010 1.4L7.4 15l-2.4.6.6-2.4 7.3-7.3a1 1 0 011.4 0z"/></svg></div><div class="why-feature-title">Installation disponible</div><div class="why-feature-desc">Service d'installation par nos techniciens certifiés.</div></div>
+        <div class="why-feature"><div class="why-feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div><div class="why-feature-title">Produits garantis 2 ans</div><div class="why-feature-desc">2 ans de garantie sur tous nos produits. SAV réactif 7/7.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REVIEWS ============ -->
+<section class="reviews-section" id="reviews">
+  <div class="container">
+    <div class="reviews-header fade-in-up">
+      <div class="gold-line" style="margin:0 auto 10px"></div>
+      <span class="section-tag" style="display:block;text-align:center">Avis vérifiés</span>
+      <h2 class="section-title" style="text-align:center">Ce que disent nos clients</h2>
+      <div class="reviews-score-wrap">
+        <div class="reviews-score-num">4.9</div>
+        <div>
+          <div class="reviews-stars-row"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+              <div class="reviews-count">Basé sur 87 avis Google vérifiés</div>
+          <a href="https://maps.app.goo.gl/4cSXcTtbNnTfEFKS7" target="_blank" class="reviews-google-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Voir tous les avis sur Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="reviews-track-wrap fade-in-up">
+      <div class="reviews-track" id="reviewsTrack">
+        <div class="review-card"><div class="review-quote">"</div><p class="review-text">Service exceptionnel et luminaires de très haute qualité. L'équipe MAGGMALIGHT a parfaitement compris nos besoins. Résultat magnifique !</p><div class="review-footer"><div class="reviewer-info"><div class="reviewer-avatar">YB</div><div><div class="reviewer-name">Youssef B.</div><div class="reviewer-role">Architecte à Casablanca</div></div></div><div class="review-stars"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div></div></div>
+        <div class="review-card"><div class="review-quote">"</div><p class="review-text">J'ai commandé des rails magnétiques pour mon appartement à Marrakech. La qualité est impressionnante, la livraison rapide. Je referai appel à eux sans hésiter.</p><div class="review-footer"><div class="reviewer-info"><div class="reviewer-avatar">SH</div><div><div class="reviewer-name">Sara H.</div><div class="reviewer-role">Décoratrice d'intérieur, Marrakech</div></div></div><div class="review-stars"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div></div></div>
+        <div class="review-card"><div class="review-quote">"</div><p class="review-text">Le Smart Lighting Casambi a transformé notre villa. L'équipe a géré tout le projet de A à Z, de la conception jusqu'à l'installation. Professionnalisme total.</p><div class="review-footer"><div class="reviewer-info"><div class="reviewer-avatar">KA</div><div><div class="reviewer-name">Karim A.</div><div class="reviewer-role">Promoteur immobilier, Rabat</div></div></div><div class="review-stars"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div></div></div>
+        <div class="review-card"><div class="review-quote">"</div><p class="review-text">Showroom magnifique à Marrakech. On a pu voir les produits en vrai et choisir en toute sérénité. Les conseils du staff sont précieux. Livraison à Agadir en 2 jours.</p><div class="review-footer"><div class="reviewer-info"><div class="reviewer-avatar">NM</div><div><div class="reviewer-name">Nadia M.</div><div class="reviewer-role">Cliente particulière, Agadir</div></div></div><div class="review-stars"><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div></div></div>
+      </div>
+    </div>
+    <div class="reviews-nav fade-in-up">
+      <button class="reviews-nav-btn" onclick="scrollReviews(-1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
+      <button class="reviews-nav-btn" onclick="scrollReviews(1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT / EMAIL ============ -->
+<section class="contact-section" id="contact-form">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="contact-info fade-in-up">
+        <div class="gold-line"></div>
+        <span class="section-tag">Contactez-nous</span>
+        <h2 class="contact-info-title">Parlons de<br>votre projet</h2>
+        <p class="contact-info-desc">Une question sur un produit ? Un projet d'éclairage ? Nos experts vous répondent dans les plus brefs délais.</p>
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div><div class="contact-detail-label">Adresse</div><div class="contact-detail-value">Magasin A6, A7 Immeuble Al-Qadissia</div><div class="contact-detail-sub">Rte de Safi, Marrakech 40000</div></div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.28 9.09a19.79 19.79 0 01-3.07-8.67A2 2 0 012.18 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.08 6.08l1.27-1.52a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+          <div><div class="contact-detail-label">Téléphone</div><div class="contact-detail-value"><a href="tel:+212708032018" style="color:var(--text);font-weight:600">+212 708 032 018</a></div><div class="contact-detail-sub">Lun – Sam : 9h00 – 19h00</div></div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <div><div class="contact-detail-label">Email</div><div class="contact-detail-value"><a href="mailto:contact@maggmalight.com" style="color:var(--orange)">contact@maggmalight.com</a></div><div class="contact-detail-sub">Réponse sous 24h</div></div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-detail-icon" style="background:#e8f8ee;border-color:#c3ecd2"><svg viewBox="0 0 24 24" fill="#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
+          <div><div class="contact-detail-label">WhatsApp</div><div class="contact-detail-value"><a href="https://wa.me/212708032018" target="_blank" style="color:#25d366">+212 708 032 018</a></div><div class="contact-detail-sub">Réponse rapide garantie</div></div>
+        </div>
+      </div>
+      <div class="contact-form fade-in-up">
+        <div class="form-title">Envoyez-nous un message</div>
+        <form onsubmit="submitContact(event)">
+          <div class="form-row">
+            <div class="form-group"><label class="form-label">Prénom *</label><input type="text" class="form-input" name="firstname" id="cf-first" placeholder="Votre prénom" required></div>
+            <div class="form-group"><label class="form-label">Nom *</label><input type="text" class="form-input" name="lastname" id="cf-last" placeholder="Votre nom" required></div>
+          </div>
+          <div class="form-group"><label class="form-label">Email *</label><input type="email" class="form-input" name="email" id="cf-email" placeholder="votre@email.com" required></div>
+          <div class="form-group"><label class="form-label">Téléphone</label><input type="tel" class="form-input" name="phone" id="cf-phone" placeholder="+212 6xx xx xx xx"></div>
+          <div class="form-group">
+            <label class="form-label">Sujet</label>
+            <select class="form-select form-input" name="subject" id="cf-subject">
+              <option value="">Choisir un sujet</option>
+              <option>Demande de devis</option>
+              <option>Renseignement produit</option>
+              <option>Commande en cours</option>
+              <option>Service après-vente</option>
+              <option>Projet professionnel</option>
+              <option>Partenariat</option>
+            </select>
+          </div>
+          <div class="form-group"><label class="form-label">Message *</label><textarea class="form-textarea" name="message" id="cf-message" placeholder="Décrivez votre projet ou votre question..." required></textarea></div>
+          <button type="submit" class="form-submit">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            Envoyer le message
+          </button>
+          <p class="form-note">Nous vous répondrons dans les 24h. Ou contactez-nous directement sur WhatsApp pour une réponse immédiate.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEWSLETTER ============ -->
+<section class="newsletter-section">
+  <div class="nl-bg" style="background-image:url('images/showroom/R62_0304.JPG')"></div>
+  <div class="container">
+    <div class="nl-content fade-in-up">
+      <div class="nl-left">
+        <div class="gold-line"></div>
+        <h2>Conseils, inspirations et nouveautés<br>directement dans votre boîte mail.</h2>
+        <p>Rejoignez +1 200 professionnels et passionnés d'éclairage au Maroc.</p>
+      </div>
+      <form class="nl-form" onsubmit="subscribeNewsletter(event)">
+        <input type="email" class="nl-input" placeholder="Votre adresse email" required>
+        <button type="submit" class="nl-btn">S'inscrire</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT STRIP ============ -->
+<div class="contact-strip">
+  <div class="container">
+    <div class="contact-strip-grid">
+      <div class="cs-item"><div class="cs-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="cs-label">Adresse</div><div class="cs-value">Magasin A6, A7 Imm. Al-Qadissia</div><div class="cs-sub">Rte de Safi, Marrakech 40000</div></div></div>
+      <div class="cs-item"><div class="cs-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div><div class="cs-label">Horaires</div><div class="cs-value">Lun – Sam : 9h00 – 19h00</div><div class="cs-sub">Dimanche : sur RDV</div></div></div>
+      <div class="cs-item"><div class="cs-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.28 9.09a19.79 19.79 0 01-3.07-8.67A2 2 0 012.18 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.08 6.08l1.27-1.52a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div><div><div class="cs-label">Téléphone</div><div class="cs-value"><a href="tel:+212708032018" style="color:inherit;font-weight:600">+212 708 032 018</a></div><div class="cs-sub">contact@maggmalight.com</div></div></div>
+      <div class="cs-item"><div class="cs-icon" style="background:#e8f8ee;border-color:#c3ecd2"><svg viewBox="0 0 24 24" fill="#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div><div><div class="cs-label">WhatsApp</div><div class="cs-value"><a href="https://wa.me/212708032018" target="_blank" style="color:#25d366">Nous écrire</a></div><div class="cs-sub">Réponse rapide garantie</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="images/logo.png" alt="MAGGMALIGHT" class="footer-logo-img"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <div class="footer-brand-logo" style="display:none">MAGGMA<span class="logo-light">LIGHT</span></div>
+        <div class="footer-brand-sub">Lighting Design &amp; Solutions</div>
+        <p class="footer-desc">L'expertise éclairage au service de vos projets. Produits premium, solutions intelligentes et accompagnement sur mesure partout au Maroc.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/maggmalight/" class="footer-social" title="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100089545215268&locale=fr_FR" class="footer-social" title="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="https://www.youtube.com/@OUHSSAINESAID-LightingDesign" class="footer-social" title="YouTube" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+          <a href="https://wa.me/212708032018" class="footer-social" title="WhatsApp" target="_blank" style="background:#25d366;border-color:#25d366;color:#fff"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Produits</div>
+        <div class="footer-links">
+          <a href="#" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Éclairage intérieur</a>
+          <a href="#" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Éclairage extérieur</a>
+          <a href="#" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Smart Lighting</a>
+          <a href="#" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Rails magnétiques</a>
+          <a href="#" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Spots &amp; Downlights</a>
+          <a href="#" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Profils LED</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Informations</div>
+        <div class="footer-links">
+          <a href="#" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>À propos</a>
+          <a href="#" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Livraison &amp; Retours</a>
+          <a href="#" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Paiement sécurisé</a>
+          <a href="#" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Installation</a>
+          <a href="#" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>FAQ</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Service Client</div>
+        <div class="footer-links">
+          <a href="consultation.html" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Consultation gratuite</a>
+          <a href="#" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Devis personnalisé</a>
+          <a href="https://wa.me/212708032018" target="_blank" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Support WhatsApp</a>
+          <a href="mailto:contact@maggmalight.com" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>contact@maggmalight.com</a>
+          <a href="tel:+212708032018" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>+212 708 032 018</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Nos Engagements</div>
+        <div class="footer-links">
+          <a href="#" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Livraison partout au Maroc</a>
+          <a href="#" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Paiement sécurisé</a>
+          <a href="#" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Produits garantis 2 ans</a>
+          <a href="#" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Installation professionnelle</a>
+          <a href="#" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>SAV disponible 7/7</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">© 2026 MAGGMALIGHT — Tous droits réservés. by <a href="https://groweb.ma" target="_blank" rel="noopener" class="footer-bottom-link">Groweb</a></div>
+      <div class="footer-bottom-right">
+        <a href="#" class="footer-bottom-link">Mentions légales</a>
+        <a href="#" class="footer-bottom-link">Confidentialité</a>
+        <a href="#" class="footer-bottom-link">CGV</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ STICKY ELEMENTS ============ -->
+<div class="whatsapp-sticky">
+  <div class="whatsapp-label">Discuter sur WhatsApp</div>
+  <a href="https://wa.me/212708032018?text=Bonjour%20MAGGMALIGHT%2C%20je%20souhaite%20des%20informations%20sur%20vos%20luminaires." target="_blank" class="whatsapp-btn">
+    <div class="whatsapp-pulse"></div>
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<!-- ============ CART SIDEBAR ============ -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header">
+    <div class="cart-title">Mon Panier (<span id="cart-items-count">0</span>)</div>
+    <button class="cart-close" onclick="closeCart()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  </div>
+  <div class="cart-body">
+    <div class="cart-empty" id="cartEmpty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg><div class="cart-empty-text">Votre panier est vide</div></div>
+    <div class="cart-items" id="cartItems" style="display:none"></div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-total"><span class="cart-total-label">Total</span><span class="cart-total-price" id="cart-total-price">0,00 MAD</span></div>
+    <a href="https://wa.me/212708032018?text=Bonjour%2C%20je%20souhaite%20commander%20via%20MAGGMALIGHT" target="_blank" class="cart-checkout-btn">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Commander via WhatsApp
+    </a>
+    <div class="cart-continue" onclick="closeCart()">← Continuer mes achats</div>
+  </div>
+</div>
+
+<!-- Search overlay -->
+<div class="search-overlay" id="searchOverlay">
+  <button class="search-close" onclick="closeSearch()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  <div class="search-box">
+    <div class="search-input-wrap"><input type="text" class="search-input" placeholder="Rechercher un luminaire..." id="searchInput"><button class="search-submit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button></div>
+    <div class="search-suggestions">Recherches populaires</div>
+    <div class="search-tags"><span class="search-tag" onclick="searchProduct('suspension led')">Suspension LED</span><span class="search-tag" onclick="searchProduct('rail magnétique')">Rail magnétique</span><span class="search-tag" onclick="searchProduct('spot encastré')">Spot encastré</span><span class="search-tag" onclick="searchProduct('bande led')">Bande LED</span><span class="search-tag" onclick="searchProduct('smart lighting')">Smart Lighting</span><span class="search-tag" onclick="searchProduct('applique extérieur')">Applique extérieur</span></div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span id="toast-msg"></span></div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1792 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Lighting Casambi au Maroc — MAGGMALIGHT</title>
+  <meta name="description" content="Découvrez le Smart Lighting Casambi avec MAGGMALIGHT. Contrôlez votre éclairage depuis votre smartphone. Solutions pour villas, hôtels et espaces professionnels au Maroc.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* ===== SMART LIGHTING PAGE STYLES ===== */
+    .navbar .nav-link.active-smart { color: var(--orange) !important; font-weight: 800; }
+    .navbar.hero-mode {
+      background: linear-gradient(180deg, rgba(0,0,0,.78), rgba(0,0,0,.18));
+      box-shadow: none;
+    }
+    .navbar.hero-mode .nav-action-btn { color: rgba(255,255,255,.9); }
+    .navbar.hero-mode .nav-whatsapp {
+      background: rgba(242,173,100,.12);
+      color: #fff;
+      border: 1px solid rgba(242,173,100,.75);
+    }
+
+    /* Hero */
+    .sl-hero {
+      min-height: 665px;
+      background: #0a0a0a;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding-top: 116px;
+    }
+    .sl-hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('images/SmartLighting/hero-casambi-salon.png');
+      background-size: cover;
+      background-position: center center;
+      opacity: 1;
+    }
+    .sl-hero-gradient {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 74% 50%, rgba(242,173,100,.08) 0%, transparent 36%),
+        linear-gradient(90deg, rgba(2,2,2,.96) 0%, rgba(2,2,2,.78) 33%, rgba(2,2,2,.2) 61%, rgba(2,2,2,.18) 100%);
+    }
+    .sl-hero-inner {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: minmax(360px, 570px) 1fr;
+      gap: 36px;
+      align-items: center;
+      padding: 54px 0 116px;
+    }
+    .sl-hero .container {
+      max-width: none;
+      padding-left: clamp(26px, 4vw, 72px);
+      padding-right: clamp(18px, 3vw, 42px);
+    }
+    .sl-hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 20px;
+    }
+    .sl-hero-tag::before {
+      content: '';
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--orange);
+    }
+    .sl-hero-h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 5.1vw, 4.55rem);
+      font-weight: 700;
+      line-height: 1.1;
+      color: #fff;
+      margin-bottom: 20px;
+      letter-spacing: -.02em;
+    }
+    .sl-hero-h1 em {
+      color: var(--orange);
+      font-style: normal;
+    }
+    .sl-hero-desc {
+      font-size: 1.08rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,.82);
+      margin-bottom: 34px;
+      max-width: 560px;
+    }
+    .sl-hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .sl-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      background: var(--orange);
+      color: #fff;
+      font-weight: 700;
+      font-size: .88rem;
+      letter-spacing: .03em;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background .2s, transform .15s;
+    }
+    .sl-btn-primary:hover { background: #e09a50; transform: translateY(-1px); }
+    .sl-btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 26px;
+      border: 1.5px solid rgba(255,255,255,.4);
+      color: #fff;
+      font-weight: 600;
+      font-size: .88rem;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: border-color .2s, background .2s;
+    }
+    .sl-btn-outline:hover { border-color: var(--orange); color: var(--orange); }
+    .sl-hero-actions .sl-btn-primary,
+    .sl-hero-actions .sl-btn-outline {
+      padding: 10px 20px;
+      min-height: 42px;
+      border-radius: 5px;
+      font-size: .74rem;
+      letter-spacing: .02em;
+      box-shadow: 0 10px 24px rgba(0,0,0,.16);
+    }
+    .sl-hero-actions .sl-btn-outline {
+      border-width: 1px;
+      background: rgba(255,255,255,.035);
+      backdrop-filter: blur(8px);
+    }
+    .sl-hero-actions .sl-btn-primary svg {
+      width: 13px;
+      height: 13px;
+    }
+
+    /* Hero right visual */
+    .sl-hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      opacity: 0;
+      pointer-events: none;
+    }
+    .sl-phone-wrap {
+      position: relative;
+      width: 390px;
+      height: 430px;
+      isolation: isolate;
+    }
+    .sl-phone {
+      width: 235px;
+      height: 430px;
+      background: #111;
+      border-radius: 36px;
+      border: 3px solid rgba(255,255,255,.12);
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 32px 80px rgba(0,0,0,.65), 0 0 0 1px rgba(255,255,255,.05);
+      margin-left: 34px;
+      transform: rotate(-1deg);
+    }
+    .sl-phone-notch {
+      position: absolute;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 20px;
+      background: #000;
+      border-radius: 12px;
+      z-index: 2;
+    }
+    .sl-phone-screen {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(160deg, #1a1200 0%, #0d0d0b 50%, #001a10 100%);
+      padding: 48px 16px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .sl-app-header {
+      font-size: .55rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 4px;
+    }
+    .sl-app-title {
+      font-size: .9rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    .sl-app-room {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(242,173,100,.2);
+      border-radius: 12px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .sl-app-room-name { font-size: .62rem; color: rgba(255,255,255,.7); font-weight: 600; }
+    .sl-app-toggle {
+      width: 28px;
+      height: 14px;
+      background: var(--orange);
+      border-radius: 7px;
+      position: relative;
+    }
+    .sl-app-toggle::after {
+      content: '';
+      position: absolute;
+      right: 2px;
+      top: 2px;
+      width: 10px;
+      height: 10px;
+      background: #fff;
+      border-radius: 50%;
+    }
+    .sl-slider-row { display: flex; flex-direction: column; gap: 4px; }
+    .sl-slider-label { font-size: .5rem; color: rgba(255,255,255,.5); }
+    .sl-slider-bar {
+      height: 3px;
+      background: rgba(255,255,255,.1);
+      border-radius: 2px;
+      position: relative;
+    }
+    .sl-slider-fill {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      border-radius: 2px;
+      background: linear-gradient(90deg, var(--orange), #f5c97a);
+    }
+    .sl-scene-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      margin-top: 4px;
+    }
+    .sl-scene-btn {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 8px;
+      padding: 8px 6px;
+      text-align: center;
+      font-size: .52rem;
+      color: rgba(255,255,255,.6);
+      cursor: pointer;
+    }
+    .sl-scene-btn.active {
+      background: rgba(242,173,100,.15);
+      border-color: rgba(242,173,100,.4);
+      color: var(--orange);
+    }
+    /* Module card */
+    .sl-module-card {
+      position: absolute;
+      bottom: 14px;
+      right: -10px;
+      width: 210px;
+      min-height: 150px;
+      background: linear-gradient(145deg,#232323,#090909);
+      border: 1px solid rgba(242,173,100,.22);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: 0 20px 50px rgba(0,0,0,.5);
+    }
+    .sl-module-label {
+      font-size: .55rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 6px;
+    }
+    .sl-module-name { font-size: .78rem; font-weight: 700; color: #fff; margin-bottom: 10px; }
+    .sl-module-chip {
+      width: 100%;
+      height: 50px;
+      background: linear-gradient(135deg, #1f3a2a 0%, #0d2018 100%);
+      border-radius: 8px;
+      border: 1px solid rgba(0,255,100,.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      margin-bottom: 8px;
+    }
+    .sl-module-chip span {
+      width: 6px;
+      height: 6px;
+      background: #00e676;
+      border-radius: 50%;
+      animation: chipBlink 1.8s ease-in-out infinite;
+    }
+    .sl-module-chip span:nth-child(2) { animation-delay: .4s; width: 4px; height: 4px; background: #69f0ae; }
+    .sl-module-chip span:nth-child(3) { animation-delay: .8s; }
+    @keyframes chipBlink { 0%,100%{opacity:1} 50%{opacity:.3} }
+    .sl-module-badge { font-size: .52rem; color: rgba(255,255,255,.45); }
+
+    /* Casambi badge floating */
+    .sl-casambi-badge {
+      position: absolute;
+      top: 16px;
+      right: 34px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 8px 14px;
+      box-shadow: 0 8px 30px rgba(0,0,0,.3);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .sl-casambi-badge-text {
+      font-size: .65rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      color: #1D1D1B;
+    }
+    .sl-casambi-badge-dot { width: 8px; height: 8px; background: #00c853; border-radius: 50%; }
+
+    /* Features bar */
+    .sl-features-bar {
+      background: transparent;
+      border-top: 1px solid rgba(255,255,255,.06);
+      padding: 0;
+      margin-top: -94px;
+      position: relative;
+      z-index: 5;
+    }
+    .sl-features-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0;
+      background: rgba(15,18,18,.92);
+      border: 1px solid rgba(255,255,255,.07);
+      border-radius: 7px;
+      box-shadow: 0 22px 50px rgba(0,0,0,.34);
+      overflow: hidden;
+      backdrop-filter: blur(12px);
+    }
+    .sl-feature-item {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      text-align: left;
+      gap: 13px;
+      padding: 24px 22px;
+    }
+    .sl-feature-item + .sl-feature-item {
+      border-left: 1px solid rgba(255,255,255,.07);
+    }
+    .sl-feature-icon {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--orange);
+    }
+    .sl-feature-icon svg { width: 25px; height: 25px; }
+    .sl-feature-title {
+      font-size: .75rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.3;
+    }
+    .sl-feature-sub {
+      font-size: .62rem;
+      color: rgba(255,255,255,.45);
+      line-height: 1.5;
+    }
+
+    /* Section shared */
+    .sl-section { padding: 62px 0; }
+    .sl-section-tag {
+      display: inline-block;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 10px;
+    }
+    .sl-section-title {
+      font-family: var(--font-sans);
+      font-size: clamp(1.4rem, 2.2vw, 2rem);
+      font-weight: 800;
+      color: var(--black);
+      margin-bottom: 12px;
+    }
+    .sl-section-sub {
+      font-size: .95rem;
+      color: #777;
+      margin-bottom: 48px;
+      max-width: 520px;
+    }
+    .sl-section-header { text-align: center; }
+    .sl-section-header .sl-section-sub { margin-left: auto; margin-right: auto; }
+
+    /* Solutions cards */
+    .sl-solutions-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 32px;
+    }
+    .sl-solution-card {
+      background: #fff;
+      border: 1px solid rgba(0,0,0,.07);
+      border-radius: 5px;
+      overflow: hidden;
+      transition: transform .25s, box-shadow .25s;
+      cursor: pointer;
+    }
+    .sl-solution-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 40px rgba(0,0,0,.1);
+    }
+    .sl-solution-img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      display: block;
+      background: #f0ede8;
+    }
+    .sl-solution-img-placeholder {
+      width: 100%;
+      height: 170px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+    }
+    .sl-solution-product-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 18px;
+      filter: drop-shadow(0 16px 22px rgba(0,0,0,.18));
+    }
+    .sl-solution-body { padding: 20px; }
+    .sl-solution-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 8px;
+    }
+    .sl-solution-desc {
+      font-size: .8rem;
+      line-height: 1.65;
+      color: #666;
+      margin-bottom: 14px;
+    }
+    .sl-solution-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: .78rem;
+      font-weight: 700;
+      color: var(--orange);
+      text-decoration: none;
+    }
+    .sl-solution-link svg { width: 13px; height: 13px; transition: transform .15s; }
+    .sl-solution-link:hover svg { transform: translateX(3px); }
+
+    /* Use cases */
+    .sl-cases-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+      margin-top: 30px;
+    }
+    .sl-case-card {
+      position: relative;
+      border-radius: 5px;
+      overflow: hidden;
+      aspect-ratio: 16/10;
+      cursor: pointer;
+    }
+    .sl-case-card:hover .sl-case-img { transform: scale(1.06); }
+    .sl-case-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .4s ease;
+      display: block;
+    }
+    .sl-case-bg {
+      background-image: url('images/SmartLighting/use-cases-smart-lighting.png');
+      background-size: 202% 202%;
+      background-repeat: no-repeat;
+    }
+    .sl-case-restaurant { background-position: left top; }
+    .sl-case-hotel { background-position: right top; }
+    .sl-case-commerce { background-position: left bottom; }
+    .sl-case-bureau { background-position: right bottom; }
+    .sl-case-bg {
+      width: 100%;
+      height: 100%;
+      transition: transform .4s ease;
+    }
+    .sl-case-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,.75) 0%, rgba(0,0,0,.1) 60%);
+    }
+    .sl-case-label {
+      position: absolute;
+      bottom: 16px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: .82rem;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: .04em;
+    }
+    .sl-case-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -60%);
+      color: rgba(255,255,255,.35);
+    }
+    .sl-case-icon svg { width: 36px; height: 36px; }
+    .sl-cases-cta {
+      text-align: center;
+      margin-top: 32px;
+    }
+    .sl-btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 28px;
+      border: 1.5px solid rgba(0,0,0,.18);
+      border-radius: 4px;
+      font-size: .85rem;
+      font-weight: 600;
+      color: var(--black);
+      text-decoration: none;
+      transition: border-color .2s, color .2s;
+    }
+    .sl-btn-ghost:hover { border-color: var(--orange); color: var(--orange); }
+    .sl-real-btn {
+      padding: 8px 18px;
+      font-size: .72rem;
+      border-width: 1px;
+      border-radius: 4px;
+      gap: 6px;
+    }
+    .sl-real-btn svg {
+      width: 12px;
+      height: 12px;
+    }
+
+    /* Casambi partner section */
+    .sl-partner {
+      background: #0b0d0d;
+      padding: 22px 0;
+    }
+    .sl-partner-inner {
+      display: grid;
+      grid-template-columns: 1fr auto .82fr;
+      gap: 24px;
+      align-items: center;
+      background: radial-gradient(circle at 56% 50%, rgba(242,173,100,.045), transparent 34%), #0b0d0d;
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 7px;
+      padding: 24px 28px;
+    }
+    .sl-partner-tag {
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 8px;
+    }
+    .sl-partner-title {
+      font-family: var(--font-sans);
+      font-size: 2.05rem;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    .sl-partner-desc {
+      font-size: .78rem;
+      line-height: 1.58;
+      color: rgba(255,255,255,.55);
+      margin-bottom: 16px;
+      max-width: 340px;
+    }
+    .sl-partner-features {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      align-items: start;
+    }
+    .sl-partner-feat {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 9px;
+    }
+    .sl-partner-feat-icon {
+      width: 32px;
+      height: 32px;
+      background: rgba(242,173,100,.12);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: var(--orange);
+    }
+    .sl-partner-feat-icon svg { width: 15px; height: 15px; }
+    .sl-partner-feat-text { font-size: .67rem; line-height: 1.38; color: rgba(255,255,255,.6); }
+    .sl-partner-feat-text strong { display: block; color: rgba(255,255,255,.9); font-size: .7rem; margin-bottom: 1px; }
+    .sl-partner-divider {
+      width: 1px;
+      height: 150px;
+      background: rgba(255,255,255,.08);
+    }
+    .sl-casambi-logo-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+    .sl-casambi-logo {
+      background: #fff;
+      border-radius: 12px;
+      padding: 20px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 20px 60px rgba(0,0,0,.4);
+    }
+    .sl-casambi-wordmark {
+      font-size: 1.35rem;
+      font-weight: 900;
+      letter-spacing: .06em;
+      color: #1D1D1B;
+    }
+    .sl-casambi-wordmark span { color: var(--orange); }
+    .sl-casambi-aa {
+      font-size: 1.65rem;
+      font-weight: 900;
+      color: #1D1D1B;
+      letter-spacing: -.02em;
+    }
+    .sl-casambi-cert {
+      font-size: .5rem;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: #999;
+      text-align: center;
+    }
+    .sl-partner-badge {
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.4);
+      text-align: center;
+    }
+    .sl-partner-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border: 1.5px solid rgba(242,173,100,.4);
+      border-radius: 4px;
+      font-size: .82rem;
+      font-weight: 600;
+      color: var(--orange);
+      text-decoration: none;
+      transition: background .2s;
+      margin-top: 12px;
+    }
+    .sl-partner-btn:hover { background: rgba(242,173,100,.08); }
+
+    /* How it works */
+    .sl-steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      position: relative;
+      margin-top: 42px;
+    }
+    .sl-steps-grid::before {
+      content: '';
+      position: absolute;
+      top: 47px;
+      left: 12%;
+      right: 12%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(242,173,100,.3) 20%, rgba(242,173,100,.3) 80%, transparent);
+      pointer-events: none;
+    }
+    .sl-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .sl-step-num {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--orange);
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: -12px;
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 8px 24px rgba(242,173,100,.35);
+    }
+    .sl-step-icon {
+      width: 86px;
+      height: 86px;
+      border-radius: 50%;
+      background: #f4f1ec;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 0;
+      color: var(--orange);
+    }
+    .sl-step-icon svg { width: 30px; height: 30px; }
+    .sl-step-title { font-size: .95rem; font-weight: 700; color: var(--black); margin-bottom: 8px; }
+    .sl-step-desc { font-size: .78rem; line-height: 1.65; color: #777; }
+
+    /* Réalisations */
+    .sl-realisations { background: #f7f5f2; }
+    .sl-real-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 30px;
+    }
+    .sl-real-card {
+      position: relative;
+      border-radius: 5px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+    }
+    .sl-real-card:hover .sl-real-img { transform: scale(1.05); }
+    .sl-real-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .4s ease;
+    }
+    .sl-real-bg {
+      background-image: url('images/SmartLighting/projets-smart-lighting.png');
+      background-size: 202% 202%;
+      background-repeat: no-repeat;
+    }
+    .sl-real-villa { background-position: left top; }
+    .sl-real-hotel { background-position: right top; }
+    .sl-real-salon { background-position: left bottom; }
+    .sl-real-restaurant { background-position: right bottom; }
+    .sl-real-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,.5) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity .3s;
+    }
+    .sl-real-card:hover .sl-real-overlay { opacity: 1; }
+    .sl-real-label {
+      position: absolute;
+      bottom: 14px;
+      left: 14px;
+      font-size: .75rem;
+      font-weight: 700;
+      color: #fff;
+      opacity: 0;
+      transition: opacity .3s;
+    }
+    .sl-real-card:hover .sl-real-label { opacity: 1; }
+
+    /* CTA banner */
+    .sl-cta-banner {
+      position: relative;
+      background: #0a0a0a;
+      padding: 52px 0;
+      overflow: hidden;
+    }
+    .sl-cta-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('images/Showroom/R62_0185.JPG');
+      background-size: cover;
+      background-position: center;
+      opacity: .24;
+    }
+    .sl-cta-gradient {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(10,10,10,.94) 0%, rgba(10,10,10,.9) 58%, rgba(10,10,10,.45) 100%);
+    }
+    .sl-cta-inner {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: center;
+    }
+    .sl-cta-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    .sl-cta-desc {
+      font-size: .9rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,.6);
+      max-width: 480px;
+    }
+    .sl-cta-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+    .sl-cta-wa {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 22px;
+      background: rgba(255,255,255,.08);
+      border: 1.5px solid rgba(255,255,255,.2);
+      border-radius: 4px;
+      font-size: .85rem;
+      font-weight: 600;
+      color: #fff;
+      text-decoration: none;
+      transition: background .2s;
+      white-space: nowrap;
+    }
+    .sl-cta-wa:hover { background: rgba(255,255,255,.14); }
+
+    /* Trust strip */
+    .sl-trust {
+      background: #fff;
+      border-top: 1px solid rgba(0,0,0,.07);
+      border-bottom: 1px solid rgba(0,0,0,.07);
+      padding: 28px 0;
+    }
+    .sl-trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .sl-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .sl-trust-item + .sl-trust-item { border-left: 1px solid rgba(0,0,0,.07); padding-left: 20px; }
+    .sl-trust-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(242,173,100,.1);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--orange);
+      flex-shrink: 0;
+    }
+    .sl-trust-icon svg { width: 18px; height: 18px; }
+    .sl-trust-title { font-size: .82rem; font-weight: 700; color: var(--black); }
+    .sl-trust-sub { font-size: .7rem; color: #888; }
+
+    /* Responsive */
+    @media (max-width:1100px) {
+      .sl-features-grid { grid-template-columns: repeat(3,1fr); }
+      .sl-solutions-grid { grid-template-columns: repeat(2,1fr); }
+    }
+    @media (max-width:900px) {
+      .sl-hero-inner { grid-template-columns: 1fr; gap: 40px; }
+      .sl-hero-visual { display: none; }
+      .sl-hero { min-height: 620px; }
+      .sl-features-bar { margin-top: 0; background: #111; }
+      .sl-cases-grid { grid-template-columns: repeat(3,1fr); }
+      .sl-partner-inner { grid-template-columns: 1fr; }
+      .sl-partner-divider { display: none; }
+      .sl-casambi-logo-box { display: none; }
+      .sl-partner-features { grid-template-columns: repeat(2,1fr); }
+      .sl-steps-grid { grid-template-columns: repeat(2,1fr); }
+      .sl-steps-grid::before { display: none; }
+      .sl-real-grid { grid-template-columns: repeat(2,1fr); }
+      .sl-cta-inner { grid-template-columns: 1fr; }
+      .sl-trust-grid { grid-template-columns: repeat(2,1fr); }
+    }
+    @media (max-width:600px) {
+      .sl-hero { padding-top: 90px; }
+      .sl-hero-inner { padding: 40px 0 60px; }
+      .sl-features-grid { grid-template-columns: repeat(2,1fr); }
+      .sl-feature-item + .sl-feature-item { border-left: none; }
+      .sl-feature-item { padding: 18px; }
+      .sl-solutions-grid { grid-template-columns: 1fr; }
+      .sl-cases-grid { grid-template-columns: repeat(2,1fr); }
+      .sl-partner-features { grid-template-columns: 1fr; }
+      .sl-steps-grid { grid-template-columns: 1fr; }
+      .sl-real-grid { grid-template-columns: 1fr 1fr; }
+      .sl-trust-grid { grid-template-columns: 1fr; }
+      .sl-trust-item + .sl-trust-item { border-left: none; padding-left: 0; border-top: 1px solid rgba(0,0,0,.07); padding-top: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============ TICKER ============ -->
+<div class="ticker-bar">
+  <div class="ticker-track">
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Livraison partout au Maroc</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>Paiement 100% sécurisé</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Conseil expert gratuit</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>Installation disponible</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Showroom à Marrakech</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Produits garantis 2 ans</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Livraison partout au Maroc</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>Paiement 100% sécurisé</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Conseil expert gratuit</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>Installation disponible</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Showroom à Marrakech</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Produits garantis 2 ans</div>
+    <span class="ticker-sep">✦</span>
+  </div>
+</div>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar hero-mode" id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" id="navLogo">
+        <img src="images/logo.png" alt="MAGGMALIGHT" class="nav-logo-img" id="logoImg" onerror="this.style.display='none';document.getElementById('logoText').style.display='flex'">
+        <span class="nav-logo-text" id="logoText" style="display:none">
+          <span class="nav-logo-main">MAGGMA<span class="logo-light">LIGHT</span></span>
+          <span class="nav-logo-sub">Lighting Design &amp; Solutions</span>
+        </span>
+      </a>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="index.html#categories" class="nav-link">
+            Produits
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-dropdown">
+            <a href="category.html?cat=salon">Toutes les catégories</a>
+            <a href="category.html?cat=suspensions">Suspensions</a>
+            <a href="category.html?cat=appliques">Appliques murales</a>
+            <a href="category.html?cat=spots">Spots &amp; Downlights</a>
+            <a href="category.html?cat=rails">Rails Magnétiques</a>
+            <a href="category.html?cat=exterieur">Luminaires Extérieurs</a>
+            <a href="smart-lighting.html">Smart Lighting</a>
+            <a href="category.html?cat=ruban">Profils LED</a>
+            <a href="category.html?cat=lampadaires">Lampes Décoratives</a>
+            <a href="category.html?cat=appareillage">Appareillage</a>
+          </div>
+        </li>
+        <li><a href="formations.html" class="nav-link">Formations</a></li>
+        <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+        <li><a href="smart-lighting.html" class="nav-link" style="color:var(--orange);font-weight:600">Smart Lighting</a></li>
+        <li><a href="blog.html" class="nav-link">Conseils</a></li>
+        <li><a href="index.html#showroom" class="nav-link">À propos</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="nav-action-btn" onclick="window.openSearch ? openSearch() : (location.href='category.html?cat=salon')" title="Rechercher">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="nav-action-btn" title="Mon compte">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </button>
+        <button class="nav-action-btn" title="Favoris">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </button>
+        <button class="nav-action-btn" onclick="window.openCart ? openCart() : (location.href='product.html')" title="Panier">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span class="nav-badge" id="cart-count">0</span>
+        </button>
+      </div>
+      <div class="nav-hamburger" onclick="toggleMobileNav()"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-header">
+    <div class="nav-logo-text">
+      <span class="nav-logo-main" style="color:#1D1D1B">MAGGMA<span class="logo-light">LIGHT</span></span>
+      <span class="nav-logo-sub" style="color:#888">Lighting Design &amp; Solutions</span>
+    </div>
+    <button class="mobile-nav-close" onclick="toggleMobileNav()">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="mobile-nav-links">
+    <a href="index.html#categories" onclick="toggleMobileNav()">Produits</a>
+    <a href="formations.html" onclick="toggleMobileNav()">Formations</a>
+    <a href="realisations.html" onclick="toggleMobileNav()">Réalisations</a>
+    <a href="smart-lighting.html" onclick="toggleMobileNav()">Smart Lighting</a>
+    <a href="blog.html" onclick="toggleMobileNav()">Conseils</a>
+    <a href="index.html#showroom" onclick="toggleMobileNav()">À propos</a>
+    <a href="contact.html" onclick="toggleMobileNav()">Contact</a>
+    <a href="consultation.html" style="color:var(--orange);font-weight:700">Réserver une consultation</a>
+  </div>
+</div>
+
+
+<!-- ============ HERO ============ -->
+<section class="sl-hero">
+  <div class="sl-hero-bg"></div>
+  <div class="sl-hero-gradient"></div>
+  <div class="container">
+    <div class="sl-hero-inner">
+      <!-- Left: text -->
+      <div>
+        <div class="sl-hero-tag">Smart Lighting</div>
+        <h1 class="sl-hero-h1">Smart Lighting<br><em>Casambi</em><br>au Maroc</h1>
+        <p class="sl-hero-desc">Contrôlez votre éclairage, créez vos ambiances et améliorez le confort de votre villa, hôtel ou espace professionnel.</p>
+        <div class="sl-hero-actions">
+          <a href="consultation.html" class="sl-btn-primary">
+            Demander une consultation
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="#solutions" class="sl-btn-outline">
+            Découvrir les solutions
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: phone mockup + module card -->
+      <div class="sl-hero-visual">
+        <div class="sl-phone-wrap">
+          <div class="sl-casambi-badge">
+            <div class="sl-casambi-badge-dot"></div>
+            <div class="sl-casambi-badge-text">CASAMBI</div>
+          </div>
+          <div class="sl-phone">
+            <div class="sl-phone-notch"></div>
+            <div class="sl-phone-screen">
+              <div class="sl-app-header">Casambi App</div>
+              <div class="sl-app-title">Salon Principal</div>
+              <div class="sl-app-room">
+                <div class="sl-app-room-name">Éclairage principal</div>
+                <div class="sl-app-toggle"></div>
+              </div>
+              <div class="sl-app-room" style="margin-top:6px">
+                <div class="sl-app-room-name">Ambiance dîner</div>
+                <div class="sl-app-toggle" style="background:rgba(255,255,255,.15)">
+                  <div style="width:10px;height:10px;background:#fff;border-radius:50%;position:absolute;left:2px;top:2px"></div>
+                </div>
+              </div>
+              <div class="sl-slider-row" style="margin-top:10px">
+                <div class="sl-slider-label">Luminosité — 72%</div>
+                <div class="sl-slider-bar"><div class="sl-slider-fill" style="width:72%"></div></div>
+              </div>
+              <div class="sl-slider-row">
+                <div class="sl-slider-label">Température — 3000K</div>
+                <div class="sl-slider-bar"><div class="sl-slider-fill" style="width:48%"></div></div>
+              </div>
+              <div class="sl-scene-grid">
+                <div class="sl-scene-btn active">Détente</div>
+                <div class="sl-scene-btn">Dîner</div>
+                <div class="sl-scene-btn">Travail</div>
+                <div class="sl-scene-btn">Cinéma</div>
+              </div>
+            </div>
+          </div>
+          <div class="sl-module-card">
+            <div class="sl-module-label">Module</div>
+            <div class="sl-module-name">Casambi CBU-ASD</div>
+            <div class="sl-module-chip">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="sl-module-badge">Bluetooth Low Energy</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES BAR ============ -->
+<div class="sl-features-bar">
+  <div class="container">
+    <div class="sl-features-grid">
+      <div class="sl-feature-item">
+        <div class="sl-feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+        </div>
+        <div class="sl-feature-title">Contrôle depuis smartphone ou tablette</div>
+        <div class="sl-feature-sub">Application Casambi intuitive</div>
+      </div>
+      <div class="sl-feature-item">
+        <div class="sl-feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2a7 7 0 017 7c0 5-7 13-7 13S5 14 5 9a7 7 0 017-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        </div>
+        <div class="sl-feature-title">Ambiances personnalisées</div>
+        <div class="sl-feature-sub">Créez l'atmosphère idéale à chaque moment</div>
+      </div>
+      <div class="sl-feature-item">
+        <div class="sl-feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
+        <div class="sl-feature-title">Économie d'énergie</div>
+        <div class="sl-feature-sub">Optimisation intelligente de votre consommation</div>
+      </div>
+      <div class="sl-feature-item">
+        <div class="sl-feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3"/></svg>
+        </div>
+        <div class="sl-feature-title">Installation simple</div>
+        <div class="sl-feature-sub">Sans câblage complexe, idéal pour rénovation</div>
+      </div>
+      <div class="sl-feature-item">
+        <div class="sl-feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="sl-feature-title">Évolutif &amp; flexible</div>
+        <div class="sl-feature-sub">Ajoutez facilement de nouveaux luminaires à votre système</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ SOLUTIONS ============ -->
+<section class="sl-section" id="solutions">
+  <div class="container">
+    <div class="sl-section-header">
+      <div class="sl-section-tag">Nos produits</div>
+      <h2 class="sl-section-title">Nos solutions Smart Lighting</h2>
+      <p class="sl-section-sub">Des technologies avancées pour un contrôle total de votre éclairage.</p>
+    </div>
+    <div class="sl-solutions-grid">
+      <div class="sl-solution-card fade-in-up">
+        <div class="sl-solution-img-placeholder" style="background:linear-gradient(135deg,#f7f7f5,#ece9e2)">
+          <img src="images/SmartLighting/cbu-asd-render.png" alt="Module Casambi CBU-ASD" class="sl-solution-product-img">
+        </div>
+        <div class="sl-solution-body">
+          <div class="sl-solution-name">Modules Casambi</div>
+          <p class="sl-solution-desc">Le cœur du système. Contrôle vos luminaires et scénarios, horaires et ambiances depuis l'application.</p>
+          <a href="consultation.html" class="sl-solution-link">En savoir plus <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+      <div class="sl-solution-card fade-in-up">
+        <div class="sl-solution-img-placeholder" style="background:linear-gradient(135deg,#1a1200,#0d0c08)">
+          <img src="images/SmartLighting/controle-automatisation.png" alt="Contrôle et automatisation Casambi" style="width:100%;height:100%;object-fit:cover;display:block">
+        </div>
+        <div class="sl-solution-body">
+          <div class="sl-solution-name">Contrôle &amp; Automatisation</div>
+          <p class="sl-solution-desc">Gérez vos luminaires, scénarios, horaires et ambiances depuis l'application.</p>
+          <a href="consultation.html" class="sl-solution-link">En savoir plus <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+      <div class="sl-solution-card fade-in-up">
+        <div class="sl-solution-img-placeholder" style="background:linear-gradient(135deg,#1a1000,#0d0a04)">
+          <img src="images/Categories/Rails Magnétique.webp" alt="Luminaires compatibles" style="width:100%;height:100%;object-fit:cover;position:absolute;top:0;left:0;opacity:.7">
+          <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.6)" stroke-width="1.2" style="position:relative;z-index:1"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3"/></svg>
+        </div>
+        <div class="sl-solution-body">
+          <div class="sl-solution-name">Luminaires compatibles</div>
+          <p class="sl-solution-desc">Une large gamme de luminaires compatibles Casambi.</p>
+          <a href="product.html" class="sl-solution-link">Voir les luminaires <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+      <div class="sl-solution-card fade-in-up">
+        <div class="sl-solution-img-placeholder" style="background:linear-gradient(135deg,#1a1a1a,#0d0d0d)">
+          <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="rgba(200,200,200,.4)" stroke-width="1.2"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="3" x2="12" y2="7"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <div class="sl-solution-body">
+          <div class="sl-solution-name">Interrupteurs intelligents</div>
+          <p class="sl-solution-desc">Contrôle sans fil, élégant et personnalisable selon vos besoins.</p>
+          <a href="consultation.html" class="sl-solution-link">En savoir plus <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ USE CASES ============ -->
+<section class="sl-section" style="background:#f7f5f2;padding-top:60px;padding-bottom:60px">
+  <div class="container">
+    <div class="sl-section-header">
+      <div class="sl-section-tag">Applications</div>
+      <h2 class="sl-section-title">Où utiliser le Smart Lighting ?</h2>
+    </div>
+    <div class="sl-cases-grid">
+      <div class="sl-case-card fade-in-up">
+        <img class="sl-case-img" src="images/sliders/slide-ext.png" alt="Villas & Résidences">
+        <div class="sl-case-overlay"></div>
+        <div class="sl-case-label">Villas &amp; Résidences</div>
+      </div>
+      <div class="sl-case-card fade-in-up">
+        <div class="sl-case-img sl-case-bg sl-case-hotel" role="img" aria-label="Chambre hôtel avec éclairage Smart Lighting"></div>
+        <div class="sl-case-overlay"></div>
+        <div class="sl-case-label">Hôtels</div>
+      </div>
+      <div class="sl-case-card fade-in-up">
+        <div class="sl-case-img sl-case-bg sl-case-restaurant" role="img" aria-label="Restaurant avec éclairage Smart Lighting"></div>
+        <div class="sl-case-overlay"></div>
+        <div class="sl-case-label">Restaurants</div>
+      </div>
+      <div class="sl-case-card fade-in-up">
+        <div class="sl-case-img sl-case-bg sl-case-bureau" role="img" aria-label="Bureau avec éclairage Smart Lighting"></div>
+        <div class="sl-case-overlay"></div>
+        <div class="sl-case-label">Bureaux</div>
+      </div>
+      <div class="sl-case-card fade-in-up">
+        <div class="sl-case-img sl-case-bg sl-case-commerce" role="img" aria-label="Commerce avec éclairage Smart Lighting"></div>
+        <div class="sl-case-overlay"></div>
+        <div class="sl-case-label">Commerces</div>
+      </div>
+    </div>
+    <div class="sl-cases-cta">
+      <a href="consultation.html" class="sl-btn-ghost">
+        Voir tous les cas d'utilisation
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CASAMBI PARTNER ============ -->
+<section class="sl-partner">
+  <div class="container">
+    <div class="sl-partner-inner">
+      <!-- Left: text -->
+      <div>
+        <div class="sl-partner-tag">Partenaire officiel</div>
+        <h2 class="sl-partner-title">Casambi<br>Technology</h2>
+        <p class="sl-partner-desc">MAGGMALIGHT est partenaire officiel Casambi au Maroc. Nous vous proposons la solution d'éclairage intelligent la plus avancée, fiable et évolutive du marché.</p>
+        <div class="sl-partner-features">
+          <div class="sl-partner-feat">
+            <div class="sl-partner-feat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12z"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <div class="sl-partner-feat-text">
+              <strong>Technologie sans fil</strong>
+              Bluetooth Low Energy
+            </div>
+          </div>
+          <div class="sl-partner-feat">
+            <div class="sl-partner-feat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3"/></svg>
+            </div>
+            <div class="sl-partner-feat-text">
+              <strong>Compatible</strong>
+              Avec des milliers de luminaires
+            </div>
+          </div>
+          <div class="sl-partner-feat">
+            <div class="sl-partner-feat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="sl-partner-feat-text">
+              <strong>Mises à jour régulières</strong>
+              Sécurité avancée
+            </div>
+          </div>
+          <div class="sl-partner-feat">
+            <div class="sl-partner-feat-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div class="sl-partner-feat-text">
+              <strong>Standard mondial</strong>
+              De l'éclairage intelligent
+            </div>
+          </div>
+        </div>
+        <a href="consultation.html" class="sl-partner-btn">
+          Découvrir Casambi
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+
+      <div class="sl-partner-divider"></div>
+
+      <!-- Right: logo badge -->
+      <div class="sl-casambi-logo-box">
+        <div class="sl-casambi-logo">
+          <div class="sl-casambi-aa">AA</div>
+          <div class="sl-casambi-wordmark">C<span>A</span>SAMBI</div>
+          <div class="sl-casambi-cert">Authorized Partner</div>
+        </div>
+        <div class="sl-partner-badge">Partenaire certifié</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="sl-section" id="process">
+  <div class="container">
+    <div class="sl-section-header">
+      <div class="sl-section-tag">Processus</div>
+      <h2 class="sl-section-title">Comment ça fonctionne ?</h2>
+    </div>
+    <div class="sl-steps-grid">
+      <div class="sl-step fade-in-up">
+        <div class="sl-step-num">1</div>
+        <div class="sl-step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <div class="sl-step-title">Vous nous contactez</div>
+        <p class="sl-step-desc">Nous étudions votre projet et vos besoins.</p>
+      </div>
+      <div class="sl-step fade-in-up">
+        <div class="sl-step-num">2</div>
+        <div class="sl-step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+        </div>
+        <div class="sl-step-title">Étude &amp; Conception</div>
+        <p class="sl-step-desc">Nous concevons la solution Smart Lighting adaptée.</p>
+      </div>
+      <div class="sl-step fade-in-up">
+        <div class="sl-step-num">3</div>
+        <div class="sl-step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <div class="sl-step-title">Installation</div>
+        <p class="sl-step-desc">Notre équipe installe et configure votre système.</p>
+      </div>
+      <div class="sl-step fade-in-up">
+        <div class="sl-step-num">4</div>
+        <div class="sl-step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <div class="sl-step-title">Profitez</div>
+        <p class="sl-step-desc">Contrôlez, personnalisez et profitez de votre éclairage intelligent.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ REALISATIONS ============ -->
+<section class="sl-section sl-realisations">
+  <div class="container">
+    <div class="sl-section-header">
+      <div class="sl-section-tag">Portfolio</div>
+      <h2 class="sl-section-title">Nos réalisations Smart Lighting</h2>
+    </div>
+    <div class="sl-real-grid">
+      <div class="sl-real-card fade-in-up">
+        <div class="sl-real-img sl-real-bg sl-real-villa" role="img" aria-label="Villa moderne éclairée à Marrakech"></div>
+        <div class="sl-real-overlay"></div>
+        <div class="sl-real-label">Villa privée — Marrakech</div>
+      </div>
+      <div class="sl-real-card fade-in-up">
+        <div class="sl-real-img sl-real-bg sl-real-hotel" role="img" aria-label="Chambre à coucher d'hôtel avec éclairage indirect"></div>
+        <div class="sl-real-overlay"></div>
+        <div class="sl-real-label">Chambre hôtel — Smart ambiance</div>
+      </div>
+      <div class="sl-real-card fade-in-up">
+        <div class="sl-real-img sl-real-bg sl-real-salon" role="img" aria-label="Salon résidentiel avec éclairage décoratif"></div>
+        <div class="sl-real-overlay"></div>
+        <div class="sl-real-label">Salon résidentiel — Scènes lumineuses</div>
+      </div>
+      <div class="sl-real-card fade-in-up">
+        <div class="sl-real-img sl-real-bg sl-real-restaurant" role="img" aria-label="Restaurant premium avec éclairage chaleureux"></div>
+        <div class="sl-real-overlay"></div>
+        <div class="sl-real-label">Restaurant premium — Ambiance chaleureuse</div>
+      </div>
+    </div>
+    <div class="sl-cases-cta" style="margin-top:36px">
+      <a href="realisations.html" class="sl-btn-ghost sl-real-btn">
+        Voir toutes nos réalisations
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BANNER ============ -->
+<section class="sl-cta-banner">
+  <div class="sl-cta-bg"></div>
+  <div class="sl-cta-gradient"></div>
+  <div class="container">
+    <div class="sl-cta-inner">
+      <div>
+        <h2 class="sl-cta-title">Un projet en tête ?</h2>
+        <p class="sl-cta-desc">Nos experts vous accompagnent pour créer un système d'éclairage intelligent sur mesure, adapté à vos espaces et vos usages.</p>
+      </div>
+      <div class="sl-cta-actions">
+        <a href="consultation.html" class="sl-btn-primary" style="justify-content:center">
+          Demander une consultation gratuite
+        </a>
+        <a href="https://wa.me/212708032018?text=Bonjour%20MAGGMALIGHT%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20le%20Smart%20Lighting%20Casambi." target="_blank" class="sl-cta-wa">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Nous écrire sur WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRUST STRIP ============ -->
+<div class="sl-trust">
+  <div class="container">
+    <div class="sl-trust-grid">
+      <div class="sl-trust-item">
+        <div class="sl-trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <div>
+          <div class="sl-trust-title">Livraison rapide</div>
+          <div class="sl-trust-sub">Partout au Maroc</div>
+        </div>
+      </div>
+      <div class="sl-trust-item">
+        <div class="sl-trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+        </div>
+        <div>
+          <div class="sl-trust-title">Paiement sécurisé</div>
+          <div class="sl-trust-sub">100% sécurisé</div>
+        </div>
+      </div>
+      <div class="sl-trust-item">
+        <div class="sl-trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <div>
+          <div class="sl-trust-title">Support client</div>
+          <div class="sl-trust-sub">Disponible 7/7</div>
+        </div>
+      </div>
+      <div class="sl-trust-item">
+        <div class="sl-trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <div>
+          <div class="sl-trust-title">Installation disponible</div>
+          <div class="sl-trust-sub">Par nos experts</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="images/logo.png" alt="MAGGMALIGHT" class="footer-logo-img"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <div class="footer-brand-logo" style="display:none">MAGGMA<span class="logo-light">LIGHT</span></div>
+        <div class="footer-brand-sub">Lighting Design &amp; Solutions</div>
+        <p class="footer-desc">L'expertise éclairage au service de vos projets. Produits premium, solutions intelligentes et accompagnement sur mesure partout au Maroc.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/maggmalight/" class="footer-social" title="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100089545215268&locale=fr_FR" class="footer-social" title="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="https://www.youtube.com/@OUHSSAINESAID-LightingDesign" class="footer-social" title="YouTube" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+          <a href="https://wa.me/212708032018" class="footer-social" title="WhatsApp" target="_blank" rel="noopener" style="background:#25d366;border-color:#25d366;color:#fff"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Produits</div>
+        <div class="footer-links">
+          <a href="index.html#categories" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Éclairage intérieur</a>
+          <a href="index.html#categories" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Éclairage extérieur</a>
+          <a href="smart-lighting.html" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Smart Lighting</a>
+          <a href="index.html#categories" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Rails magnétiques</a>
+          <a href="index.html#categories" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Spots &amp; Downlights</a>
+          <a href="index.html#categories" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Profils LED</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Informations</div>
+        <div class="footer-links">
+          <a href="index.html#why" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>À propos</a>
+          <a href="#" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Livraison &amp; Retours</a>
+          <a href="#" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Paiement sécurisé</a>
+          <a href="#" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Installation</a>
+          <a href="#" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>FAQ</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Service Client</div>
+        <div class="footer-links">
+          <a href="consultation.html" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Consultation gratuite</a>
+          <a href="#" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Devis personnalisé</a>
+          <a href="https://wa.me/212708032018" target="_blank" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Support WhatsApp</a>
+          <a href="mailto:contact@maggmalight.com" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>contact@maggmalight.com</a>
+          <a href="tel:+212708032018" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>+212 708 032 018</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Showroom</div>
+        <div class="footer-links">
+          <a href="https://maps.app.goo.gl/4cSXcTtbNnTfEFKS7" target="_blank" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Av. Mohammed VI, Marrakech</a>
+          <a href="#" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Lun–Sam : 9h00–19h00</a>
+          <a href="https://maps.app.goo.gl/4cSXcTtbNnTfEFKS7" target="_blank" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Voir sur la carte</a>
+        </div>
+        <div style="margin-top:16px;border-radius:8px;overflow:hidden;height:80px">
+          <img src="images/Showroom/ouverture-4.JPG" alt="Showroom MAGGMALIGHT" style="width:100%;height:100%;object-fit:cover;display:block">
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">© 2026 MAGGMALIGHT — Tous droits réservés. by <a href="https://groweb.ma" target="_blank" rel="noopener" class="footer-bottom-link">Groweb</a></div>
+      <div class="footer-bottom-right">
+        <a href="#" class="footer-bottom-link">Mentions légales</a>
+        <a href="#" class="footer-bottom-link">Confidentialité</a>
+        <a href="#" class="footer-bottom-link">CGV</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp sticky -->
+<div class="whatsapp-sticky">
+  <div class="whatsapp-label">Discuter sur WhatsApp</div>
+  <a href="https://wa.me/212708032018?text=Bonjour%20MAGGMALIGHT%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20le%20Smart%20Lighting%20Casambi." target="_blank" class="whatsapp-btn">
+    <div class="whatsapp-pulse"></div>
+    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"><span id="toast-msg"></span></div>
+
+<!-- Cart overlay & sidebar (shared structure) -->
+<div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header">
+    <div class="cart-title">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+      Mon Panier <span class="cart-count-badge" id="cart-items-count">0</span>
+    </div>
+    <button class="cart-close" onclick="closeCart()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="cart-empty" id="cartEmpty">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="48" height="48"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+    <p>Votre panier est vide</p>
+  </div>
+  <div class="cart-items" id="cartItems" style="display:none"></div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-total"><span>Total</span><span id="cart-total-price">0,00 MAD</span></div>
+    <a href="https://wa.me/212708032018?text=Je%20souhaite%20commander%20les%20articles%20de%20mon%20panier." target="_blank" class="cart-checkout-btn">Commander via WhatsApp</a>
+  </div>
+</div>
+
+<!-- Search overlay -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <button class="search-close" onclick="closeSearch()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <input type="text" class="search-input" id="searchInput" placeholder="Rechercher un luminaire…" oninput="handleSearch(this.value)">
+    <div class="search-suggestions">
+      <div class="search-suggestion" onclick="searchProduct('Suspension LED')">Suspension LED</div>
+      <div class="search-suggestion" onclick="searchProduct('Rail magnétique')">Rail magnétique</div>
+      <div class="search-suggestion" onclick="searchProduct('Smart Lighting')">Smart Lighting Casambi</div>
+      <div class="search-suggestion" onclick="searchProduct('Spot encastré')">Spot encastré</div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ---- Navbar scroll ---- */
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  if (scrollTop > 80) {
+    navbar.classList.add('scrolled');
+    navbar.classList.remove('hero-mode');
+  } else {
+    navbar.classList.remove('scrolled');
+    navbar.classList.add('hero-mode');
+  }
+});
+
+/* ---- Mobile nav ---- */
+function toggleMobileNav() {
+  const nav = document.getElementById('mobileNav');
+  nav.classList.toggle('open');
+  document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
+}
+
+/* ---- Cart ---- */
+let cart = [];
+function openCart() {
+  document.getElementById('cartOverlay').classList.add('open');
+  document.getElementById('cartSidebar').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeCart() {
+  document.getElementById('cartOverlay').classList.remove('open');
+  document.getElementById('cartSidebar').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function addToCart(name, price) {
+  const existing = cart.find(i => i.name === name);
+  if (existing) { existing.qty++; } else { cart.push({ name, price, qty: 1 }); }
+  updateCart();
+  showToast(`"${name}" ajouté au panier`);
+  openCart();
+}
+function updateCart() {
+  const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
+  const count = cart.reduce((s, i) => s + i.qty, 0);
+  document.getElementById('cart-count').textContent = count;
+  document.getElementById('cart-items-count').textContent = count;
+  document.getElementById('cart-total-price').textContent = total.toLocaleString('fr-MA') + ',00 MAD';
+  const cartItems = document.getElementById('cartItems');
+  const cartEmpty = document.getElementById('cartEmpty');
+  const cartFooter = document.getElementById('cartFooter');
+  if (cart.length === 0) {
+    cartEmpty.style.display = 'flex';
+    cartItems.style.display = 'none';
+    cartFooter.style.display = 'none';
+    return;
+  }
+  cartEmpty.style.display = 'none';
+  cartItems.style.display = 'flex';
+  cartFooter.style.display = 'block';
+  cartItems.innerHTML = cart.map((item, idx) => `
+    <div class="cart-item">
+      <div class="cart-item-img">💡</div>
+      <div class="cart-item-info">
+        <div class="cart-item-name">${item.name}</div>
+        <div class="cart-item-price">${(item.price * item.qty).toLocaleString('fr-MA')},00 MAD</div>
+        <div class="cart-item-qty">
+          <button class="cart-qty-btn" onclick="changeQty(${idx},-1)">−</button>
+          <span class="cart-qty-num">${item.qty}</span>
+          <button class="cart-qty-btn" onclick="changeQty(${idx},1)">+</button>
+          <button class="cart-qty-btn" onclick="removeItem(${idx})" style="margin-left:8px;color:#e63946">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  `).join('');
+}
+function changeQty(idx, dir) {
+  cart[idx].qty += dir;
+  if (cart[idx].qty <= 0) cart.splice(idx, 1);
+  updateCart();
+}
+function removeItem(idx) { cart.splice(idx, 1); updateCart(); }
+
+/* ---- Search ---- */
+function openSearch() {
+  document.getElementById('searchOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => document.getElementById('searchInput').focus(), 100);
+}
+function closeSearch() {
+  document.getElementById('searchOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+function searchProduct(term) {
+  document.getElementById('searchInput').value = term;
+  closeSearch();
+  showToast(`Recherche : "${term}"`);
+}
+function handleSearch(val) {
+  if (val.length > 1) showToast(`Recherche : "${val}"`);
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') { closeSearch(); closeCart(); }
+});
+
+/* ---- Toast ---- */
+let toastTimer;
+function showToast(msg) {
+  const toast = document.getElementById('toast');
+  document.getElementById('toast-msg').textContent = msg;
+  toast.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove('show'), 3500);
+}
+
+/* ---- Intersection Observer ---- */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+
+/* ---- Smooth scroll ---- */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+
+<script>
+(function(){
+  window.toggleMobileNav = function(){
+    const nav = document.getElementById('mobileNav');
+    if (!nav) return;
+    nav.classList.toggle('open');
+    nav.classList.toggle('active');
+    document.body.style.overflow = (nav.classList.contains('open') || nav.classList.contains('active')) ? 'hidden' : '';
+  };
+  if (!window.openSearch) window.openSearch = function(){ location.href = 'category.html?cat=salon'; };
+  if (!window.openCart) window.openCart = function(){ location.href = 'product.html'; };
+  const navbar = document.getElementById('navbar');
+  function updateCommonNavbar(){
+    if (!navbar) return;
+    const hero = document.querySelector('.hero, .cat-hero, .contact-hero, .blog-hero, .academy-hero, .sl-hero, .cp-hero, .real-hero, .product-page, .ty-wrap');
+    const threshold = hero ? Math.max(90, hero.offsetHeight * 0.45) : 140;
+    if (window.scrollY > threshold) {
+      navbar.classList.remove('hero-mode');
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.add('hero-mode');
+      navbar.classList.remove('scrolled');
+    }
+  }
+  window.addEventListener('scroll', updateCommonNavbar, { passive:true });
+  window.addEventListener('resize', updateCommonNavbar);
+  updateCommonNavbar();
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultation Gratuite — MAGGMALIGHT</title>
+  <meta name="description" content="Réservez votre consultation d'éclairage gratuite avec les experts MAGGMALIGHT à Marrakech. Conseils personnalisés pour votre projet.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* ===== CONSULTATION PAGE ===== */
+    :root {
+      --orange: #F2AD64;
+      --orange-dark: #d48d3a;
+      --black: #1D1D1B;
+      --bg: #ffffff;
+      --bg-alt: #f8f7f4;
+      --border: #e8e6e0;
+      --text: #1D1D1B;
+      --text-2: #4a4846;
+      --text-3: #888680;
+    }
+
+    /* ---- Page Hero ---- */
+    .cp-hero {
+      position: relative;
+      padding: 160px 0 80px;
+      background: var(--black);
+      overflow: hidden;
+    }
+    .cp-hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('images/Showroom/R62_0185.JPG');
+      background-size: cover;
+      background-position: center 30%;
+      opacity: 0.18;
+    }
+    .cp-hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+    .cp-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(242,173,100,.12);
+      border: 1px solid rgba(242,173,100,.35);
+      color: var(--orange);
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      padding: 8px 20px;
+      border-radius: 40px;
+      margin-bottom: 24px;
+    }
+    .cp-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.18;
+      margin-bottom: 18px;
+    }
+    .cp-title em { font-style: italic; color: var(--orange); }
+    .cp-desc { font-size: 1rem; color: rgba(255,255,255,.7); line-height: 1.75; margin-bottom: 36px; }
+    .cp-badges {
+      display: flex;
+      justify-content: center;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+    .cp-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .82rem;
+      color: rgba(255,255,255,.75);
+    }
+    .cp-badge svg { color: var(--orange); flex-shrink: 0; }
+
+    /* ---- Booking Body ---- */
+    .cp-body { padding: 72px 0 100px; background: var(--bg); }
+    .cp-grid {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 48px;
+      align-items: start;
+    }
+
+    /* ---- Step indicator ---- */
+    .cp-steps {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      margin-bottom: 40px;
+    }
+    .cp-step {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: 1;
+    }
+    .cp-step-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--bg-alt);
+      border: 2px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .72rem;
+      font-weight: 700;
+      color: var(--text-3);
+      flex-shrink: 0;
+      transition: all .3s;
+    }
+    .cp-step.active .cp-step-num {
+      background: var(--orange);
+      border-color: var(--orange);
+      color: #fff;
+    }
+    .cp-step.done .cp-step-num {
+      background: #1D1D1B;
+      border-color: #1D1D1B;
+      color: #fff;
+    }
+    .cp-step-label { font-size: .78rem; font-weight: 600; color: var(--text-3); }
+    .cp-step.active .cp-step-label { color: var(--black); }
+    .cp-step.done .cp-step-label { color: var(--black); }
+    .cp-step-line { flex: 1; height: 1px; background: var(--border); margin: 0 12px; }
+    .cp-step-line.done { background: var(--black); }
+
+    /* ---- Section titles ---- */
+    .cp-section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 6px;
+    }
+    .cp-section-sub { font-size: .84rem; color: var(--text-3); margin-bottom: 24px; }
+
+    /* ---- Consultation types ---- */
+    .consult-types {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 40px;
+    }
+    .consult-type {
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      padding: 18px 16px;
+      cursor: pointer;
+      transition: all .25s;
+      background: var(--bg);
+    }
+    .consult-type:hover { border-color: var(--orange); background: #fffaf5; }
+    .consult-type.selected { border-color: var(--orange); background: #fffaf5; }
+    .consult-type-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--bg-alt);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      transition: all .25s;
+    }
+    .consult-type.selected .consult-type-icon { background: var(--orange); color: #fff; }
+    .consult-type-icon svg { width: 20px; height: 20px; }
+    .consult-type-name { font-size: .88rem; font-weight: 700; color: var(--black); margin-bottom: 3px; }
+    .consult-type-desc { font-size: .75rem; color: var(--text-3); line-height: 1.5; }
+    .consult-type-badge {
+      display: inline-block;
+      font-size: .65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      padding: 2px 8px;
+      border-radius: 20px;
+      margin-top: 8px;
+      background: rgba(242,173,100,.15);
+      color: var(--orange-dark);
+    }
+
+    /* ---- Calendar ---- */
+    .cal-wrap { margin-bottom: 40px; }
+    .cal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    .cal-nav {
+      width: 34px;
+      height: 34px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--bg);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .2s;
+    }
+    .cal-nav:hover { border-color: var(--orange); color: var(--orange); }
+    .cal-nav svg { width: 16px; height: 16px; }
+    .cal-month { font-size: .95rem; font-weight: 700; color: var(--black); }
+    .cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+    .cal-day-label {
+      text-align: center;
+      font-size: .68rem;
+      font-weight: 700;
+      color: var(--text-3);
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      padding: 6px 0;
+    }
+    .cal-day {
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: .82rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all .2s;
+      color: var(--text);
+      font-weight: 500;
+    }
+    .cal-day:hover:not(.disabled):not(.empty) { background: var(--bg-alt); }
+    .cal-day.today { font-weight: 700; color: var(--orange); }
+    .cal-day.selected { background: var(--black); color: #fff; }
+    .cal-day.selected.today { background: var(--black); color: var(--orange); }
+    .cal-day.disabled { color: var(--border); cursor: not-allowed; }
+    .cal-day.empty { pointer-events: none; }
+
+    /* ---- Time slots ---- */
+    .slots-wrap { margin-bottom: 40px; }
+    .slots-selected-date {
+      font-size: .84rem;
+      color: var(--text-2);
+      margin-bottom: 14px;
+    }
+    .slots-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+    .slot {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 6px;
+      text-align: center;
+      font-size: .8rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .2s;
+      color: var(--text);
+      background: var(--bg);
+    }
+    .slot:hover { border-color: var(--orange); color: var(--orange); background: #fffaf5; }
+    .slot.selected { background: var(--orange); border-color: var(--orange); color: #fff; }
+    .slot.busy { background: var(--bg-alt); color: var(--border); cursor: not-allowed; pointer-events: none; }
+
+    /* ---- Contact form ---- */
+    .cp-form .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .cp-form .form-group { margin-bottom: 18px; }
+    .cp-form .form-label { display: block; font-size: .8rem; font-weight: 600; color: var(--black); margin-bottom: 6px; }
+    .cp-form .form-input,
+    .cp-form .form-textarea,
+    .cp-form .form-select {
+      width: 100%;
+      padding: 13px 16px;
+      border: 1.5px solid var(--border);
+      border-radius: 10px;
+      font-family: 'Poppins', sans-serif;
+      font-size: .88rem;
+      color: var(--text);
+      background: var(--bg);
+      outline: none;
+      transition: border-color .2s;
+      box-sizing: border-box;
+    }
+    .cp-form .form-input:focus,
+    .cp-form .form-textarea:focus,
+    .cp-form .form-select:focus { border-color: var(--orange); }
+    .cp-form .form-textarea { height: 100px; resize: vertical; }
+    .cp-submit {
+      width: 100%;
+      padding: 16px 24px;
+      background: var(--black);
+      color: #fff;
+      border: none;
+      border-radius: 40px;
+      font-family: 'Poppins', sans-serif;
+      font-size: .92rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all .25s;
+    }
+    .cp-submit:hover { background: var(--orange); transform: translateY(-2px); }
+    .cp-submit-note { text-align: center; font-size: .75rem; color: var(--text-3); margin-top: 12px; }
+
+    /* ---- Summary sidebar ---- */
+    .cp-sidebar { position: sticky; top: 100px; }
+    .cp-summary {
+      background: var(--bg);
+      border: 1.5px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .cp-summary-header {
+      background: var(--black);
+      padding: 22px 24px;
+    }
+    .cp-summary-header-title {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 4px;
+    }
+    .cp-summary-header-sub {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .cp-summary-body { padding: 24px; }
+    .cp-sum-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .cp-sum-row:last-of-type { border-bottom: none; }
+    .cp-sum-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: var(--bg-alt);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .cp-sum-icon svg { width: 16px; height: 16px; color: var(--orange); }
+    .cp-sum-label { font-size: .72rem; color: var(--text-3); margin-bottom: 2px; }
+    .cp-sum-value { font-size: .88rem; font-weight: 600; color: var(--black); }
+    .cp-sum-value.placeholder { color: var(--border); font-style: italic; font-weight: 400; }
+
+    /* Guarantee badges in sidebar */
+    .cp-guarantees { margin-top: 20px; display: flex; flex-direction: column; gap: 10px; }
+    .cp-guarantee {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .8rem;
+      color: var(--text-2);
+    }
+    .cp-guarantee svg { color: var(--orange); flex-shrink: 0; }
+
+    /* ---- Success overlay ---- */
+    .cp-success {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.65);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+    }
+    .cp-success.show { display: flex; }
+    .cp-success-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 48px 40px;
+      text-align: center;
+      max-width: 440px;
+      width: 90%;
+      animation: popIn .35s ease;
+    }
+    @keyframes popIn { from { transform:scale(.85); opacity:0; } to { transform:scale(1); opacity:1; } }
+    .cp-success-icon {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: #f0faf4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+    .cp-success-icon svg { width: 36px; height: 36px; color: #22c55e; }
+    .cp-success-title { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; color: var(--black); margin-bottom: 12px; }
+    .cp-success-text { font-size: .9rem; color: var(--text-2); line-height: 1.7; margin-bottom: 28px; }
+    .cp-success-wa {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: #25d366;
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: .9rem;
+      text-decoration: none;
+      transition: all .25s;
+    }
+    .cp-success-wa:hover { background: #1aad4f; transform: translateY(-2px); }
+    .cp-success-close {
+      display: block;
+      margin: 16px auto 0;
+      font-size: .82rem;
+      color: var(--text-3);
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 900px) {
+      .cp-grid { grid-template-columns: 1fr; }
+      .cp-sidebar { position: static; }
+      .consult-types { grid-template-columns: 1fr 1fr; }
+      .slots-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 580px) {
+      .cp-hero { padding: 130px 0 60px; }
+      .consult-types { grid-template-columns: 1fr; }
+      .slots-grid { grid-template-columns: repeat(2, 1fr); }
+      .cp-form .form-row { grid-template-columns: 1fr; }
+      .cp-badges { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============ TICKER ============ -->
+<div class="ticker-bar">
+  <div class="ticker-track">
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Livraison partout au Maroc</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>Paiement 100% sécurisé</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Conseil expert gratuit</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>Installation disponible</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Showroom à Marrakech</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Produits garantis 2 ans</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Livraison partout au Maroc</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>Paiement 100% sécurisé</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Conseil expert gratuit</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>Installation disponible</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Showroom à Marrakech</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Produits garantis 2 ans</div>
+    <span class="ticker-sep">✦</span>
+  </div>
+</div>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar hero-mode" id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" id="navLogo">
+        <img src="images/logo.png" alt="MAGGMALIGHT" class="nav-logo-img" id="logoImg" onerror="this.style.display='none';document.getElementById('logoText').style.display='flex'">
+        <span class="nav-logo-text" id="logoText" style="display:none">
+          <span class="nav-logo-main">MAGGMA<span class="logo-light">LIGHT</span></span>
+          <span class="nav-logo-sub">Lighting Design &amp; Solutions</span>
+        </span>
+      </a>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="index.html#categories" class="nav-link">
+            Produits
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-dropdown">
+            <a href="category.html?cat=salon">Toutes les catégories</a>
+            <a href="category.html?cat=suspensions">Suspensions</a>
+            <a href="category.html?cat=appliques">Appliques murales</a>
+            <a href="category.html?cat=spots">Spots &amp; Downlights</a>
+            <a href="category.html?cat=rails">Rails Magnétiques</a>
+            <a href="category.html?cat=exterieur">Luminaires Extérieurs</a>
+            <a href="smart-lighting.html">Smart Lighting</a>
+            <a href="category.html?cat=ruban">Profils LED</a>
+            <a href="category.html?cat=lampadaires">Lampes Décoratives</a>
+            <a href="category.html?cat=appareillage">Appareillage</a>
+          </div>
+        </li>
+        <li><a href="formations.html" class="nav-link">Formations</a></li>
+        <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+        <li><a href="smart-lighting.html" class="nav-link" style="color:var(--orange);font-weight:600">Smart Lighting</a></li>
+        <li><a href="blog.html" class="nav-link">Conseils</a></li>
+        <li><a href="index.html#showroom" class="nav-link">À propos</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="nav-action-btn" onclick="window.openSearch ? openSearch() : (location.href='category.html?cat=salon')" title="Rechercher">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="nav-action-btn" title="Mon compte">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </button>
+        <button class="nav-action-btn" title="Favoris">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </button>
+        <button class="nav-action-btn" onclick="window.openCart ? openCart() : (location.href='product.html')" title="Panier">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span class="nav-badge" id="cart-count">0</span>
+        </button>
+      </div>
+      <div class="nav-hamburger" onclick="toggleMobileNav()"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-header">
+    <div class="nav-logo-text">
+      <span class="nav-logo-main" style="color:#1D1D1B">MAGGMA<span class="logo-light">LIGHT</span></span>
+      <span class="nav-logo-sub" style="color:#888">Lighting Design &amp; Solutions</span>
+    </div>
+    <button class="mobile-nav-close" onclick="toggleMobileNav()">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="mobile-nav-links">
+    <a href="index.html#categories" onclick="toggleMobileNav()">Produits</a>
+    <a href="formations.html" onclick="toggleMobileNav()">Formations</a>
+    <a href="realisations.html" onclick="toggleMobileNav()">Réalisations</a>
+    <a href="smart-lighting.html" onclick="toggleMobileNav()">Smart Lighting</a>
+    <a href="blog.html" onclick="toggleMobileNav()">Conseils</a>
+    <a href="index.html#showroom" onclick="toggleMobileNav()">À propos</a>
+    <a href="contact.html" onclick="toggleMobileNav()">Contact</a>
+    <a href="consultation.html" style="color:var(--orange);font-weight:700">Réserver une consultation</a>
+  </div>
+</div>
+
+
+<!-- ============ HERO ============ -->
+<section class="cp-hero">
+  <div class="cp-hero-bg"></div>
+  <div class="container">
+    <div class="cp-hero-content">
+      <div class="cp-tag">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+        Consultation 100% gratuite
+      </div>
+      <h1 class="cp-title">Réservez votre<br>consultation <em>éclairage</em><br>gratuite</h1>
+      <p class="cp-desc">Nos experts en éclairage  vous accompagnent dans la conception et le choix de vos luminaires — pour chaque projet et chaque budget.</p>
+      <div class="cp-badges">
+        <div class="cp-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4"/></svg>
+          Sans engagement
+        </div>
+        <div class="cp-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          30 minutes
+        </div>
+        <div class="cp-badge">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Showroom ou WhatsApp
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BOOKING BODY ============ -->
+<section class="cp-body">
+  <div class="container">
+
+    <!-- Steps -->
+    <div class="cp-steps">
+      <div class="cp-step active" id="step1">
+        <div class="cp-step-num">1</div>
+        <div class="cp-step-label">Type</div>
+      </div>
+      <div class="cp-step-line" id="line1"></div>
+      <div class="cp-step" id="step2">
+        <div class="cp-step-num">2</div>
+        <div class="cp-step-label">Date &amp; Heure</div>
+      </div>
+      <div class="cp-step-line" id="line2"></div>
+      <div class="cp-step" id="step3">
+        <div class="cp-step-num">3</div>
+        <div class="cp-step-label">Vos infos</div>
+      </div>
+    </div>
+
+    <div class="cp-grid">
+
+      <!-- ---- LEFT COLUMN: BOOKING FORM ---- -->
+      <div class="cp-left">
+
+        <!-- STEP 1 — Type de consultation -->
+        <div id="block-type">
+          <div class="cp-section-title">Quel type de consultation ?</div>
+          <div class="cp-section-sub">Choisissez la formule qui correspond à votre projet</div>
+          <div class="consult-types">
+            <div class="consult-type selected" onclick="selectType(this,'Visite au showroom')" data-type="Visite au showroom">
+              <div class="consult-type-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg></div>
+              <div class="consult-type-name">Visite au showroom</div>
+              <div class="consult-type-desc">Découvrez +400 produits en exposition réelle à Marrakech</div>
+              <span class="consult-type-badge">Recommandé</span>
+            </div>
+            <div class="consult-type" onclick="selectType(this,'Consultation WhatsApp')" data-type="Consultation WhatsApp">
+              <div class="consult-type-icon"><svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></div>
+              <div class="consult-type-name">Consultation WhatsApp</div>
+              <div class="consult-type-desc">Échange rapide avec un expert depuis chez vous</div>
+              <span class="consult-type-badge">Rapide</span>
+            </div>
+            <div class="consult-type" onclick="selectType(this,'Projet résidentiel')" data-type="Projet résidentiel">
+              <div class="consult-type-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+              <div class="consult-type-name">Projet résidentiel</div>
+              <div class="consult-type-desc">Villa, appartement, rénovation complète</div>
+            </div>
+            <div class="consult-type" onclick="selectType(this,'Projet professionnel')" data-type="Projet professionnel">
+              <div class="consult-type-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
+              <div class="consult-type-name">Projet professionnel</div>
+              <div class="consult-type-desc">Hôtel, restaurant, bureau, commerce</div>
+              <span class="consult-type-badge">Pro</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- STEP 2 — Date & Heure -->
+        <div id="block-datetime">
+          <div class="cp-section-title">Choisissez une date</div>
+          <div class="cp-section-sub">Sélectionnez le jour qui vous convient</div>
+          <div class="cal-wrap">
+            <div class="cal-header">
+              <button class="cal-nav" onclick="changeMonth(-1)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+              </button>
+              <div class="cal-month" id="calMonth">Mai 2026</div>
+              <button class="cal-nav" onclick="changeMonth(1)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+              </button>
+            </div>
+            <div class="cal-grid" id="calGrid"></div>
+          </div>
+
+          <div class="slots-wrap" id="slotsWrap" style="display:none">
+            <div class="cp-section-title" style="font-size:1.1rem">Choisissez un créneau</div>
+            <div class="slots-selected-date" id="slotsDateLabel"></div>
+            <div class="slots-grid" id="slotsGrid"></div>
+          </div>
+        </div>
+
+        <!-- STEP 3 — Contact info -->
+        <div id="block-contact">
+          <div class="cp-section-title" style="margin-top:32px">Vos coordonnées</div>
+          <div class="cp-section-sub">Pour confirmer votre rendez-vous</div>
+          <form class="cp-form" onsubmit="submitBooking(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Prénom *</label>
+                <input type="text" class="form-input" name="firstname" id="b-first" placeholder="Votre prénom" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Nom *</label>
+                <input type="text" class="form-input" name="lastname" id="b-last" placeholder="Votre nom" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Téléphone / WhatsApp *</label>
+              <input type="tel" class="form-input" name="phone" id="b-phone" placeholder="+212 6xx xx xx xx" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-input" name="email" id="b-email" placeholder="votre@email.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Décrivez brièvement votre projet</label>
+              <textarea class="form-textarea" name="project" id="b-project" placeholder="Ex : villa à Marrakech, 3 chambres + salon — éclairage LED et suspension design..."></textarea>
+            </div>
+            <button type="submit" class="cp-submit">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Confirmer par WhatsApp
+            </button>
+            <p class="cp-submit-note">Votre réservation sera confirmée par WhatsApp dans les 30 minutes.</p>
+          </form>
+        </div>
+      </div>
+
+      <!-- ---- RIGHT COLUMN: SUMMARY SIDEBAR ---- -->
+      <div class="cp-sidebar">
+        <div class="cp-summary">
+          <div class="cp-summary-header">
+            <div class="cp-summary-header-title">Récapitulatif</div>
+            <div class="cp-summary-header-sub">Votre consultation</div>
+          </div>
+          <div class="cp-summary-body">
+            <div class="cp-sum-row">
+              <div class="cp-sum-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+              <div>
+                <div class="cp-sum-label">Type de consultation</div>
+                <div class="cp-sum-value" id="sum-type">Visite au showroom</div>
+              </div>
+            </div>
+            <div class="cp-sum-row">
+              <div class="cp-sum-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+              <div>
+                <div class="cp-sum-label">Date</div>
+                <div class="cp-sum-value placeholder" id="sum-date">Non sélectionnée</div>
+              </div>
+            </div>
+            <div class="cp-sum-row">
+              <div class="cp-sum-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+              <div>
+                <div class="cp-sum-label">Créneau</div>
+                <div class="cp-sum-value placeholder" id="sum-time">Non sélectionné</div>
+              </div>
+            </div>
+            <div class="cp-sum-row">
+              <div class="cp-sum-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+              <div>
+                <div class="cp-sum-label">Lieu</div>
+                <div class="cp-sum-value" style="font-size:.82rem;line-height:1.5">Magasin A6, A7 Imm. Al-Qadissia<br><span style="color:var(--text-3)">Rte de Safi, Marrakech</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="cp-guarantees" style="margin-top:24px;padding:0 4px">
+          <div class="cp-guarantee">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Consultation 100% gratuite, sans engagement
+          </div>
+          <div class="cp-guarantee">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Experts certifiés en lighting design
+          </div>
+          <div class="cp-guarantee">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            Confirmation rapide par WhatsApp
+          </div>
+          <div class="cp-guarantee">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+            +400 produits à découvrir en showroom
+          </div>
+        </div>
+
+        <!-- Direct contact -->
+        <div style="margin-top:24px;border:1.5px solid var(--border);border-radius:14px;padding:20px;background:var(--bg-alt)">
+          <div style="font-size:.78rem;font-weight:700;color:var(--black);margin-bottom:12px;text-transform:uppercase;letter-spacing:.07em">Contact direct</div>
+          <a href="tel:+212708032018" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text);font-size:.87rem;font-weight:600;margin-bottom:10px">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--orange)" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.28 9.09 19.79 19.79 0 01.21 0.4A2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.08 6.08l1.27-1.52a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            +212 708 032 018
+          </a>
+          <a href="https://wa.me/212708032018?text=Bonjour%20MAGGMALIGHT%2C%20je%20souhaite%20r%C3%A9server%20une%20consultation%20gratuite." target="_blank" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:#25d366;font-size:.87rem;font-weight:600">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Contacter sur WhatsApp
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="images/logo.png" alt="MAGGMALIGHT" class="footer-logo-img"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <div class="footer-brand-logo" style="display:none">MAGGMA<span class="logo-light">LIGHT</span></div>
+        <div class="footer-brand-sub">Lighting Design &amp; Solutions</div>
+        <p class="footer-desc">L'expertise éclairage au service de vos projets. Produits premium, solutions intelligentes et accompagnement sur mesure partout au Maroc.</p>
+        <div class="footer-socials" style="margin-top:16px">
+          <a href="https://www.instagram.com/maggmalight/" class="footer-social" title="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100089545215268&locale=fr_FR" class="footer-social" title="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="https://www.youtube.com/@OUHSSAINESAID-LightingDesign" class="footer-social" title="YouTube" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+          <a href="https://wa.me/212708032018" class="footer-social" title="WhatsApp" target="_blank" rel="noopener" style="background:#25d366;border-color:#25d366;color:#fff"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Navigation</div>
+        <div class="footer-links">
+          <a href="index.html" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Accueil</a>
+          <a href="index.html#categories" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Produits</a>
+          <a href="index.html#showroom" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Showroom</a>
+          <a href="index.html#contact-form" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Contact</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <div class="footer-links">
+          <a href="tel:+212708032018" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>+212 708 032 018</a>
+          <a href="mailto:contact@maggmalight.com" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>contact@maggmalight.com</a>
+          <a href="https://maps.app.goo.gl/4cSXcTtbNnTfEFKS7" target="_blank" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Magasin A6-A7, Rte de Safi, Marrakech</a>
+          <a href="https://wa.me/212708032018" target="_blank" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>WhatsApp direct</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">© 2026 MAGGMALIGHT — Tous droits réservés. by <a href="https://groweb.ma" target="_blank" rel="noopener" class="footer-bottom-link">Groweb</a></div>
+      <div class="footer-bottom-right">
+        <a href="#" class="footer-bottom-link">Mentions légales</a>
+        <a href="#" class="footer-bottom-link">Confidentialité</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp sticky -->
+<div class="whatsapp-sticky">
+  <a href="https://wa.me/212708032018?text=Bonjour%20MAGGMALIGHT%2C%20je%20souhaite%20r%C3%A9server%20une%20consultation%20gratuite." target="_blank" class="whatsapp-btn">
+    <div class="whatsapp-pulse"></div>
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
+
+<!-- Success overlay -->
+<div class="cp-success" id="successOverlay">
+  <div class="cp-success-card">
+    <div class="cp-success-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <div class="cp-success-title">Demande envoyée !</div>
+    <p class="cp-success-text" id="successText">Nous vous confirmons votre rendez-vous sur WhatsApp dans les 30 minutes.<br><br>Un expert vous contactera au numéro fourni.</p>
+    <a href="#" class="cp-success-wa" id="successWaLink" target="_blank">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Confirmer sur WhatsApp
+    </a>
+    <button class="cp-success-close" onclick="closeSuccess()">Fermer</button>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span id="toast-msg"></span></div>
+
+<script>
+/* ===== CONSULTATION PAGE SCRIPT ===== */
+
+/* Mobile nav */
+function toggleMobileNav() {
+  const nav = document.getElementById('mobileNav');
+  nav.classList.toggle('open');
+  document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
+}
+
+/* Toast */
+let toastTimer;
+function showToast(msg) {
+  const toast = document.getElementById('toast');
+  document.getElementById('toast-msg').textContent = msg;
+  toast.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => toast.classList.remove('show'), 3500);
+}
+
+/* ---- Booking state ---- */
+const state = {
+  type: 'Visite au showroom',
+  year: 0,
+  month: 0,
+  day: 0,
+  time: ''
+};
+
+/* ---- Consultation type ---- */
+function selectType(el, type) {
+  document.querySelectorAll('.consult-type').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+  state.type = type;
+  document.getElementById('sum-type').textContent = type;
+  updateSteps();
+}
+
+/* ---- Calendar ---- */
+const MONTHS = ['Janvier','Février','Mars','Avril','Mai','Juin','Juillet','Août','Septembre','Octobre','Novembre','Décembre'];
+const DAYS   = ['Dim','Lun','Mar','Mer','Jeu','Ven','Sam'];
+const today  = new Date();
+
+state.year  = today.getFullYear();
+state.month = today.getMonth();
+
+function changeMonth(dir) {
+  state.month += dir;
+  if (state.month > 11) { state.month = 0; state.year++; }
+  if (state.month < 0)  { state.month = 11; state.year--; }
+  renderCalendar();
+}
+
+function renderCalendar() {
+  const grid = document.getElementById('calGrid');
+  document.getElementById('calMonth').textContent = MONTHS[state.month] + ' ' + state.year;
+  grid.innerHTML = '';
+
+  DAYS.forEach(d => {
+    const lbl = document.createElement('div');
+    lbl.className = 'cal-day-label';
+    lbl.textContent = d;
+    grid.appendChild(lbl);
+  });
+
+  const firstDay = new Date(state.year, state.month, 1).getDay();
+  const daysInMonth = new Date(state.year, state.month + 1, 0).getDate();
+
+  for (let i = 0; i < firstDay; i++) {
+    const empty = document.createElement('div');
+    empty.className = 'cal-day empty';
+    grid.appendChild(empty);
+  }
+
+  for (let d = 1; d <= daysInMonth; d++) {
+    const btn = document.createElement('div');
+    btn.className = 'cal-day';
+    btn.textContent = d;
+
+    const date = new Date(state.year, state.month, d);
+    const isPast = date < new Date(today.getFullYear(), today.getMonth(), today.getDate());
+    const isSunday = date.getDay() === 0;
+    const isToday = d === today.getDate() && state.month === today.getMonth() && state.year === today.getFullYear();
+
+    if (isPast || isSunday) {
+      btn.classList.add('disabled');
+    } else {
+      if (isToday) btn.classList.add('today');
+      if (state.day === d && state.month === btn._month && state.year === btn._year) btn.classList.add('selected');
+      btn._day = d;
+      btn.onclick = () => selectDay(btn, d);
+    }
+    grid.appendChild(btn);
+  }
+}
+
+function selectDay(el, d) {
+  document.querySelectorAll('.cal-day.selected').forEach(c => c.classList.remove('selected'));
+  el.classList.add('selected');
+  state.day = d;
+  state.time = '';
+
+  const dateStr = d + ' ' + MONTHS[state.month] + ' ' + state.year;
+  document.getElementById('sum-date').textContent = dateStr;
+  document.getElementById('sum-date').classList.remove('placeholder');
+  document.getElementById('sum-time').textContent = 'Non sélectionné';
+  document.getElementById('sum-time').classList.add('placeholder');
+
+  renderSlots(dateStr);
+  updateSteps();
+}
+
+/* ---- Time slots ---- */
+const ALL_SLOTS = ['9h00','9h30','10h00','10h30','11h00','11h30','14h00','14h30','15h00','15h30','16h00','16h30','17h00','17h30','18h00'];
+const BUSY = ['10h00','15h00']; // simulated busy slots
+
+function renderSlots(dateLabel) {
+  const wrap = document.getElementById('slotsWrap');
+  const grid = document.getElementById('slotsGrid');
+  document.getElementById('slotsDateLabel').textContent = 'Créneaux disponibles — ' + dateLabel;
+  grid.innerHTML = '';
+  wrap.style.display = 'block';
+
+  ALL_SLOTS.forEach(t => {
+    const btn = document.createElement('div');
+    btn.className = 'slot' + (BUSY.includes(t) ? ' busy' : '');
+    btn.textContent = t;
+    if (!BUSY.includes(t)) {
+      btn.onclick = () => selectSlot(btn, t);
+    }
+    grid.appendChild(btn);
+  });
+}
+
+function selectSlot(el, t) {
+  document.querySelectorAll('.slot.selected').forEach(s => s.classList.remove('selected'));
+  el.classList.add('selected');
+  state.time = t;
+  document.getElementById('sum-time').textContent = t;
+  document.getElementById('sum-time').classList.remove('placeholder');
+  updateSteps();
+}
+
+/* ---- Step indicator ---- */
+function updateSteps() {
+  const s1 = document.getElementById('step1');
+  const s2 = document.getElementById('step2');
+  const s3 = document.getElementById('step3');
+  const l1 = document.getElementById('line1');
+  const l2 = document.getElementById('line2');
+
+  if (state.type) {
+    s1.classList.add('done'); s1.classList.remove('active');
+    s2.classList.add('active');
+    l1.classList.add('done');
+  }
+  if (state.day && state.time) {
+    s2.classList.add('done'); s2.classList.remove('active');
+    s3.classList.add('active');
+    l2.classList.add('done');
+  }
+}
+
+/* ---- Submit ---- */
+function submitBooking(e) {
+  e.preventDefault();
+  const first   = document.getElementById('b-first').value.trim();
+  const last    = document.getElementById('b-last').value.trim();
+  const phone   = document.getElementById('b-phone').value.trim();
+  const email   = document.getElementById('b-email').value.trim();
+  const project = document.getElementById('b-project').value.trim();
+
+  if (!state.day || !state.time) {
+    showToast('Veuillez choisir une date et un créneau.');
+    return;
+  }
+
+  const dateStr = state.day + ' ' + MONTHS[state.month] + ' ' + state.year;
+  const msg = encodeURIComponent(
+    `Bonjour MAGGMALIGHT 👋\n\nJe souhaite réserver une consultation :\n\n` +
+    `👤 Nom : ${first} ${last}\n` +
+    `📱 Téléphone : ${phone}\n` +
+    (email ? `📧 Email : ${email}\n` : '') +
+    `\n📋 Type : ${state.type}\n` +
+    `📅 Date : ${dateStr}\n` +
+    `⏰ Créneau : ${state.time}\n` +
+    (project ? `\n📝 Projet :\n${project}` : '')
+  );
+
+  document.getElementById('successText').innerHTML =
+    `Votre demande de consultation a été envoyée.<br><br>
+     <strong>${first} ${last}</strong> — ${dateStr} à ${state.time}<br><br>
+     Nous vous confirmons rapidement sur WhatsApp.`;
+
+  document.getElementById('successWaLink').href = 'https://wa.me/212708032018?text=' + msg;
+  document.getElementById('successOverlay').classList.add('show');
+
+  window.open('https://wa.me/212708032018?text=' + msg, '_blank');
+}
+
+function closeSuccess() {
+  document.getElementById('successOverlay').classList.remove('show');
+}
+
+/* ---- Init ---- */
+renderCalendar();
+</script>
+
+<script>
+(function(){
+  window.toggleMobileNav = function(){
+    const nav = document.getElementById('mobileNav');
+    if (!nav) return;
+    nav.classList.toggle('open');
+    nav.classList.toggle('active');
+    document.body.style.overflow = (nav.classList.contains('open') || nav.classList.contains('active')) ? 'hidden' : '';
+  };
+  if (!window.openSearch) window.openSearch = function(){ location.href = 'category.html?cat=salon'; };
+  if (!window.openCart) window.openCart = function(){ location.href = 'product.html'; };
+  const navbar = document.getElementById('navbar');
+  function updateCommonNavbar(){
+    if (!navbar) return;
+    const hero = document.querySelector('.hero, .cat-hero, .contact-hero, .blog-hero, .academy-hero, .sl-hero, .cp-hero, .real-hero, .product-page, .ty-wrap');
+    const threshold = hero ? Math.max(90, hero.offsetHeight * 0.45) : 140;
+    if (window.scrollY > threshold) {
+      navbar.classList.remove('hero-mode');
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.add('hero-mode');
+      navbar.classList.remove('scrolled');
+    }
+  }
+  window.addEventListener('scroll', updateCommonNavbar, { passive:true });
+  window.addEventListener('resize', updateCommonNavbar);
+  updateCommonNavbar();
+})();
+</script>
+
+</body>
+</html>

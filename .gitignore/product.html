@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suspension LED Moderne Line Noir Mat — MAGGMALIGHT</title>
+  <meta name="description" content="Suspension LED Moderne Line Noir Mat, design élégant, lumière chaude 3000K, 36W, aluminium. Livraison partout au Maroc.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* ===== PRODUCT PAGE ===== */
+
+    /* ---- Breadcrumb ---- */
+    .breadcrumb {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg);
+    }
+    .breadcrumb-list {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: .75rem;
+      color: var(--text-3);
+      flex-wrap: wrap;
+    }
+    .breadcrumb-list a { color: var(--text-3); text-decoration: none; transition: color .2s; }
+    .breadcrumb-list a:hover { color: var(--orange); }
+    .breadcrumb-sep { color: var(--border); font-size: .65rem; }
+    .breadcrumb-current { color: var(--black); font-weight: 500; }
+
+    /* ---- Product main section ---- */
+    .product-section { padding: 36px 0 60px; background: var(--bg); }
+    .product-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+
+    /* ---- Gallery ---- */
+    .gallery-wrap { position: sticky; top: 110px; }
+    .gallery-main {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #f5f3ef;
+      aspect-ratio: 1;
+      margin-bottom: 12px;
+    }
+    .gallery-main img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: opacity .35s ease;
+    }
+    .gallery-badge {
+      position: absolute;
+      top: 16px; left: 16px;
+      background: var(--orange);
+      color: #fff;
+      font-size: .65rem;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 4px;
+      z-index: 2;
+    }
+    .gallery-arrow {
+      position: absolute;
+      top: 50%; transform: translateY(-50%);
+      width: 36px; height: 36px;
+      background: rgba(255,255,255,.92);
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      transition: all .2s;
+      z-index: 3;
+    }
+    .gallery-arrow:hover { background: #fff; box-shadow: 0 2px 12px rgba(0,0,0,.12); }
+    .gallery-arrow svg { width: 15px; height: 15px; }
+    .gallery-arrow-prev { left: 12px; }
+    .gallery-arrow-next { right: 12px; }
+    .gallery-thumbs { display: flex; gap: 8px; }
+    .gallery-thumb {
+      flex: 1;
+      aspect-ratio: 1;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #f5f3ef;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: all .2s;
+    }
+    .gallery-thumb:hover { border-color: rgba(242,173,100,.5); }
+    .gallery-thumb.active { border-color: var(--orange); }
+    .gallery-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    /* ---- Product info ---- */
+    .product-info { padding: 0; }
+    .product-ref { font-size: .72rem; color: var(--text-3); margin-bottom: 8px; }
+    .product-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.5rem, 2.4vw, 2rem);
+      font-weight: 700;
+      color: var(--black);
+      line-height: 1.25;
+      margin-bottom: 12px;
+    }
+    .product-rating {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .product-stars { display: flex; gap: 2px; }
+    .product-stars svg { width: 16px; height: 16px; }
+    .product-rating-count { font-size: .8rem; color: var(--text-3); }
+    .product-rating-ref { font-size: .78rem; color: var(--text-3); margin-left: auto; }
+    .product-price-wrap { margin-bottom: 6px; }
+    .product-price-main {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--black);
+      letter-spacing: -.02em;
+    }
+    .product-price-note { font-size: .78rem; color: var(--text-3); margin-bottom: 20px; }
+    .product-divider { height: 1px; background: var(--border); margin: 20px 0; }
+    .product-desc { font-size: .9rem; color: var(--text-2); line-height: 1.8; margin-bottom: 20px; }
+
+    /* Mini specs */
+    .product-specs-mini {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .spec-mini {
+      background: var(--bg-alt);
+      border-radius: 10px;
+      padding: 12px 10px;
+      text-align: center;
+    }
+    .spec-mini-icon { color: var(--orange); margin-bottom: 6px; }
+    .spec-mini-icon svg { width: 18px; height: 18px; }
+    .spec-mini-label { font-size: .6rem; font-weight: 700; color: var(--text-3); text-transform: uppercase; letter-spacing: .05em; }
+    .spec-mini-value { font-size: .78rem; font-weight: 700; color: var(--black); margin-top: 2px; }
+
+    .product-dims { font-size: .84rem; color: var(--text-2); margin-bottom: 10px; }
+    .product-dims strong { color: var(--black); }
+    .product-stock {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: .8rem;
+      font-weight: 700;
+      color: #16a34a;
+      margin-bottom: 24px;
+    }
+    .product-stock span { width: 8px; height: 8px; border-radius: 50%; background: #16a34a; display: inline-block; }
+
+    /* Quantity + CTA */
+    .product-qty-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 14px;
+    }
+    .qty-selector {
+      display: flex;
+      align-items: center;
+      border: 1.5px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .qty-btn {
+      width: 40px; height: 44px;
+      background: var(--bg-alt);
+      border: none;
+      cursor: pointer;
+      font-size: 1.1rem;
+      color: var(--black);
+      font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      transition: background .2s;
+    }
+    .qty-btn:hover { background: var(--border); }
+    .qty-num {
+      width: 44px; height: 44px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .95rem; font-weight: 700; color: var(--black);
+      border-left: 1.5px solid var(--border);
+      border-right: 1.5px solid var(--border);
+    }
+    .btn-wa-main {
+      flex: 1;
+      display: flex; align-items: center; justify-content: center; gap: 9px;
+      background: var(--orange);
+      color: #fff;
+      padding: 14px 24px;
+      border-radius: 10px;
+      font-size: .9rem;
+      font-weight: 800;
+      font-family: 'Poppins', sans-serif;
+      cursor: pointer;
+      border: none;
+      transition: all .25s;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    .btn-wa-main:hover { background: var(--orange-dark); transform: translateY(-2px); box-shadow: var(--shadow-orange); }
+    .btn-wa-main svg { width: 18px; height: 18px; flex-shrink: 0; }
+    .btn-form-main {
+      width: 100%;
+      display: flex; align-items: center; justify-content: center; gap: 9px;
+      background: var(--orange);
+      color: #fff;
+      padding: 14px 20px;
+      border-radius: 10px;
+      font-size: .88rem;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      cursor: pointer;
+      border: none;
+      transition: all .25s;
+      margin-bottom: 20px;
+    }
+    .btn-form-main:hover { background: var(--orange-dark); transform: translateY(-2px); }
+    .btn-form-main svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+    /* Micro trust */
+    .micro-trust {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+    }
+    .micro-trust-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      text-align: center;
+      padding: 10px 6px;
+    }
+    .micro-trust-item svg { width: 20px; height: 20px; color: var(--orange); }
+    .micro-trust-item span { font-size: .64rem; font-weight: 600; color: var(--text-2); line-height: 1.4; }
+
+    /* ---- Delivery section ---- */
+    .delivery-section { padding: 56px 0; background: var(--bg-alt); border-top: 1px solid var(--border); }
+    .delivery-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--black);
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .delivery-steps {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      margin-bottom: 48px;
+    }
+    .delivery-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 200px;
+    }
+    .delivery-step-num {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: var(--orange);
+      color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-size: .88rem;
+      font-weight: 800;
+      margin-bottom: 14px;
+      flex-shrink: 0;
+    }
+    .delivery-step-icon {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      background: #fff;
+      border: 2px solid var(--orange);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 14px;
+      flex-shrink: 0;
+    }
+    .delivery-step-icon svg { width: 22px; height: 22px; color: var(--orange); }
+    .delivery-step-name { font-size: .88rem; font-weight: 700; color: var(--black); margin-bottom: 6px; }
+    .delivery-step-desc { font-size: .76rem; color: var(--text-3); line-height: 1.6; }
+    .delivery-arrow {
+      flex-shrink: 0;
+      padding: 0 28px;
+      color: var(--orange);
+    }
+    .delivery-arrow svg { width: 32px; height: 32px; }
+    .delivery-trust {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+    }
+    .delivery-trust-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .delivery-trust-icon {
+      width: 44px; height: 44px;
+      border-radius: 10px;
+      background: #fff;
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .delivery-trust-icon svg { width: 20px; height: 20px; color: var(--orange); }
+    .delivery-trust-name { font-size: .86rem; font-weight: 700; color: var(--black); margin-bottom: 3px; }
+    .delivery-trust-desc { font-size: .74rem; color: var(--text-3); line-height: 1.5; }
+
+    /* ---- Description + Specs ---- */
+    .desc-section { padding: 60px 0; background: var(--bg); border-top: 1px solid var(--border); }
+    .desc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+    .desc-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 16px;
+    }
+    .desc-text { font-size: .88rem; color: var(--text-2); line-height: 1.85; margin-bottom: 20px; }
+    .desc-points { display: flex; flex-direction: column; gap: 10px; }
+    .desc-point {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .85rem;
+      color: var(--text);
+    }
+    .desc-point svg { color: var(--orange); flex-shrink: 0; width: 16px; height: 16px; }
+    .specs-table { width: 100%; border-collapse: collapse; font-size: .85rem; }
+    .specs-table tr { border-bottom: 1px solid var(--border); }
+    .specs-table tr:last-child { border-bottom: none; }
+    .specs-table td { padding: 10px 8px; color: var(--text-2); }
+    .specs-table td:first-child { color: var(--text-3); font-weight: 500; width: 45%; }
+    .specs-table td:last-child { color: var(--black); font-weight: 600; }
+
+    /* ---- Similar products ---- */
+    .similar-section { padding: 60px 0; background: var(--bg-alt); border-top: 1px solid var(--border); }
+    .similar-section .section-title { margin-bottom: 28px; }
+    .similar-carousel { position: relative; }
+    .similar-track {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      padding: 4px 0 8px;
+    }
+    .similar-track::-webkit-scrollbar { display: none; }
+    .similar-card {
+      min-width: 210px;
+      width: 210px;
+      flex-shrink: 0;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all .25s;
+      text-decoration: none;
+    }
+    .similar-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,.1); border-color: rgba(242,173,100,.4); }
+    .similar-card-img {
+      aspect-ratio: 1;
+      overflow: hidden;
+      background: #f5f3ef;
+      position: relative;
+    }
+    .similar-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+    .similar-card:hover .similar-card-img img { transform: scale(1.05); }
+    .similar-card-wish {
+      position: absolute;
+      top: 10px; right: 10px;
+      width: 30px; height: 30px;
+      background: rgba(255,255,255,.9);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+    }
+    .similar-card-wish svg { width: 14px; height: 14px; color: var(--text-3); }
+    .similar-card-body { padding: 14px; }
+    .similar-card-name { font-size: .82rem; font-weight: 600; color: var(--black); margin-bottom: 6px; line-height: 1.4; }
+    .similar-card-stars { display: flex; gap: 2px; margin-bottom: 8px; }
+    .similar-card-stars svg { width: 12px; height: 12px; }
+    .similar-card-count { font-size: .68rem; color: var(--text-3); margin-left: 4px; }
+    .similar-card-price { font-size: .95rem; font-weight: 800; color: var(--black); }
+    .similar-nav {
+      position: absolute;
+      top: 50%; transform: translateY(-50%);
+      width: 36px; height: 36px;
+      background: #fff;
+      border: 1.5px solid var(--border);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      z-index: 2;
+      transition: all .2s;
+      box-shadow: 0 2px 8px rgba(0,0,0,.1);
+    }
+    .similar-nav:hover { border-color: var(--orange); color: var(--orange); }
+    .similar-nav svg { width: 15px; height: 15px; }
+    .similar-nav-prev { left: -18px; }
+    .similar-nav-next { right: -18px; }
+
+    /* ---- Dark trust strip ---- */
+    .trust-dark {
+      background: var(--black);
+      padding: 30px 0;
+    }
+    .trust-dark-grid {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .trust-dark-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .trust-dark-icon { color: var(--orange); flex-shrink: 0; }
+    .trust-dark-icon svg { width: 24px; height: 24px; }
+    .trust-dark-name { font-size: .82rem; font-weight: 700; color: #fff; }
+    .trust-dark-desc { font-size: .72rem; color: rgba(255,255,255,.55); margin-top: 1px; }
+
+    /* ---- Cash on delivery modal ---- */
+    .order-modal-bg { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.62); z-index: 9998; align-items: center; justify-content: center; padding: 18px; backdrop-filter: blur(8px); }
+    .order-modal-bg.show { display: flex; }
+    .order-modal { background: #fff; border-radius: 18px; padding: 30px; width: min(100%, 960px); max-height: 92vh; overflow-y: auto; animation: popIn .3s ease; position: relative; box-shadow: 0 30px 90px rgba(0,0,0,.35); }
+    @keyframes popIn { from { transform:scale(.88);opacity:0; } to { transform:scale(1);opacity:1; } }
+    .order-modal-head { display:flex; align-items:flex-start; justify-content:space-between; gap:18px; padding-bottom:22px; border-bottom:1px solid #d8d8d8; margin-bottom:18px; }
+    .order-modal-title { font-family:var(--font-sans); font-size:clamp(1.55rem,3vw,2.15rem); font-weight:800; color:var(--black); line-height:1.18; margin:0; }
+    .order-modal-x { width:42px; height:42px; border:none; background:transparent; cursor:pointer; flex-shrink:0; color:var(--black); display:flex; align-items:center; justify-content:center; }
+    .order-modal-x svg { width:30px; height:30px; }
+    .order-summary { display:flex; align-items:center; gap:18px; padding:12px 0 20px; border-bottom:1px solid #d8d8d8; margin-bottom:28px; }
+    .order-summary-img { width:96px; height:96px; border-radius:9px; overflow:hidden; background:#f5f3ef; flex-shrink:0; }
+    .order-summary-img img { width:100%; height:100%; object-fit:cover; display:block; }
+    .order-summary-main { flex:1; min-width:0; }
+    .order-summary-name { font-size:1.1rem; font-weight:800; color:var(--black); line-height:1.28; margin-bottom:4px; }
+    .order-summary-meta { font-size:.92rem; color:#555; }
+    .order-summary-price { font-size:1.45rem; font-weight:800; color:var(--black); white-space:nowrap; }
+    .order-form-grid { display:grid; gap:16px; }
+    .cod-field { display:grid; grid-template-columns:82px 1fr; min-height:74px; border:1.5px solid #c7c7c7; border-radius:11px; overflow:hidden; background:#fff; }
+    .cod-field-icon { background:#e6e6e6; border-right:1.5px solid #c7c7c7; display:flex; align-items:center; justify-content:center; color:#222; }
+    .cod-field-icon svg { width:28px; height:28px; }
+    .cod-input { width:100%; border:none; outline:none; padding:0 26px; font-family:var(--font-sans); font-size:1.05rem; color:var(--black); background:#fff; box-sizing:border-box; }
+    .cod-input::placeholder { color:#555; }
+    .cod-field:focus-within { border-color:var(--orange); box-shadow:0 0 0 3px rgba(242,173,100,.16); }
+    .order-confirm-check { display:flex; align-items:flex-start; gap:12px; padding:14px 16px; border:1.5px solid rgba(242,173,100,.34); border-radius:12px; background:rgba(242,173,100,.07); cursor:pointer; }
+    .order-confirm-check input { appearance:none; width:22px; height:22px; border:2px solid var(--orange); border-radius:5px; background:#fff; flex-shrink:0; margin-top:1px; display:grid; place-items:center; cursor:pointer; }
+    .order-confirm-check input:checked { background:var(--orange); }
+    .order-confirm-check input:checked::after { content:''; width:6px; height:11px; border:solid #fff; border-width:0 2px 2px 0; transform:rotate(45deg); margin-top:-2px; }
+    .order-confirm-check span { font-size:.86rem; line-height:1.55; color:var(--black); font-weight:600; }
+    .order-confirm-check small { display:block; margin-top:2px; color:#777; font-size:.72rem; font-weight:500; }
+    .order-modal-submit { width:100%; padding:20px 24px; margin-top:16px; background:var(--orange); color:#fff; border:none; border-radius:999px; font-family:var(--font-sans); font-size:1.08rem; font-weight:800; cursor:pointer; transition:all .25s; display:flex; align-items:center; justify-content:center; gap:14px; text-transform:uppercase; letter-spacing:.03em; box-shadow:var(--shadow-orange); }
+    .order-modal-submit:hover { background:var(--orange-dark); }
+    .order-modal-submit > svg { display:none; }
+    .order-modal-submit::before { content:''; width:23px; height:23px; background:#fff; flex-shrink:0; -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z'/%3E%3Cpath d='M3 6h18'/%3E%3Cpath d='M16 10a4 4 0 0 1-8 0'/%3E%3C/svg%3E") center/contain no-repeat; mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z'/%3E%3Cpath d='M3 6h18'/%3E%3Cpath d='M16 10a4 4 0 0 1-8 0'/%3E%3C/svg%3E") center/contain no-repeat; }
+    .order-cod-note { display:flex; align-items:center; gap:9px; justify-content:center; margin-top:14px; font-size:.78rem; font-weight:600; color:#666; }
+    .order-cod-note svg { width:16px; height:16px; color:var(--orange); }
+
+    /* ---- Responsive ---- */
+    @media(max-width:900px) {
+      .product-grid { grid-template-columns:1fr; gap:32px; }
+      .gallery-wrap { position:static; }
+      .desc-grid { grid-template-columns:1fr; gap:36px; }
+      .delivery-trust { grid-template-columns:1fr 1fr; }
+    }
+    @media(max-width:640px) {
+      .product-specs-mini { grid-template-columns:repeat(2,1fr); }
+      .micro-trust { grid-template-columns:repeat(2,1fr); }
+      .delivery-steps { flex-direction:column; gap:20px; }
+      .delivery-arrow { transform:rotate(90deg); padding:4px 0; }
+      .delivery-trust { grid-template-columns:1fr; }
+      .trust-dark-grid { grid-template-columns:1fr 1fr; }
+      .similar-nav { display:none; }
+      .order-modal { padding:22px 18px; border-radius:14px; }
+      .order-summary { align-items:flex-start; gap:12px; }
+      .order-summary-img { width:72px; height:72px; }
+      .order-summary-price { font-size:1rem; }
+      .order-summary-name { font-size:.92rem; }
+      .cod-field { grid-template-columns:58px 1fr; min-height:62px; }
+      .cod-input { font-size:.94rem; padding:0 16px; }
+      .order-modal-submit { font-size:.86rem; padding:16px 18px; }
+    }
+    @media(max-width:480px) {
+      .trust-dark-grid { grid-template-columns:1fr; }
+      .product-qty-row {
+        display:grid;
+        grid-template-columns:auto minmax(0,1fr);
+        align-items:center;
+        gap:8px;
+      }
+      .qty-selector { flex-shrink:0; }
+      .qty-btn { width:38px; height:46px; }
+      .qty-num { width:40px; height:46px; }
+      .btn-wa-main {
+        width:auto;
+        min-width:0;
+        height:46px;
+        padding:0 10px;
+        font-size:clamp(.62rem,2.35vw,.78rem);
+        line-height:1;
+        white-space:nowrap;
+        gap:6px;
+      }
+      .btn-wa-main svg { width:15px; height:15px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============ TICKER ============ -->
+<div class="ticker-bar">
+  <div class="ticker-track">
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Livraison partout au Maroc</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>Paiement 100% sécurisé</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Conseil expert gratuit</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>Installation disponible</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Showroom à Marrakech</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Produits garantis 2 ans</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Livraison partout au Maroc</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>Paiement 100% sécurisé</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Conseil expert gratuit</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg>Installation disponible</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Showroom à Marrakech</div>
+    <span class="ticker-sep">✦</span>
+    <div class="ticker-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Produits garantis 2 ans</div>
+    <span class="ticker-sep">✦</span>
+  </div>
+</div>
+
+<!-- ============ NAVBAR ============ -->
+<nav class="navbar hero-mode" id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" id="navLogo">
+        <img src="images/logo.png" alt="MAGGMALIGHT" class="nav-logo-img" id="logoImg" onerror="this.style.display='none';document.getElementById('logoText').style.display='flex'">
+        <span class="nav-logo-text" id="logoText" style="display:none">
+          <span class="nav-logo-main">MAGGMA<span class="logo-light">LIGHT</span></span>
+          <span class="nav-logo-sub">Lighting Design &amp; Solutions</span>
+        </span>
+      </a>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="index.html#categories" class="nav-link">
+            Produits
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-dropdown">
+            <a href="category.html?cat=salon">Toutes les catégories</a>
+            <a href="category.html?cat=suspensions">Suspensions</a>
+            <a href="category.html?cat=appliques">Appliques murales</a>
+            <a href="category.html?cat=spots">Spots &amp; Downlights</a>
+            <a href="category.html?cat=rails">Rails Magnétiques</a>
+            <a href="category.html?cat=exterieur">Luminaires Extérieurs</a>
+            <a href="smart-lighting.html">Smart Lighting</a>
+            <a href="category.html?cat=ruban">Profils LED</a>
+            <a href="category.html?cat=lampadaires">Lampes Décoratives</a>
+            <a href="category.html?cat=appareillage">Appareillage</a>
+          </div>
+        </li>
+        <li><a href="formations.html" class="nav-link">Formations</a></li>
+        <li><a href="realisations.html" class="nav-link">Réalisations</a></li>
+        <li><a href="smart-lighting.html" class="nav-link" style="color:var(--orange);font-weight:600">Smart Lighting</a></li>
+        <li><a href="blog.html" class="nav-link">Conseils</a></li>
+        <li><a href="index.html#showroom" class="nav-link">À propos</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="nav-action-btn" onclick="window.openSearch ? openSearch() : (location.href='category.html?cat=salon')" title="Rechercher">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="nav-action-btn" title="Mon compte">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </button>
+        <button class="nav-action-btn" title="Favoris">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+        </button>
+        <button class="nav-action-btn" onclick="window.openCart ? openCart() : (location.href='product.html')" title="Panier">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span class="nav-badge" id="cart-count">0</span>
+        </button>
+      </div>
+      <div class="nav-hamburger" onclick="toggleMobileNav()"><span></span><span></span><span></span></div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-header">
+    <div class="nav-logo-text">
+      <span class="nav-logo-main" style="color:#1D1D1B">MAGGMA<span class="logo-light">LIGHT</span></span>
+      <span class="nav-logo-sub" style="color:#888">Lighting Design &amp; Solutions</span>
+    </div>
+    <button class="mobile-nav-close" onclick="toggleMobileNav()">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <div class="mobile-nav-links">
+    <a href="index.html#categories" onclick="toggleMobileNav()">Produits</a>
+    <a href="formations.html" onclick="toggleMobileNav()">Formations</a>
+    <a href="realisations.html" onclick="toggleMobileNav()">Réalisations</a>
+    <a href="smart-lighting.html" onclick="toggleMobileNav()">Smart Lighting</a>
+    <a href="blog.html" onclick="toggleMobileNav()">Conseils</a>
+    <a href="index.html#showroom" onclick="toggleMobileNav()">À propos</a>
+    <a href="contact.html" onclick="toggleMobileNav()">Contact</a>
+    <a href="consultation.html" style="color:var(--orange);font-weight:700">Réserver une consultation</a>
+  </div>
+</div>
+
+
+<!-- ============ BREADCRUMB ============ -->
+<div class="breadcrumb" style="margin-top:106px">
+  <div class="container">
+    <div class="breadcrumb-list">
+      <a href="index.html">Accueil</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="index.html#categories">Suspensions</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="index.html#categories">Suspensions LED</a>
+      <span class="breadcrumb-sep">›</span>
+      <span class="breadcrumb-current">Suspension LED Moderne Line Noir Mat</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PRODUCT SECTION ============ -->
+<section class="product-section">
+  <div class="container">
+    <div class="product-grid">
+
+      <!-- LEFT: Gallery -->
+      <div class="gallery-wrap">
+        <div class="gallery-main" id="galleryMain">
+          <span class="gallery-badge">Nouveauté</span>
+          <img src="images/Categories/Suspension-detail.png" alt="Suspension LED Moderne Line" id="mainImg">
+          <button class="gallery-arrow gallery-arrow-prev" onclick="slideGallery(-1)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button class="gallery-arrow gallery-arrow-next" onclick="slideGallery(1)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+        <div class="gallery-thumbs" id="galleryThumbs">
+          <div class="gallery-thumb active" onclick="setThumb(0)">
+            <img src="images/Categories/Suspension-detail.png" alt="Vue 1">
+          </div>
+          <div class="gallery-thumb" onclick="setThumb(1)">
+            <img src="images/Categories/Suspensions.webp" alt="Vue 2">
+          </div>
+          <div class="gallery-thumb" onclick="setThumb(2)">
+            <img src="images/sliders/slide-salon.png" alt="Vue ambiance">
+          </div>
+          <div class="gallery-thumb" onclick="setThumb(3)">
+            <img src="images/Showroom/R62_0185.JPG" alt="Vue showroom">
+          </div>
+          <div class="gallery-thumb" onclick="setThumb(4)">
+            <img src="images/Showroom/R62_0329.JPG" alt="Vue installation">
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Product info -->
+      <div class="product-info">
+        <div class="product-ref">Référence : ML-PL-1023</div>
+        <h1 class="product-title">Suspension LED Moderne Line Noir Mat – Design Élégant &amp; Lumière Chauffante</h1>
+
+        <div class="product-rating">
+          <div class="product-stars">
+            <svg viewBox="0 0 24 24" fill="#F2AD64"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#F2AD64"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#F2AD64"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="#F2AD64"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="#F2AD64" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <span class="product-rating-count">(12 avis clients)</span>
+          <span class="product-rating-ref">Référence : ML-PL-1023</span>
+        </div>
+
+        <div class="product-price-wrap">
+          <div class="product-price-main">1 450,00 MAD</div>
+        </div>
+        <div class="product-price-note">TTC · Livraison incluse partout au Maroc</div>
+
+        <div class="product-divider"></div>
+
+        <p class="product-desc">Élégante et minimaliste, cette suspension LED moderne en finition noir mat apporte une touche sophistiquée à vos espaces. Son éclairage chaud crée une ambiance chaleureuse idéale pour salons, salles à manger ou espaces professionnels.</p>
+
+        <!-- Mini specs -->
+        <div class="product-specs-mini">
+          <div class="spec-mini">
+            <div class="spec-mini-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="5"/><path d="M12 2v2M12 20v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M2 12h2M20 12h2"/></svg></div>
+            <div class="spec-mini-label">Lumière</div>
+            <div class="spec-mini-value">3000K</div>
+          </div>
+          <div class="spec-mini">
+            <div class="spec-mini-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+            <div class="spec-mini-label">Puissance</div>
+            <div class="spec-mini-value">36W</div>
+          </div>
+          <div class="spec-mini">
+            <div class="spec-mini-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div class="spec-mini-label">Matériau</div>
+            <div class="spec-mini-value">Aluminium</div>
+          </div>
+          <div class="spec-mini">
+            <div class="spec-mini-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+            <div class="spec-mini-label">Garantie</div>
+            <div class="spec-mini-value">2 ans</div>
+          </div>
+        </div>
+
+        <div class="product-dims"><strong>Dimensions :</strong> Ø 60 cm | Hauteur réglable jusqu'à 150 cm</div>
+        <div class="product-stock"><span></span> En stock — expédition sous 24h</div>
+
+        <div class="product-divider"></div>
+
+        <!-- Quantity + Cash on delivery -->
+        <div class="product-qty-row">
+          <div class="qty-selector">
+            <button class="qty-btn" onclick="changeQtyProd(-1)">−</button>
+            <div class="qty-num" id="prodQty">1</div>
+            <button class="qty-btn" onclick="changeQtyProd(1)">+</button>
+          </div>
+          <button class="btn-wa-main" onclick="openOrderModal()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            Commander Maintenant
+          </button>
+        </div>
+
+        <!-- Micro trust -->
+        <div class="micro-trust">
+          <div class="micro-trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            <span>Paiement à<br>la livraison</span>
+          </div>
+          <div class="micro-trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+            <span>Paiement<br>sécurisé</span>
+          </div>
+          <div class="micro-trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+            <span>Retour<br>sous 7 jours</span>
+          </div>
+          <div class="micro-trust-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>Produits 100%<br>authentiques</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DELIVERY SECTION ============ -->
+<section class="delivery-section">
+  <div class="container">
+    <h2 class="delivery-title">Livraison rapide partout au Maroc</h2>
+    <div class="delivery-steps">
+      <div class="delivery-step">
+        <div class="delivery-step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+        </div>
+        <div style="position:relative">
+          <div style="position:absolute;top:-58px;left:50%;transform:translateX(-50%);width:24px;height:24px;background:var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.7rem;font-weight:800">1</div>
+        </div>
+        <div class="delivery-step-name">Commande aujourd'hui</div>
+        <div class="delivery-step-desc">Remplissez le formulaire et payez tranquillement à la livraison.</div>
+      </div>
+      <div class="delivery-arrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </div>
+      <div class="delivery-step">
+        <div class="delivery-step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+        </div>
+        <div style="position:relative">
+          <div style="position:absolute;top:-58px;left:50%;transform:translateX(-50%);width:24px;height:24px;background:var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.7rem;font-weight:800">2</div>
+        </div>
+        <div class="delivery-step-name">Fulfillment demain</div>
+        <div class="delivery-step-desc">Votre commande est préparée et expédiée depuis notre showroom à Marrakech.</div>
+      </div>
+      <div class="delivery-arrow">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </div>
+      <div class="delivery-step">
+        <div class="delivery-step-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </div>
+        <div style="position:relative">
+          <div style="position:absolute;top:-58px;left:50%;transform:translateX(-50%);width:24px;height:24px;background:var(--orange);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.7rem;font-weight:800">3</div>
+        </div>
+        <div class="delivery-step-name">Livraison le lendemain</div>
+        <div class="delivery-step-desc">Recevez votre produit partout au Maroc en seulement 24h après l'expédition.</div>
+      </div>
+    </div>
+
+    <div class="delivery-trust">
+      <div class="delivery-trust-item">
+        <div class="delivery-trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div>
+          <div class="delivery-trust-name">Showroom à Marrakech</div>
+          <div class="delivery-trust-desc">Venez découvrir nos produits dans notre showroom de +200 m²</div>
+        </div>
+      </div>
+      <div class="delivery-trust-item">
+        <div class="delivery-trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div>
+          <div class="delivery-trust-name">+10 ans d'expérience</div>
+          <div class="delivery-trust-desc">Plus d'une décennie d'expertise en éclairage</div>
+        </div>
+      </div>
+      <div class="delivery-trust-item">
+        <div class="delivery-trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 010 1.4L7.4 15l-2.4.6.6-2.4 7.3-7.3a1 1 0 011.4 0z"/><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/></svg>
+        </div>
+        <div>
+          <div class="delivery-trust-name">Équipe d'installation</div>
+          <div class="delivery-trust-desc">Une équipe professionnelle pour vos installations</div>
+        </div>
+      </div>
+      <div class="delivery-trust-item">
+        <div class="delivery-trust-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+        </div>
+        <div>
+          <div class="delivery-trust-name">Conseils sur mesure</div>
+          <div class="delivery-trust-desc">Un accompagnement personnalisé pour chaque projet</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DESCRIPTION + SPECS ============ -->
+<section class="desc-section">
+  <div class="container">
+    <div class="desc-grid">
+      <div>
+        <h2 class="desc-heading">Description</h2>
+        <p class="desc-text">Élégante et minimaliste, cette suspension LED moderne en finition noir mat apporte une touche sophistiquée à vos espaces. Son éclairage chaud crée une ambiance chaleureuse idéale pour salons, salles à manger ou espaces professionnels.</p>
+        <p class="desc-text">Fabriquée avec des matériaux de haute qualité, elle garantit durabilité et performance.</p>
+        <div class="desc-points">
+          <div class="desc-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Design moderne et épuré</div>
+          <div class="desc-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Éclairage LED intégré haute performance</div>
+          <div class="desc-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Hauteur réglable selon vos besoins</div>
+          <div class="desc-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Matériaux premium pour une longue durée de vie</div>
+          <div class="desc-point"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Parfaite pour les intérieurs résidentiels et professionnels</div>
+        </div>
+      </div>
+      <div>
+        <h2 class="desc-heading">Caractéristiques techniques</h2>
+        <table class="specs-table">
+          <tr><td>Type de produit</td><td>Suspension LED</td></tr>
+          <tr><td>Matériau</td><td>Aluminium + Silicone</td></tr>
+          <tr><td>Couleur</td><td>Noir Mat</td></tr>
+          <tr><td>Température de couleur</td><td>3000K (Lumière chaude)</td></tr>
+          <tr><td>Puissance</td><td>36W</td></tr>
+          <tr><td>Tension</td><td>220-240V</td></tr>
+          <tr><td>Dimensions</td><td>Ø 60 cm – Hauteur réglable jusqu'à 150 cm</td></tr>
+          <tr><td>Garantie</td><td>2 ans</td></tr>
+          <tr><td>Utilisation</td><td>Intérieur</td></tr>
+          <tr><td>Indice de protection</td><td>IP20</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SIMILAR PRODUCTS ============ -->
+<section class="similar-section">
+  <div class="container">
+    <h2 class="section-title">Produits similaires</h2>
+    <div class="similar-carousel" style="position:relative">
+      <button class="similar-nav similar-nav-prev" onclick="scrollSimilar(-1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg></button>
+      <div class="similar-track" id="similarTrack">
+
+        <a href="product.html" class="similar-card">
+          <div class="similar-card-img">
+            <img src="images/Categories/Suspensions.webp" alt="Suspension LED Wave">
+            <div class="similar-card-wish"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+          </div>
+          <div class="similar-card-body">
+            <div class="similar-card-name">Suspension LED Wave Noir &amp; Or</div>
+            <div class="similar-card-stars">
+              <svg viewBox="0 0 24 24" fill="#F2AD64"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="#F2AD64"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="#F2AD64"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="#F2AD64"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="#F2AD64" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <span class="similar-card-count">(11)</span>
+            </div>
+            <div class="similar-card-price">2 250,00 MAD</div>
+          </div>
+        </a>
+
+        <a href="product.html" class="similar-card">
+          <div class="similar-card-img">
+            <img src="images/Categories/Suspension-detail.png" alt="Suspension LED Linear">
+            <div class="similar-card-wish"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+          </div>
+          <div class="similar-card-body">
+            <div class="similar-card-name">Suspension LED Linear Moderne Noire</div>
+            <div class="similar-card-stars">
+              <svg viewBox="0 0 24 24" fill="#F2AD64"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="#F2AD64"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="#F2AD64"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="#F2AD64"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="#F2AD64"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <span class="similar-card-count">(9)</span>
+            </div>
+            <div class="similar-card-price">1 250,00 MAD</div>
+          </div>
+        </a>
+
+        <a href="product.html" class="similar-card">
+          <div class="similar-card-img">
+            <img src="images/Categories/Suspensions.webp" alt="Suspension LED Circle">
+            <div class="similar-card-wish"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+          </div>
+          <div class="similar-card-body">
+            <div class="similar-card-name">Suspension LED Circle Minimaliste</div>
+            <div class="similar-card-stars">
+              <svg viewBox="0 0 24 24" fill="#F2AD64"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="#F2AD64"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="#F2AD64"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="#F2AD64"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="#F2AD64"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <span class="similar-card-count">(14)</span>
+            </div>
+            <div class="similar-card-price">1 850,00 MAD</div>
+          </div>
+        </a>
+
+        <a href="product.html" class="similar-card">
+          <div class="similar-card-img">
+            <img src="images/Categories/Les Lampadaires.png" alt="Suspension LED Cylindre">
+            <div class="similar-card-wish"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+          </div>
+          <div class="similar-card-body">
+            <div class="similar-card-name">Suspension LED Cylindre Noir Mat</div>
+            <div class="similar-card-stars">
+              <svg viewBox="0 0 24 24" fill="#F2AD64"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="#F2AD64"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="#F2AD64"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="#F2AD64"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="#F2AD64" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <span class="similar-card-count">(8)</span>
+            </div>
+            <div class="similar-card-price">1 650,00 MAD</div>
+          </div>
+        </a>
+
+        <a href="product.html" class="similar-card">
+          <div class="similar-card-img">
+            <img src="images/Categories/Suspension-detail.png" alt="Suspension LED Infinity">
+            <div class="similar-card-wish"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+          </div>
+          <div class="similar-card-body">
+            <div class="similar-card-name">Suspension LED Infinity Design</div>
+            <div class="similar-card-stars">
+              <svg viewBox="0 0 24 24" fill="#F2AD64"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="#F2AD64"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="#F2AD64"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="#F2AD64"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <svg viewBox="0 0 24 24" fill="#F2AD64"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <span class="similar-card-count">(10)</span>
+            </div>
+            <div class="similar-card-price">2 150,00 MAD</div>
+          </div>
+        </a>
+
+      </div>
+      <button class="similar-nav similar-nav-next" onclick="scrollSimilar(1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DARK TRUST STRIP ============ -->
+<div class="trust-dark">
+  <div class="container">
+    <div class="trust-dark-grid">
+      <div class="trust-dark-item">
+        <div class="trust-dark-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <div><div class="trust-dark-name">Livraison rapide</div><div class="trust-dark-desc">Partout au Maroc</div></div>
+      </div>
+      <div class="trust-dark-item">
+        <div class="trust-dark-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+        <div><div class="trust-dark-name">Paiement sécurisé</div><div class="trust-dark-desc">100% sécurisé</div></div>
+      </div>
+      <div class="trust-dark-item">
+        <div class="trust-dark-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.28 9.09a19.79 19.79 0 01-3.07-8.67A2 2 0 012.18 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.08 6.08l1.27-1.52a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+        <div><div class="trust-dark-name">Support client</div><div class="trust-dark-desc">Disponible 7j/7</div></div>
+      </div>
+      <div class="trust-dark-item">
+        <div class="trust-dark-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 010 1.4L7.4 15l-2.4.6.6-2.4 7.3-7.3a1 1 0 011.4 0z"/></svg></div>
+        <div><div class="trust-dark-name">Installation disponible</div><div class="trust-dark-desc">Par nos experts</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="images/logo.png" alt="MAGGMALIGHT" class="footer-logo-img"
+             onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+        <div class="footer-brand-logo" style="display:none">MAGGMA<span class="logo-light">LIGHT</span></div>
+        <div class="footer-brand-sub">Lighting Design &amp; Solutions</div>
+        <p class="footer-desc">L'expertise éclairage au service de vos projets. Produits premium, solutions intelligentes et accompagnement sur mesure partout au Maroc.</p>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/maggmalight/" class="footer-social" title="Instagram" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=100089545215268&locale=fr_FR" class="footer-social" title="Facebook" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="https://www.youtube.com/@OUHSSAINESAID-LightingDesign" class="footer-social" title="YouTube" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22.54 6.42a2.78 2.78 0 00-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 00-1.95 1.96A29 29 0 001 12a29 29 0 00.46 5.58A2.78 2.78 0 003.41 19.54C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 001.95-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/></svg></a>
+          <a href="https://wa.me/212708032018" class="footer-social" title="WhatsApp" target="_blank" style="background:#25d366;border-color:#25d366;color:#fff"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Produits</div>
+        <div class="footer-links">
+          <a href="index.html#categories" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Éclairage intérieur</a>
+          <a href="index.html#categories" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Éclairage extérieur</a>
+          <a href="index.html#categories" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Rails magnétiques</a>
+          <a href="index.html#categories" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Spots &amp; Downlights</a>
+          <a href="index.html#categories" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Profils LED</a>
+          <a href="index.html#categories" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Toutes les catégories</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Informations</div>
+        <div class="footer-links">
+          <a href="#" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>À propos</a>
+          <a href="#" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Livraison &amp; Retours</a>
+          <a href="#" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Paiement sécurisé</a>
+          <a href="#" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Installation</a>
+          <a href="#" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>FAQ</a>
+          <a href="#" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Contact</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Service Client</div>
+        <div class="footer-links">
+          <a href="consultation.html" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Consultation gratuite</a>
+          <a href="https://wa.me/212708032018" target="_blank" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Support WhatsApp</a>
+          <a href="tel:+212708032018" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>+212 708 032 018</a>
+          <a href="mailto:contact@maggmalight.com" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>contact@maggmalight.com</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Showroom</div>
+        <div class="footer-links">
+          <a href="https://maps.app.goo.gl/4cSXcTtbNnTfEFKS7" target="_blank" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Av. Mohammed VI, Marrakech</a>
+          <a href="#" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Lun – Sam : 9h00 – 19h00</a>
+          <a href="https://maps.app.goo.gl/4cSXcTtbNnTfEFKS7" target="_blank" class="footer-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>Voir sur la carte</a>
+        </div>
+        <div style="margin-top:16px;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.1)">
+          <img src="images/Showroom/ouverture-2.JPG" alt="Showroom MAGGMALIGHT" style="width:100%;height:90px;object-fit:cover;display:block">
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">© 2026 MAGGMALIGHT — Tous droits réservés. by <a href="https://groweb.ma" target="_blank" rel="noopener" class="footer-bottom-link">Groweb</a></div>
+      <div class="footer-bottom-right">
+        <a href="#" class="footer-bottom-link">Mentions légales</a>
+        <a href="#" class="footer-bottom-link">Politique de confidentialité</a>
+        <a href="#" class="footer-bottom-link">Conditions générales de vente</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp sticky -->
+<div class="whatsapp-sticky">
+  <div class="whatsapp-label">Discuter sur WhatsApp</div>
+  <a href="https://wa.me/212708032018?text=Bonjour%20MAGGMALIGHT%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20la%20Suspension%20LED%20Moderne%20Line%20Noir%20Mat%20(r%C3%A9f.%20ML-PL-1023)." target="_blank" class="whatsapp-btn">
+    <div class="whatsapp-pulse"></div>
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+</div>
+
+<!-- Order form modal -->
+<div class="order-modal-bg" id="orderModal">
+  <div class="order-modal">
+    <div class="order-modal-head">
+      <h2 class="order-modal-title">Veuillez remplir le formulaire pour commander</h2>
+      <button class="order-modal-x" onclick="closeOrderModal()" aria-label="Fermer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="order-summary">
+      <div class="order-summary-img"><img src="images/Categories/Suspension-detail.png" alt="Suspension LED Moderne Line Noir Mat"></div>
+      <div class="order-summary-main">
+        <div class="order-summary-name">Suspension LED Moderne Line Noir Mat</div>
+        <div class="order-summary-meta">Quantité : <span id="om-summary-qty">1</span> · Réf : ML-PL-1023</div>
+      </div>
+      <div class="order-summary-price" id="om-summary-total">1 450,00 MAD</div>
+    </div>
+    <form class="order-form-grid" onsubmit="submitOrder(event)">
+      <label class="cod-field">
+        <span class="cod-field-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+        <input type="text" class="cod-input" id="om-name" placeholder="Nom et Prénom" autocomplete="name" required>
+      </label>
+      <label class="cod-field">
+        <span class="cod-field-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.1 15.1 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24 11.36 11.36 0 003.56.57 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1 11.36 11.36 0 00.57 3.56 1 1 0 01-.24 1.01l-2.21 2.22z"/></svg></span>
+        <input type="tel" class="cod-input" id="om-phone" placeholder="Téléphone" autocomplete="tel" required>
+      </label>
+      <label class="cod-field">
+        <span class="cod-field-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"/><path d="M12 13v8"/><path d="M8 21h8"/></svg></span>
+        <input type="text" class="cod-input" id="om-city" placeholder="Ville" autocomplete="address-level2" required>
+      </label>
+      <label class="cod-field">
+        <span class="cod-field-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6a2.5 2.5 0 010 5.5z"/></svg></span>
+        <input type="text" class="cod-input" id="om-address" placeholder="Adresse" autocomplete="street-address" required>
+      </label>
+      <label class="order-confirm-check">
+        <input type="checkbox" id="om-confirm" required>
+        <span>
+          Cochez cette case pour confirmer votre commande.
+          <small>Je confirme que je veux commander ce produit avec paiement à la livraison.</small>
+        </span>
+      </label>
+    <button class="order-modal-submit" type="submit">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Acheter maintenant - <span id="om-submit-total">1 450,00 MAD</span>
+    </button>
+    </form>
+    <div class="order-cod-note">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+      Paiement à la livraison · Confirmation par téléphone
+    </div>
+  </div>
+</div>
+
+<!-- Search overlay -->
+<div class="search-overlay" id="searchOverlay">
+  <button class="search-close" onclick="closeSearch()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+  <div class="search-box">
+    <div class="search-input-wrap"><input type="text" class="search-input" placeholder="Rechercher un luminaire..." id="searchInput"><button class="search-submit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></button></div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg><span id="toast-msg"></span></div>
+
+<script src="js/products-data.js"></script>
+<script>
+/* ===== PRODUCT PAGE SCRIPT ===== */
+
+/* Mobile nav */
+function toggleMobileNav() {
+  const nav = document.getElementById('mobileNav');
+  nav.classList.toggle('open');
+  document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
+}
+
+/* Toast */
+let toastTimer;
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  document.getElementById('toast-msg').textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 3000);
+}
+
+/* Search */
+function openSearch() {
+  document.getElementById('searchOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => document.getElementById('searchInput').focus(), 100);
+}
+function closeSearch() {
+  document.getElementById('searchOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSearch(); });
+
+/* Dummy cart count */
+function openCart() { showToast('Panier — commandez directement sur WhatsApp'); }
+const cart = [];
+function updateCartCount() {
+  const total = cart.reduce((s,i) => s + i.qty, 0);
+  document.getElementById('cart-count').textContent = total;
+}
+
+/* ---- Gallery ---- */
+let images = [
+  'images/Categories/Suspension-detail.png',
+  'images/Categories/Suspensions.webp',
+  'images/sliders/slide-salon.png',
+  'images/Showroom/R62_0185.JPG',
+  'images/Showroom/R62_0329.JPG'
+];
+let activeThumb = 0;
+let activeProduct = {
+  id: 'suspension-led-moderne-line-noir-mat',
+  name: 'Suspension LED Moderne Line Noir Mat',
+  sku: 'ML-PL-1023',
+  category: 'suspensions',
+  price: 1450,
+  priceDisplay: '1 450,00 MAD',
+  image: 'images/Categories/Suspension-detail.png',
+  description: 'Élégante et minimaliste, cette suspension LED moderne en finition noir mat apporte une touche sophistiquée à vos espaces. Son éclairage chaud crée une ambiance chaleureuse idéale pour salons, salles à manger ou espaces professionnels.'
+};
+let productBasePrice = activeProduct.price;
+
+function setThumb(idx) {
+  activeThumb = idx;
+  document.getElementById('mainImg').src = images[idx];
+  document.querySelectorAll('.gallery-thumb').forEach((t, i) => {
+    t.classList.toggle('active', i === idx);
+  });
+}
+
+function slideGallery(dir) {
+  const next = (activeThumb + dir + images.length) % images.length;
+  setThumb(next);
+}
+
+/* ---- Quantity ---- */
+let prodQty = 1;
+function changeQtyProd(dir) {
+  prodQty = Math.max(1, Math.min(99, prodQty + dir));
+  document.getElementById('prodQty').textContent = prodQty;
+}
+
+function formatMad(amount) {
+  return amount.toLocaleString('fr-MA', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' MAD';
+}
+
+function uniqueImages(list) {
+  return list.filter(Boolean).filter((item, index, arr) => arr.indexOf(item) === index).slice(0, 5);
+}
+
+function categoryLabel(key) {
+  const labels = {
+    suspensions: 'Suspensions',
+    appliques: 'Appliques murales',
+    spots: 'Spots & Downlights',
+    rails: 'Rails Magnétiques',
+    exterieur: 'Luminaires Extérieurs',
+    ruban: 'Rubans & Profils LED',
+    lampadaires: 'Lampadaires',
+    appareillage: 'Appareillage',
+    salon: 'Produits d’éclairage'
+  };
+  return labels[key] || 'Produits d’éclairage';
+}
+
+function categoryImage(key) {
+  const imagesByCategory = {
+    suspensions: 'images/Categories/Suspensions.webp',
+    appliques: 'images/Categories/Applique Intérieur.png',
+    spots: 'images/Categories/Spots.png',
+    rails: 'images/Categories/Rails Magnétique.webp',
+    exterieur: 'images/Categories/Applique Extérieur.png',
+    ruban: 'images/Categories/Ruban LED.png',
+    lampadaires: 'images/Categories/Les Lampadaires.png',
+    appareillage: 'images/Products/maggmalight-0082-cadre-1-element-dome-nocturne-bros.webp',
+    salon: 'images/Spaces/salon.png'
+  };
+  return imagesByCategory[key] || imagesByCategory.salon;
+}
+
+function currentCatalogProduct() {
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get('id');
+  const catalog = Array.isArray(window.MAGGMA_PRODUCTS) ? window.MAGGMA_PRODUCTS : [];
+  if (!catalog.length) return null;
+  return catalog.find(product => product.id === id) || catalog[0];
+}
+
+function applyProductFromCatalog() {
+  const product = currentCatalogProduct();
+  if (!product) return;
+
+  activeProduct = product;
+  productBasePrice = Number(product.price) || 0;
+  const ref = product.sku || product.id || 'MAGGMALIGHT';
+  const label = categoryLabel(product.category);
+  const categoryUrl = `category.html?cat=${encodeURIComponent(product.category || 'salon')}`;
+  const description = product.description || `${product.name}. Produit d’éclairage sélectionné par MAGGMALIGHT pour vos projets au Maroc.`;
+
+  document.title = `${product.name} — MAGGMALIGHT`;
+  const metaDesc = document.querySelector('meta[name="description"]');
+  if (metaDesc) metaDesc.setAttribute('content', description);
+
+  const breadcrumbLinks = document.querySelectorAll('.breadcrumb-list a');
+  if (breadcrumbLinks[1]) {
+    breadcrumbLinks[1].textContent = label;
+    breadcrumbLinks[1].href = categoryUrl;
+  }
+  if (breadcrumbLinks[2]) {
+    breadcrumbLinks[2].textContent = label;
+    breadcrumbLinks[2].href = categoryUrl;
+  }
+  const breadcrumbCurrent = document.querySelector('.breadcrumb-current');
+  if (breadcrumbCurrent) breadcrumbCurrent.textContent = product.name;
+
+  const refEls = document.querySelectorAll('.product-ref, .product-rating-ref');
+  refEls.forEach(el => { el.textContent = `Référence : ${ref}`; });
+  const titleEl = document.querySelector('.product-title');
+  if (titleEl) titleEl.textContent = product.name;
+  const priceEl = document.querySelector('.product-price-main');
+  if (priceEl) priceEl.textContent = product.priceDisplay || formatMad(productBasePrice);
+  const descEl = document.querySelector('.product-desc');
+  if (descEl) descEl.textContent = description;
+  const stockEl = document.querySelector('.product-stock');
+  if (stockEl) stockEl.innerHTML = `<span></span> ${product.qty > 0 ? `En stock — ${product.qty} pièces disponibles` : 'Disponibilité à confirmer par téléphone'}`;
+
+  images = uniqueImages([
+    ...(Array.isArray(product.gallery) ? product.gallery : []),
+    product.image,
+    categoryImage(product.category),
+    'images/sliders/slide-salon.png',
+    'images/Showroom/R62_0185.JPG',
+    'images/Showroom/R62_0329.JPG'
+  ]);
+  document.getElementById('galleryThumbs').innerHTML = images.map((src, index) => `
+    <div class="gallery-thumb ${index === 0 ? 'active' : ''}" onclick="setThumb(${index})">
+      <img src="${src}" alt="${product.name} - vue ${index + 1}" onerror="this.src='images/Spaces/salon.png'">
+    </div>
+  `).join('');
+  document.getElementById('mainImg').alt = product.name;
+  setThumb(0);
+
+  const summaryImg = document.querySelector('.order-summary-img img');
+  if (summaryImg) {
+    summaryImg.src = images[0];
+    summaryImg.alt = product.name;
+  }
+  const summaryName = document.querySelector('.order-summary-name');
+  if (summaryName) summaryName.textContent = product.name;
+  const summaryMeta = document.querySelector('.order-summary-meta');
+  if (summaryMeta) summaryMeta.innerHTML = `Quantité : <span id="om-summary-qty">${prodQty}</span> · Réf : ${ref}`;
+  document.getElementById('om-summary-total').textContent = product.priceDisplay || formatMad(productBasePrice);
+  document.getElementById('om-submit-total').textContent = product.priceDisplay || formatMad(productBasePrice);
+
+  const stickyWhatsapp = document.querySelector('.whatsapp-sticky .whatsapp-btn');
+  if (stickyWhatsapp) {
+    stickyWhatsapp.href = `https://wa.me/212708032018?text=${encodeURIComponent(`Bonjour MAGGMALIGHT, je suis intéressé par ${product.name} (réf. ${ref}).`)}`;
+  }
+}
+
+/* ---- Cash on delivery order modal ---- */
+function openOrderModal() {
+  const total = productBasePrice * prodQty;
+  document.getElementById('om-summary-qty').textContent = prodQty;
+  document.getElementById('om-summary-total').textContent = formatMad(total);
+  document.getElementById('om-submit-total').textContent = formatMad(total);
+  document.getElementById('orderModal').classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+function closeOrderModal() {
+  document.getElementById('orderModal').classList.remove('show');
+  document.body.style.overflow = '';
+}
+function submitOrder(event) {
+  event.preventDefault();
+  const name  = document.getElementById('om-name').value.trim();
+  const phone = document.getElementById('om-phone').value.trim();
+  const city  = document.getElementById('om-city').value.trim();
+  const address = document.getElementById('om-address').value.trim();
+  const confirmed = document.getElementById('om-confirm').checked;
+  const qty = prodQty;
+
+  if (!name || !phone || !city || !address) {
+    showToast('Veuillez remplir tous les champs.');
+    return;
+  }
+
+  if (!confirmed) {
+    showToast('Veuillez confirmer votre commande en cochant la case.');
+    return;
+  }
+
+  const order = {
+    name,
+    phone,
+    city,
+    address,
+    product: activeProduct.name,
+    ref: activeProduct.sku || activeProduct.id,
+    qty,
+    total: formatMad(productBasePrice * qty),
+    payment: 'Paiement à la livraison',
+    confirmed: true,
+    date: new Date().toISOString()
+  };
+  localStorage.setItem('maggmalight_last_order', JSON.stringify(order));
+  window.location.href = 'thank-you.html';
+}
+
+applyProductFromCatalog();
+
+/* ---- Similar products scroll ---- */
+function scrollSimilar(dir) {
+  const track = document.getElementById('similarTrack');
+  track.scrollBy({ left: dir * 440, behavior: 'smooth' });
+}
+</script>
+
+<script>
+(function(){
+  window.toggleMobileNav = function(){
+    const nav = document.getElementById('mobileNav');
+    if (!nav) return;
+    nav.classList.toggle('open');
+    nav.classList.toggle('active');
+    document.body.style.overflow = (nav.classList.contains('open') || nav.classList.contains('active')) ? 'hidden' : '';
+  };
+  if (!window.openSearch) window.openSearch = function(){ location.href = 'category.html?cat=salon'; };
+  if (!window.openCart) window.openCart = function(){ location.href = 'product.html'; };
+  const navbar = document.getElementById('navbar');
+  function updateCommonNavbar(){
+    if (!navbar) return;
+    const hero = document.querySelector('.hero, .cat-hero, .contact-hero, .blog-hero, .academy-hero, .sl-hero, .cp-hero, .real-hero, .product-page, .ty-wrap');
+    const threshold = hero ? Math.max(90, hero.offsetHeight * 0.45) : 140;
+    if (window.scrollY > threshold) {
+      navbar.classList.remove('hero-mode');
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.add('hero-mode');
+      navbar.classList.remove('scrolled');
+    }
+  }
+  window.addEventListener('scroll', updateCommonNavbar, { passive:true });
+  window.addEventListener('resize', updateCommonNavbar);
+  updateCommonNavbar();
+})();
+</script>
+
+</body>
+</html>
